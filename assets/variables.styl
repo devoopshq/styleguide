@@ -1,0 +1,31 @@
+$sansSerif = -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+$monospace = Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif
+
+rem(value) {
+  u = unit(value)
+
+  if (u is 'px') {
+    return unit(value/16, 'rem')
+  } else {
+    return unit(value, u)
+  }
+}
+
+// Primary
+$black = #000
+$white = #fff
+
+// Secondary
+$blue = #0076ff
+$magenta = #D400FF
+$orange = #f5a623
+$yellow = #f8e71c
+$green = #50e3c2
+
+
+// Accents
+$gray = #fafafa
+$gray1 = #eaeaea
+$gray2 = #999999
+$gray3 = #666666
+$gray4 = #333333

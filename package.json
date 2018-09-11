@@ -1,0 +1,67 @@
+{
+  "name": "devoops-styleguide",
+  "version": "1.0.0",
+  "description": "###",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node_modules/.bin/nuxt",
+    "build": "node_modules/.bin/nuxt build",
+    "lint": "node_modules/.bin/eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint",
+    "start": "HOST=0.0.0.0 PORT=3011 node_modules/.bin/nuxt start"
+  },
+  "dependencies": {
+    "nuxt-edge": "^2.0.0-25609473.c77fa47"
+  },
+  "devDependencies": {
+    "babel-eslint": "^9.0.0",
+    "eslint": "^5.5.0",
+    "eslint-loader": "^2.1.0",
+    "eslint-plugin-vue": "^4.7.1",
+    "pug": "^2.0.3",
+    "pug-plain-loader": "^1.0.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devoopshq/styleguide.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/devoopshq/styleguide/issues"
+  },
+  "homepage": "https://github.com/devoopshq/styleguide#readme",
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:vue/recommended"
+    ],
+    "plugins": [
+      "vue"
+    ],
+    "rules": {
+      "semi": [
+        2,
+        "never"
+      ],
+      "no-console": "error",
+      "vue/max-attributes-per-line": "off"
+    }
+  }
+}
