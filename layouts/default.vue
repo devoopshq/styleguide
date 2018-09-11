@@ -41,7 +41,7 @@ body
   line-height 1.7
   color #000
   background-color #fff
-  margin 0
+  margin 0 0 25vh 0
   min-height 100%
 
 // Suppress the focus outline on elements that cannot be accessed via keyboard.
@@ -51,4 +51,8 @@ body
 // Credit: https://github.com/suitcss/base
 [tabindex="-1"]:focus
   outline none !important
+
+::selection
+  background-color $yellow
+  color $black
 </style>

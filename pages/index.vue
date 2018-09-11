@@ -9,6 +9,17 @@
   OL(:lists="lists")
   TerminalInput
   TerminalOutput
+  ButtonPrimary
+  | &nbsp;
+  ButtonPrimary(:warning="true")
+  | &nbsp;
+  ButtonPrimary(disabled)
+  | &nbsp;
+  ButtonSecondary
+  | &nbsp;
+  ButtonLoading
+  | &nbsp;
+  ButtonAbort
 </template>
 
 <script>
@@ -20,6 +31,10 @@ import UL from '@/components/lists/UL'
 import OL from '@/components/lists/OL'
 import TerminalInput from '@/components/code/TerminalInput'
 import TerminalOutput from '@/components/code/TerminalOutput'
+import ButtonPrimary from '@/components/buttons/ButtonPrimary'
+import ButtonSecondary from '@/components/buttons/ButtonSecondary'
+import ButtonLoading from '@/components/buttons/ButtonLoading'
+import ButtonAbort from '@/components/buttons/ButtonAbort'
 
 export default {
   components: {
@@ -30,7 +45,11 @@ export default {
     UL,
     OL,
     TerminalInput,
-    TerminalOutput
+    TerminalOutput,
+    ButtonPrimary,
+    ButtonSecondary,
+    ButtonLoading,
+    ButtonAbort
   },
 
   data () {
