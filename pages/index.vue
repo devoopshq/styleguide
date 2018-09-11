@@ -9,17 +9,13 @@
   OL(:lists="lists")
   TerminalInput
   TerminalOutput
-  ButtonPrimary
-  | &nbsp;
-  ButtonPrimary(:warning="true")
-  | &nbsp;
-  ButtonPrimary(disabled)
-  | &nbsp;
-  ButtonSecondary
-  | &nbsp;
+  ButtonPrimary(action="cta")
+  ButtonPrimary(action="cta" :warning="true")
+  ButtonPrimary(action="cta" disabled)
+  ButtonSecondary(action="cta")
   ButtonLoading
-  | &nbsp;
-  ButtonAbort
+  ButtonAbort(action="cta")
+  ButtonAbort(:warning="true")
 </template>
 
 <script>
@@ -64,4 +60,8 @@ export default {
 .container
   max-width 512px
   margin 0 auto
+button
+  margin-right 4px
+  &:last-child
+    margin-right 0
 </style>

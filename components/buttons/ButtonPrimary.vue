@@ -1,10 +1,14 @@
 <template lang="pug">
-button.button(:class="{warning: warning}") ACTION
+button.button(:class="{ warning }") {{ action }}
 </template>
 
 <script>
 export default {
   props: {
+    action: {
+      type: String,
+      default: ''
+    },
     warning: {
       type: Boolean,
       default: false

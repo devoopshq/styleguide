@@ -1,6 +1,17 @@
 <template lang="pug">
-button.button ACTION
+button.button {{ action }}
 </template>
+
+<script>
+export default {
+  props: {
+    action: {
+      type: String,
+      default: ''
+    }
+  }
+}
+</script>
 
 <style lang="stylus" scoped>
 .button
