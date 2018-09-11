@@ -1,12 +1,12 @@
 <template lang="pug">
 button.button(:class="{warning: warning}")
-  span
-  span
-  span
+  Spinner
 </template>
 
 <script>
+import Spinner from '@/components/Spinner'
 export default {
+  components: { Spinner },
   props: {
     warning: {
       type: Boolean,
@@ -36,27 +36,4 @@ export default {
   font-weight 700
   &:hover
     color $black
-span
-  vertical-align middle
-  animation-name blink
-  animation-duration 1400ms
-  animation-iteration-count infinite
-  animation-fill-mode both
-  width 4px
-  height 4px
-  background-color $gray4
-  display inline-block
-  border-radius 50%
-  margin 0 1px
-  &:nth-child(2)
-    animation-delay 200ms
-  &:nth-child(3)
-    animation-delay 400ms
-@keyframes blink
-  0%
-    opacity 0.2
-  20%
-    opacity 1
-  100%
-    opacity 0.2
 </style>

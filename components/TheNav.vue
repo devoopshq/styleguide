@@ -1,19 +1,15 @@
 <template lang="pug">
 nav
-  nuxt-link(to="/") DEVOOPS
+  nuxt-link(to="/") DevOops
 </template>
 
 <style lang="stylus" scoped>
 nav
   height 64px
-  // outline 1px dashed
   display flex
   align-items center
-  justify-content center
-  max-width 768px
+  max-width 512px
   margin 0 auto
-  padding-left 16px
-  padding-right 16px
 a
   font-weight 700
   color #000
