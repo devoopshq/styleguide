@@ -1,7 +1,17 @@
 <template lang="pug">
-div npm --version
+div {{ content }}
 </template>
 
+<script>
+export default {
+  props: {
+    content: {
+      type: String,
+      default: ''
+    }
+  }
+}
+</script>
 
 <style lang="stylus" scoped>
 div

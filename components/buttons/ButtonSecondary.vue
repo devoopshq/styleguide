@@ -22,7 +22,6 @@ export default {
   font-size rem(12px)
   text-transform uppercase
   user-select none
-  // font-weight 100
   line-height 0
   background $white
   padding 0 1rem

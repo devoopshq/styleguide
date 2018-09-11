@@ -7,8 +7,8 @@
   P(content="<strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit</strong>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.")
   UL(:lists="lists")
   OL(:lists="lists")
-  TerminalInput
-  TerminalOutput
+  TerminalInput(content="npm --version\n             new line")
+  TerminalOutput(content="6.4.1\n       foo\n  bar")
   ButtonPrimary(action="cta")
   ButtonPrimary(action="cta" :warning="true")
   ButtonPrimary(action="cta" disabled)

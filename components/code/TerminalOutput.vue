@@ -1,15 +1,26 @@
 <template lang="pug">
-div 6.4.1
+div(v-html="content")
 </template>
 
+<script>
+export default {
+  props: {
+    content: {
+      type: String,
+      default: ''
+    }
+  }
+}
+</script>
 
 <style lang="stylus" scoped>
 div
-  color: rgb(255, 255, 255);
-  font-family: Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
-  font-size: 13px;
-  line-height: 20px;
-  background: rgb(0, 0, 0);
-  margin: 40px 0px;
-  padding: 20px;
+  color $white
+  font-family $monospace
+  font-size rem(13px)
+  line-height 1.538
+  background rgb(0, 0, 0)
+  margin 2rem 0
+  padding 1rem
+  white-space pre
 </style>
