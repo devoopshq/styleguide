@@ -9,8 +9,7 @@
   small 16px — H4 Heading
   H4(content="Lorem ipsum dolore")
   small 14px — Paragraphs
-  P(content="Lorem ipsum dolor sit amet, consectetur <code>devoops</code> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.")
-  P(content="<strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit</strong>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.")
+  Content(:content="content")
 
   small Unordered List
   UL(:lists="lists")
@@ -39,7 +38,7 @@
   small Spinner
   Spinner
   small Spinner Custom
-  Spinner(size="48" stroke="#0076ff")
+  Spinner(size="48")
 </template>
 
 <script>
@@ -47,7 +46,7 @@ import H1 from '@/components/headings/H1'
 import H2 from '@/components/headings/H2'
 import H3 from '@/components/headings/H3'
 import H4 from '@/components/headings/H4'
-import P from '@/components/paragraphs/P'
+import Content from '@/components/Content'
 import UL from '@/components/lists/UL'
 import OL from '@/components/lists/OL'
 import TerminalInput from '@/components/code/TerminalInput'
@@ -64,7 +63,7 @@ export default {
     H2,
     H3,
     H4,
-    P,
+    Content,
     UL,
     OL,
     TerminalInput,
@@ -78,7 +77,8 @@ export default {
 
   data () {
     return {
-      lists: ['Item', 'Item', 'Item']
+      lists: ['Item', 'Item', 'Item'],
+      content: '<p>Looorem ipsum dolor sit amet, consectetur <code>devoops</code> elit, sed do <a href="/internal">internal</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p><strong>Lorem <a href="https://example.com">external</a> dolor sit amet, consectetur adipiscing elit</strong>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco <a href="https://example.com" target="_blank">_blank</a> nisi ut aliquip ex ea commodo consequat.</p>'
     }
   }
 }

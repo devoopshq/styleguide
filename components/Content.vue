@@ -1,5 +1,5 @@
 <template lang="pug">
-p(v-interpolation v-html="content")
+div(v-interpolation v-html="content")
 </template>
 
 <script>

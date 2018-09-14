@@ -1,19 +1,26 @@
 {
-  "name": "devoops-styleguide",
+  "name": "styleguide",
   "version": "1.0.0",
-  "description": "###",
+  "description": "Style Guide",
   "main": "index.js",
   "scripts": {
     "dev": "node_modules/.bin/nuxt",
     "build": "node_modules/.bin/nuxt build",
+    "test": "node_modules/.bin/ava --verbose",
     "lint": "node_modules/.bin/eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
     "start": "HOST=0.0.0.0 PORT=3011 node_modules/.bin/nuxt start"
   },
   "dependencies": {
-    "nuxt-edge": "^2.0.0-25609473.c77fa47"
+    "font-loading": "^1.0.3",
+    "nuxt-edge": "^2.0.0-25609473.c77fa47",
+    "nuxt-interpolation": "^0.2.2"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "devDependencies": {
+    "ava": "^0.25.0",
     "babel-eslint": "^9.0.0",
     "eslint": "^5.5.0",
     "eslint-loader": "^2.1.0",
@@ -27,8 +34,10 @@
     "type": "git",
     "url": "git+https://github.com/devoopshq/styleguide.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "styleguide"
+  ],
+  "author": "Dalibor Gogic <mail@daliborgogic.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/devoopshq/styleguide/issues"

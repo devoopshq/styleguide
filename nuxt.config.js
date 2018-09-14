@@ -31,6 +31,14 @@ module.exports = {
     ]
   },
 
+  modules: [
+    'nuxt-interpolation',
+    ['font-loading', {
+      fontName: 'Hack Regular',
+      fontPath: './fonts/d.woff'
+    }]
+  ],
+
   build: {
     watch: [
       '~/nuxt.config.js'

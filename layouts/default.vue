@@ -1,14 +1,14 @@
 <template lang="pug">
 div
-  TheNav
+  //- TheNav
   nuxt
 </template>
 
 <script>
-import TheNav from '@/components/TheNav'
+// import TheNav from '@/components/TheNav'
 
 export default {
-  components: { TheNav }
+  // components: { TheNav }
 }
 </script>
 
