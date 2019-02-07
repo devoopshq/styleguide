@@ -31,7 +31,9 @@ module.exports = {
       // { rel: 'manifest', href: 'https://devoops.app/icons/manifest.json' },
       // { rel: 'mask-icon', href: 'https://devoops.app/icons/safari-pinned-tab.svg', color: '#000000' },
       // { rel: 'shortcut icon', href: 'https://devoops.app/icons/favicon.ico' }
-      { rel: 'preload', href: 'fonts/Inter.var.ttf', as: 'font' }
+      // Specs: https://wicg.github.io/priority-hints/
+      // Origin Trail: https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/jpeSdM897Xw
+      { rel: 'preload', href: 'fonts/Inter.var.ttf', as: 'font', crossorigin: 'anonymous', importance: 'high' }
     ]
   },
 
