@@ -12,8 +12,7 @@
     "start": "HOST=0.0.0.0 PORT=3011 node_modules/.bin/nuxt start"
   },
   "dependencies": {
-    "font-loading": "^1.0.3",
-    "nuxt-edge": "^2.0.0-25609473.c77fa47",
+    "nuxt": "^2.4.3",
     "nuxt-interpolation": "^0.2.2"
   },
   "publishConfig": {
@@ -24,11 +23,7 @@
     "babel-eslint": "^9.0.0",
     "eslint": "^5.5.0",
     "eslint-loader": "^2.1.0",
-    "eslint-plugin-vue": "^4.7.1",
-    "pug": "^2.0.3",
-    "pug-plain-loader": "^1.0.0",
-    "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.2"
+    "eslint-plugin-vue": "^4.7.1"
   },
   "repository": {
     "type": "git",

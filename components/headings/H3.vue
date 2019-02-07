@@ -1,5 +1,5 @@
-<template lang="pug">
-h3(v-html="content")
+<template>
+  <h3 v-html="content" />
 </template>
 
 <script>
@@ -13,9 +13,10 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
-h3
-  font-size rem(18px)
-  line-height 1.3125
-  font-weight 700
+<style lang="postcss" scoped>
+h3 {
+  font-size: 18px;
+  line-height: 1.3125;
+  font-weight: 700;
+}
 </style>

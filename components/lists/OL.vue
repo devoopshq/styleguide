@@ -1,6 +1,9 @@
-<template lang="pug">
-ol
-  li(v-for="list, index in lists" :key="index") {{list}}
+<template>
+  <ol>
+    <li v-for="(list, index) in lists" :key="index">
+      {{ list }}
+    </li>
+  </ol>
 </template>
 
 <script>
@@ -16,12 +19,14 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
-ol
-  margin-left 1rem
-  padding 0
-li
-  font-size rem(14px)
-  line-height 1.714
-  margin-bottom 1rem
+<style lang="postcss" scoped>
+ol {
+  margin-left: 1rem;
+  padding: 0;
+}
+li {
+  font-size: 14px;
+  line-height: 1.714;
+  margin-bottom: 1rem;
+}
 </style>

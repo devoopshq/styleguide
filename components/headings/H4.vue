@@ -1,5 +1,5 @@
-<template lang="pug">
-h4(v-html="content")
+<template>
+  <h4 v-html="content" />
 </template>
 
 <script>
@@ -13,8 +13,9 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
-h4
-  font-size rem(16px)
-  font-weight 700
+<style lang="postcss" scoped>
+h4 {
+  font-size: 16px;
+  font-weight: 700;
+}
 </style>

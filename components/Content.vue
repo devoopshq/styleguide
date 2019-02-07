@@ -1,5 +1,5 @@
-<template lang="pug">
-div(v-interpolation v-html="content")
+<template>
+  <div v-interpolation v-html="content" />
 </template>
 
 <script>
@@ -13,26 +13,32 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
->>> p
-  font-size rem(14px)
-  line-height 1.714
-  font-weight 400
->>> code
-  color $magenta
-  font-family $monospace
-  font-size rem(13px)
-  white-space pre-wrap
-  &::before
-    content '`'
-  &::after
-    content '`'
->>> a
-  color $blue
-  text-decoration none
->>> .external
-  margin-left 4px
-  fill $blue
-  vertical-align middle
-  transform translateY(-1px)
+<style lang="postcss" scoped>
+>>> p {
+  font-size: 14px;
+  line-height: 1.714;
+  font-weight: 400;
+}
+>>> code {
+  color: var(--magenta);
+  font-family: var(--monospace);
+  font-size: 13px;
+  white-space: pre-wrap;
+}
+>>> code::before {
+  content: '`';
+}
+>>> code::after {
+  content: '`';
+}
+>>> a {
+  color: var(--blue);
+  text-decoration: none;
+}
+>>> .external {
+  margin-left: 4px;
+  fill: var(--blue);
+  vertical-align: middle;
+  transform: translateY(-1px);
+}
 </style>

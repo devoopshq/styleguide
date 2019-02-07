@@ -1,58 +1,94 @@
 <template lang="pug">
 div
-  //- TheNav
+  TheNav
   nuxt
 </template>
 
 <script>
-// import TheNav from '@/components/TheNav'
+
+import TheNav from '@/components/TheNav'
+
+async function loadFont () {
+  const font = new FontFace('Inter', 'url(./fonts/Inter.var.ttf)')
+  await font.load()
+  document.fonts.add(font)
+  document.getElementById('__nuxt').classList.add('fontLoaded')
+}
 
 export default {
-  // components: { TheNav }
+  components: { TheNav },
+  beforeMount () { loadFont() }
 }
 </script>
 
-<style lang="stylus">
-*
-*::before
-*::after
-  box-sizing inherit
+<style lang="postcss">
+:root {
+  --sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  --monospace: Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
 
-html
-  font-family sans-serif
-  font-size 16px
-  line-height 1.15
-  box-sizing border-box
-  -ms-overflow-style scrollbar
-  -ms-text-size-adjust 100%
-  -webkit-text-size-adjust 100%
-  -webkit-tap-highlight-color transparent
-  height 100%
+  /* Primary */
+  --black: #000;
+  --white: #fff;
 
-@-ms-viewport
-  width device-width
+  /* Secondary */
+  --blue: #0076ff;
+  --magenta: #D400FF;
+  --orange: #f5a623;
+  --yellow: #f8e71c;
+  --green: #50e3c2;
 
-body
-  font-family $sansSerif
-  font-size rem(14px)
-  font-weight normal
-  text-rendering optimizeLegibility
-  -webkit-font-smoothing antialiased
-  line-height 1.7
-  color #000
-  background-color #fff
-  margin 0 0 25vh 0
-  min-height 100%
 
-// Suppress the focus outline on elements that cannot be accessed via keyboard.
-// This prevents an unwanted focus outline from appearing around elements that
-// might still respond to pointer events.
-//
-// Credit: https://github.com/suitcss/base
-[tabindex="-1"]:focus
-  outline none !important
+  /* Accents */
+  --gray: #fafafa;
+  --gray1: #eaeaea;
+  --gray2: #999999;
+  --gray3: #666666;
+  --gray4: #333333;
+}
 
-::selection
-  background-color $yellow
-  color $black
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+html {
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.15;
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  height: 100%;
+}
+@-ms-viewport {
+  width: device-width;
+}
+body {
+  color: var(--black);
+  background-color: var(--white);
+  margin: 0 0 25vh 0;
+  min-height: 100%;
+}
+
+#__nuxt {
+  font-family: var(--sans-serif);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1rem;
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height);
+}
+#__nuxt.fontLoaded {
+  font-family: Inter;
+  font-variation-settings: 'wght' var(--weight), 'slnt' var(--slant);
+}
+[tabindex="-1"]:focus {
+  outline: none !important;
+}
+::selection {
+  background-color: var(--yellow);
+  color: var(--black);
+}
 </style>
