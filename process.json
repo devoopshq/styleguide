@@ -1,7 +1,7 @@
 {
   "apps" : [
     {
-      "name": "devoops-styleguide",
+      "name": "styleguide",
       "script": "npm",
       "args" : "start",
       "error_file": "./err.log",

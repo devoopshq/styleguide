@@ -19,7 +19,7 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="postcss" scoped>
 ul {
   list-style-type: none;
   margin-left: 1rem;

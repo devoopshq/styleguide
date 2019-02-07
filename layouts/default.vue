@@ -1,23 +1,29 @@
-<template lang="pug">
-div
-  TheNav
-  nuxt
+<template>
+  <div>
+    <TheNav />
+    <Nuxt />
+  </div>
 </template>
 
 <script>
 
 import TheNav from '@/components/TheNav'
 
-async function loadFont () {
-  const font = new FontFace('Inter', 'url(./fonts/Inter.var.ttf)')
-  await font.load()
-  document.fonts.add(font)
-  document.getElementById('__nuxt').classList.add('fontLoaded')
-}
+
 
 export default {
   components: { TheNav },
-  beforeMount () { loadFont() }
+
+  beforeMount () { this.loadFont() },
+
+  methods: {
+    async loadFont () {
+      const font = new FontFace('Inter', 'url(./fonts/Inter.var.ttf)')
+      await font.load()
+      document.fonts.add(font)
+      document.getElementById('__nuxt').classList.add('fontLoaded')
+    }
+  }
 }
 </script>
 

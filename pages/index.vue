@@ -1,4 +1,4 @@
-<template lang="pug">
+<template>
 <div class="container">
   <small>32px — H1 Heading</small>
   <H1 content="Lorem <strong>Ipsum</strong> Dolore" />
