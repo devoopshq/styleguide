@@ -15,7 +15,7 @@ export default {
 
 <style lang="postcss" scoped>
 div {
-  color: var(--magenta);
+  color: var(--magenta-aa);
   font-family: var(--monospace);
   font-size: 13px;
   line-height: 20px;

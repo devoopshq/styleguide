@@ -1,5 +1,5 @@
 <template>
-  <button class="button">
+  <button :aria-label="action">
     {{ action }}
   </button>
 </template>
@@ -16,11 +16,11 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.button {
+button {
   min-width: 64px;
   height: 32px;
   -webkit-appearance: none;
-  color: var(--gray2);
+  color: var(--gray3);
   font-size: 12px;
   text-transform: uppercase;
   user-select: none;
@@ -35,7 +35,7 @@ export default {
   border-radius: 2px;
   font-weight: 700;
 }
-.button:hover {
+button:hover {
   color: var(--black);
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <button :class="{ warning }" class="button">
+  <button :class="{ warning }" aria-label="Loading">
     <Spinner />
   </button>
 </template>
@@ -18,7 +18,7 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.button {
+button {
   min-width: 64px;
   height: 32px;
   -webkit-appearance: none;
@@ -36,7 +36,7 @@ export default {
   border-radius: 2px;
   font-weight: 700;
 }
-.button:hover {
+button:hover {
   color: var(--black);
 }
 </style>

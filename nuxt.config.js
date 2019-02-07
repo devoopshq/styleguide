@@ -1,10 +1,12 @@
 module.exports = {
   modern: true,
   head: {
+    htmlAttrs: { lang: 'en-US' },
     title: 'DevOops Style Guide',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: '###' },
       /*
         Open Graph
         http://ogp.me/
@@ -29,6 +31,7 @@ module.exports = {
       // { rel: 'manifest', href: 'https://devoops.app/icons/manifest.json' },
       // { rel: 'mask-icon', href: 'https://devoops.app/icons/safari-pinned-tab.svg', color: '#000000' },
       // { rel: 'shortcut icon', href: 'https://devoops.app/icons/favicon.ico' }
+      { rel: 'preload', href: 'fonts/Inter.var.ttf', as: 'font' }
     ]
   },
 

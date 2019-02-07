@@ -1,7 +1,9 @@
 <template>
   <div>
     <TheNav />
-    <Nuxt />
+    <main role="main">
+      <Nuxt />
+    </main>
   </div>
 </template>
 
@@ -38,7 +40,11 @@ export default {
 
   /* Secondary */
   --blue: #0076ff;
-  --magenta: #D400FF;
+  --blue-aa: #0070f3;
+  --blue-aaa: #0055b7;
+  --magenta: #d400ff;
+  --magenta-aa: #c504ec;
+  --red-aa: #ec0000;
   --orange: #f5a623;
   --yellow: #f8e71c;
   --green: #50e3c2;

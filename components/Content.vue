@@ -20,7 +20,7 @@ export default {
   font-weight: 400;
 }
 >>> code {
-  color: var(--magenta);
+  color: var(--magenta-aa);
   font-family: var(--monospace);
   font-size: 13px;
   white-space: pre-wrap;
@@ -32,12 +32,12 @@ export default {
   content: '`';
 }
 >>> a {
-  color: var(--blue);
+  color: var(--blue-aa);
   text-decoration: none;
 }
 >>> .external {
   margin-left: 4px;
-  fill: var(--blue);
+  fill: var(--blue-aa);
   vertical-align: middle;
   transform: translateY(-1px);
 }

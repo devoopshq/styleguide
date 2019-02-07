@@ -1,24 +1,25 @@
 <template>
   <div :style="cssVariables" class="container">
+    <H1 content="<strong>The Inter</strong> Font Family" />
     <div class="fieldset">
-      <label>Weight {{ cssVariables["--weight"] }} (in the range of 100 to 900)</label>
-      <input v-model="weight" type="range" min="100" max="900">
+      <label for="weight">Weight {{ cssVariables["--weight"] }} (in the range of 100 to 900)</label>
+      <input id="weight" v-model="weight" type="range" min="100" max="900">
     </div>
     <div class="fieldset">
-      <label>Slant {{ cssVariables["--slant"] }}° (angle in the range of 0° to 10°)</label>
-      <input v-model="slant" type="range" min="0" max="10">
+      <label for="slant">Slant {{ cssVariables["--slant"] }}° (angle in the range of 0° to 10°)</label>
+      <input id="slant" v-model="slant" type="range" min="0" max="10">
     </div>
     <div class="fieldset">
-      <label>Size {{ cssVariables["--size"] }}</label>
-      <input v-model="size" type="range" min="11" max="112">
+      <label for="size">Size {{ cssVariables["--size"] }}</label>
+      <input id="size" v-model="size" type="range" min="11" max="112">
     </div>
     <div class="fieldset">
-      <label>Tracking {{ cssVariables["--letter-spacing"] }} (space between letters)</label>
-      <input v-model="letterSpacing" type="range" min="-0.1" max="0.1" step="0.001">
+      <label for="tracking">Tracking {{ cssVariables["--letter-spacing"] }} (space between letters)</label>
+      <input id="tracking" v-model="letterSpacing" type="range" min="-0.1" max="0.1" step="0.001">
     </div>
     <div class="fieldset">
-      <label>Line Height {{ cssVariables["--line-height"] }}</label>
-      <input v-model="lineHeight" type="range" min="0.7" max="2" step="0.01">
+      <label for="lineHeight">Line Height {{ cssVariables["--line-height"] }}</label>
+      <input id="lineHeight" v-model="lineHeight" type="range" min="0.7" max="2" step="0.01">
     </div>
     <p class="var">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 ?!()[]{}&*^%$#@~</p>
     <div class="resources">
@@ -52,6 +53,9 @@
 
 <script>
   export default {
+    components: {
+      H1: () => import('@/components/headings/H1')
+    },
     data () {
       return {
         size: 32,
@@ -76,6 +80,7 @@
 </script>
 
 <style lang="postcss" scoped>
+>>> h1 { margin-bottom: 48px; }
 .fieldset {
   display: flex;
   flex-direction: column;
@@ -89,11 +94,12 @@ label {
   color: var(--gray3);
 }
 .resources a {
-  color: var(--blue);
+  color: var(--blue-aa);
 }
 .container {
-  max-width: 512px;
-  margin: 56px auto 0;
+  max-width: 544px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 @supports (font-variation-settings: 'wdth' 200) {
   .var {

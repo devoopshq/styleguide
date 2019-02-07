@@ -1,5 +1,5 @@
 <template>
-  <button :class="{ warning }" class="button">
+  <button :class="{ warning }" :aria-label="action">
     {{ action }}
   </button>
 </template>
@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.button {
+button{
   min-width: 64px;
   height: 32px;
   -webkit-appearance: none;
@@ -39,12 +39,12 @@ export default {
   border-radius: 2px;
   font-weight: 700;
 }
-.button:disabled {
+button:disabled {
   background-color: var(--gray1);
   border-color: var(--gray1);
 }
 .warning {
-  background-color: #f00;
-  border-color: #f00;
+  background-color: var(--red-aa);
+  border-color: var(--red-aa);
 }
 </style>

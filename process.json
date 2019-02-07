@@ -4,8 +4,9 @@
       "name": "styleguide",
       "script": "npm",
       "args" : "start",
-      "error_file": "./err.log",
-      "out_file": "./out.log",
+      "watch": true,
+      "error_file": "/usr/share/nginx/logs/err-styleguide.log",
+      "out_file": "/usr/share/nginx/logs/out-styleguide.log",
       "merge_logs": true,
       "log_date_format": "DD/MM/YYYY HH:mm:ss"
     }

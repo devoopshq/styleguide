@@ -19,7 +19,7 @@ div {
   font-family: var(--monospace);
   font-size: 13px;
   line-height: 1.538;
-  background: #000;
+  background: var(--black);
   margin: 2rem 0;
   padding: 1rem;
   white-space: pre;
