@@ -3,9 +3,6 @@
     <NuxtLink to="/">
       DevOops <small>v0.1.0</small>
     </NuxtLink>
-    <NuxtLink to="/font">
-      Variable Font
-    </NuxtLink>
   </nav>
 </template>
 
@@ -14,7 +11,7 @@ nav {
   height: 64px;
   display: flex;
   align-items: center;
-  max-width: 544px;
+  max-width: 768px;
   margin: 0 auto;
   padding: 0 16px;
 }

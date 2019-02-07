@@ -1,5 +1,5 @@
 <template>
-  <div :style="cssVariables" class="container">
+  <div>
     <H1 content="<strong>The Inter</strong> Font Family" />
     <div class="fieldset">
       <label for="weight">Weight {{ cssVariables["--weight"] }} (in the range of 100 to 900)</label>
@@ -21,7 +21,9 @@
       <label for="lineHeight">Line Height {{ cssVariables["--line-height"] }}</label>
       <input id="lineHeight" v-model="lineHeight" type="range" min="0.7" max="2" step="0.01">
     </div>
-    <p class="var">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 ?!()[]{}&*^%$#@~</p>
+    <div :style="cssVariables" class="card">
+      <p class="var">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 ?!()[]{}&*^%$#@~</p>
+    </div>
     <div class="resources">
       <p>
         The Inter Font family
@@ -58,7 +60,7 @@
     },
     data () {
       return {
-        size: 32,
+        size: 48,
         letterSpacing: -0.03,
         lineHeight: 1.1,
         weight: 600,
@@ -96,11 +98,6 @@ label {
 .resources a {
   color: var(--blue-aa);
 }
-.container {
-  max-width: 544px;
-  margin: 0 auto;
-  padding: 0 16px;
-}
 @supports (font-variation-settings: 'wdth' 200) {
   .var {
     font-size: var(--size);
@@ -111,4 +108,16 @@ label {
   }
 }
 @supports not (font-variation-settings: 'wdth' 200) {}
+
+.card {
+  /* outline: 1px dashed; */
+  padding: 16px 32px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.12);
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+.card:hover {
+  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.12);
+}
 </style>

@@ -20,4 +20,4 @@ test('Route / exits and render HTML', async t => {
   t.true(html.includes('</body>'))
 })
 
-test.after('Closing server and nuxt.js', t => nuxt.close())
+test.after('Closing server and nuxt.js', () => nuxt.close())
