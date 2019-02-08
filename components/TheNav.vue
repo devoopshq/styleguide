@@ -1,34 +1,58 @@
 <template>
   <nav>
-    <NuxtLink to="/">
-      DevOops <small>v0.1.0</small>
-    </NuxtLink>
+    <div class="links">
+      <NuxtLink to="/">
+        DevOops <span> v0.1.0</span>
+      </NuxtLink>
+      <NuxtLink v-for="(link, index) in links" :key="index" :to="'/' + link.toLowerCase()">
+        {{ link }}
+      </NuxtLink>
+    </div>
   </nav>
 </template>
 
+<script>
+export default {
+  props: {
+    links: {
+      type: Array,
+      default: () => []
+    }
+  }
+}
+</script>
+
 <style lang="postcss" scoped>
 nav {
-  height: 64px;
-  display: flex;
-  align-items: center;
-  max-width: 768px;
-  margin: 0 auto;
+  width: 200px;
   padding: 0 16px;
 }
 a {
+  display: flex;
   font-weight: 400;
   color: #757575;
   font-size: 14px;
   text-decoration: none;
-  margin-right: 16px;
+  margin-bottom: 16px;
+  align-items: baseline;
 }
 .nuxt-link-exact-active {
   color: var(--black);
 }
 a:first-child {
-  font-weight: 700;
+  color: var(--black);
+  font-size: 18px;
+  font-variation-settings: 'wght' 700;
+  margin-bottom: 32px;
 }
-small {
+span {
+  font-variation-settings: 'wght' 400;
   color: #757575;
+  font-size: 13px;
+  padding-left: 0.5em;
+}
+.links {
+  position: sticky;
+  top: 25px;
 }
 </style>
