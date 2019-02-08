@@ -1,21 +1,89 @@
 <template>
   <div>
     <H1 content="Headings" />
-    <small>32px — H1 Heading</small>
     <div class="card">
+      <small>32px — H1 Heading</small>
       <H1 content="Lorem <strong>Ipsum</strong> Dolore" />
     </div>
-    <small>24px — H2 Heading</small>
-    <div class="card">
-      <H2 content="Lorem ipsum dolore" />
+    <div class="doc">
+      <table>
+        <tbody>
+          <tr>
+            <th>Props</th>
+            <th>Type</th>
+            <th>Default</th>
+          </tr>
+          <tr>
+            <td><code>content</code></td>
+            <td><code>String</code></td>
+            <td><code>null</code></td>
+          </tr>
+        </tbody>
+      </table>
+      <small>Path</small>
+      <TerminalInput content="@/components/headings/H1" />
+      <small>Usage</small>
+      <!-- eslint-disable-next-line -->
+      <TerminalInput content='<H1 content="Lorem <strong>Ipsum</strong> Dolore" />' />
     </div>
-    <small>18px — H3 Heading</small>
+
+
     <div class="card">
-      <H3 content="Lorem ipsum dolore" />
+      <small>24px — H2 Heading</small>
+      <H2>Lorem ipsum dolore</H2>
     </div>
-    <small>16px — H4 Heading</small>
+
+    <div class="doc">
+      <table>
+        <tbody>
+          <tr>
+            <th>Slot</th>
+          </tr>
+        </tbody>
+      </table>
+      <small>Path</small>
+      <TerminalInput content="@/components/headings/H2" />
+      <small>Example</small>
+      <TerminalInput content="<H2>Lorem ipsum dolore</H2>" />
+    </div>
+
+
     <div class="card">
-      <H4 content="Lorem ipsum dolore" />
+      <small>18px — H3 Heading</small>
+      <H3>Lorem ipsum dolore</H3>
+    </div>
+
+    <div class="doc">
+      <table>
+        <tbody>
+          <tr>
+            <th>Slot</th>
+          </tr>
+        </tbody>
+      </table>
+      <small>Path</small>
+      <TerminalInput content="@/components/headings/H3" />
+      <small>Example</small>
+      <TerminalInput content="<H3>Lorem ipsum dolore</H3>" />
+    </div>
+
+    <div class="card">
+      <small>16px — H4 Heading</small>
+      <H4>Lorem ipsum dolore</H4>
+    </div>
+
+    <div class="doc">
+      <table>
+        <tbody>
+          <tr>
+            <th>Slot</th>
+          </tr>
+        </tbody>
+      </table>
+      <small>Path</small>
+      <TerminalInput content="@/components/headings/H4" />
+      <small>Example</small>
+      <TerminalInput content="<H4>Lorem ipsum dolore</H4>" />
     </div>
   </div>
 </template>
@@ -26,7 +94,8 @@ export default {
     H1: () => import('@/components/headings/H1'),
     H2: () => import('@/components/headings/H2'),
     H3: () => import('@/components/headings/H3'),
-    H4: () => import('@/components/headings/H4')
+    H4: () => import('@/components/headings/H4'),
+    TerminalInput: () => import('@/components/code/TerminalInput')
   },
 
   head () {
@@ -38,6 +107,18 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
+.doc {
+  margin-bottom: 32px;
+}
+table { margin-bottom: 16px; }
+th {
+  text-align: left;
+}
+th,
+td {
+  padding-right: 16px;
+  padding-bottom: 8px;
+}
 small {
   display: block;
   margin-bottom: 0.25rem;

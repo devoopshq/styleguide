@@ -1,17 +1,8 @@
 <template>
-  <h4 v-html="content" />
+  <h4>
+    <slot>H4</slot>
+  </h4>
 </template>
-
-<script>
-export default {
-  props: {
-    content: {
-      type: String,
-      default: ''
-    }
-  }
-}
-</script>
 
 <style lang="postcss" scoped>
 h4 {

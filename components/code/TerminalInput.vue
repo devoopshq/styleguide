@@ -1,5 +1,5 @@
 <template>
-  <div>{{ content }}</div>
+  <div v-text="content" />
 </template>
 
 <script>
@@ -20,15 +20,15 @@ div {
   font-size: 13px;
   line-height: 20px;
   white-space: pre;
-  border-width: 1px;
-  border-style: solid;
-  border-color: var(--gray1);
-  border-image: initial;
-  margin: 2rem 0;
+  /* border-width: 1px; */
+  /* border-style: solid; */
+  /* border-color: var(--gray1); */
+  /* border-image: initial; */
+  margin: 8px 0;
   overflow: auto;
-  padding: 1rem;
+  padding: 1rem 0;
 }
-div::before {
+/* div::before {
   content: "$ ";
-}
+} */
 </style>
