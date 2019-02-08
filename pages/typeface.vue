@@ -1,6 +1,6 @@
 <template>
   <div>
-    <H1 content="Typeface" />
+    <Heading1>Typeface</Heading1>
     <small>Sans</small>
     <div class="card">
       <p class="w100">Thin - 100</p>
@@ -25,7 +25,7 @@
 <script>
 export default {
   components: {
-    H1: () => import('@/components/headings/H1')
+    Heading1: () => import('@/components/headings/Heading1')
   },
 
   head () {

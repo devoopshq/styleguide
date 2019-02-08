@@ -1,6 +1,6 @@
 <template>
   <div>
-    <H1 content="Paragraphs" />
+    <Heading1>Paragraphs</Heading1>
     <small>14px — Regular</small>
     <div class="card">
       <Content v-interpolation :content="content" />
@@ -26,7 +26,7 @@
 <script>
 export default {
   components: {
-    H1: () => import('@/components/headings/H1'),
+    Heading1: () => import('@/components/headings/Heading1'),
     Content: () => import('@/components/Content')
   },
 

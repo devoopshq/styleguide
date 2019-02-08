@@ -1,5 +1,5 @@
 <template>
-  <div v-text="content" />
+  <pre v-html="content" />
 </template>
 
 <script>
@@ -14,7 +14,7 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-div {
+pre {
   color: var(--magenta-aa);
   font-family: var(--monospace);
   font-size: 13px;

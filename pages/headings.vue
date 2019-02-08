@@ -1,36 +1,29 @@
 <template>
   <div>
-    <H1 content="Headings" />
+    <Heading1>Headings</Heading1>
     <div class="card">
       <small>32px — H1 Heading</small>
-      <H1 content="Lorem <strong>Ipsum</strong> Dolore" />
+      <Heading1>Lorem <strong>Ipsum</strong> Dolore</Heading1>
     </div>
     <div class="doc">
       <table>
         <tbody>
           <tr>
-            <th>Props</th>
-            <th>Type</th>
-            <th>Default</th>
-          </tr>
-          <tr>
-            <td><code>content</code></td>
-            <td><code>String</code></td>
-            <td><code>null</code></td>
+            <th>Slot</th>
           </tr>
         </tbody>
       </table>
       <small>Path</small>
-      <TerminalInput content="@/components/headings/H1" />
+      <TerminalInput content="@/components/headings/Heading1" />
       <small>Usage</small>
       <!-- eslint-disable-next-line -->
-      <TerminalInput content='<H1 content="Lorem <strong>Ipsum</strong> Dolore" />' />
+      <TerminalInput :content="escapeHtml('<Heading1>\n  Lorem <strong>Ipsum</strong> Dolore\n</Heading1>')" />
     </div>
 
 
     <div class="card">
       <small>24px — H2 Heading</small>
-      <H2>Lorem ipsum dolore</H2>
+      <Heading2>Lorem ipsum dolore</Heading2>
     </div>
 
     <div class="doc">
@@ -42,15 +35,15 @@
         </tbody>
       </table>
       <small>Path</small>
-      <TerminalInput content="@/components/headings/H2" />
+      <TerminalInput content="@/components/headings/Heading2" />
       <small>Example</small>
-      <TerminalInput content="<H2>Lorem ipsum dolore</H2>" />
+      <TerminalInput :content="escapeHtml('<Heading2>\n  Lorem ipsum dolore\n</Heading2>')" />
     </div>
 
 
     <div class="card">
       <small>18px — H3 Heading</small>
-      <H3>Lorem ipsum dolore</H3>
+      <Heading3>Lorem ipsum dolore</Heading3>
     </div>
 
     <div class="doc">
@@ -62,14 +55,14 @@
         </tbody>
       </table>
       <small>Path</small>
-      <TerminalInput content="@/components/headings/H3" />
+      <TerminalInput content="@/components/headings/Heading3" />
       <small>Example</small>
-      <TerminalInput content="<H3>Lorem ipsum dolore</H3>" />
+      <TerminalInput :content="escapeHtml('<Heading3>\n  Lorem ipsum dolore\n</Heading3>')" />
     </div>
 
     <div class="card">
       <small>16px — H4 Heading</small>
-      <H4>Lorem ipsum dolore</H4>
+      <Heading4>Lorem ipsum dolore</Heading4>
     </div>
 
     <div class="doc">
@@ -81,9 +74,9 @@
         </tbody>
       </table>
       <small>Path</small>
-      <TerminalInput content="@/components/headings/H4" />
+      <TerminalInput content="@/components/headings/Heading4" />
       <small>Example</small>
-      <TerminalInput content="<H4>Lorem ipsum dolore</H4>" />
+      <TerminalInput :content="escapeHtml('<Heading4>\n  Lorem ipsum dolore\n</Heading4>')" />
     </div>
   </div>
 </template>
@@ -91,10 +84,10 @@
 <script>
 export default {
   components: {
-    H1: () => import('@/components/headings/H1'),
-    H2: () => import('@/components/headings/H2'),
-    H3: () => import('@/components/headings/H3'),
-    H4: () => import('@/components/headings/H4'),
+    Heading1: () => import('@/components/headings/Heading1'),
+    Heading2: () => import('@/components/headings/Heading2'),
+    Heading3: () => import('@/components/headings/Heading3'),
+    Heading4: () => import('@/components/headings/Heading4'),
     TerminalInput: () => import('@/components/code/TerminalInput')
   },
 
@@ -102,6 +95,17 @@ export default {
     return {
       title: 'Headings'
     }
+  },
+
+  methods: {
+    escapeHtml(unsafe) {
+      return unsafe
+           .replace(/&/g, "&amp;")
+           .replace(/</g, "&lt;")
+           .replace(/>/g, "&gt;")
+           .replace(/"/g, "&quot;")
+           .replace(/'/g, "&#039;")
+   }
   }
 }
 </script>

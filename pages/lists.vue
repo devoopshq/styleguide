@@ -1,6 +1,6 @@
 <template>
   <div>
-    <H1 content="Lists" />
+    <Heading1>Lists</Heading1>
     <small>Unordered List</small>
     <div class="card">
       <UL :lists="lists" />
@@ -15,7 +15,7 @@
 <script>
 export default {
   components: {
-    H1: () => import('@/components/headings/H1'),
+    Heading1: () => import('@/components/headings/Heading1'),
     UL: () => import('@/components/lists/UL'),
     OL: () => import('@/components/lists/OL')
   },

@@ -102,7 +102,7 @@ body {
 main {
   flex: 1;
   max-width: 512px;
-  margin: 0px 0 0 48px;
+  margin: 75px 0 0 100px;
 }
 [tabindex="-1"]:focus {
   outline: none !important;

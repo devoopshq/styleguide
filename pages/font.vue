@@ -1,6 +1,8 @@
 <template>
   <div>
-    <H1 content="<strong>The Inter</strong> Font Family" />
+    <Heading1>
+      <strong>The Inter</strong> Font Family
+    </Heading1>
     <div class="fieldset">
       <InputTypeRange
         id="fontWeight"
@@ -91,7 +93,7 @@
 <script>
   export default {
     components: {
-      H1: () => import('@/components/headings/H1'),
+      Heading1: () => import('@/components/headings/Heading1'),
       InputTypeRange: () => import('@/components/forms/InputTypeRange')
     },
     data () {

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <H1 content="Buttons" />
+    <Heading1>Buttons</Heading1>
     <small>Button — Primary</small>
     <AppCard>
       <ButtonPrimary />
@@ -39,7 +39,7 @@
 <script>
 export default {
   components: {
-    H1: () => import('@/components/headings/H1'),
+    Heading1: () => import('@/components/headings/Heading1'),
     AppCard: () => import('@/components/AppCard'),
     ButtonPrimary: () => import('@/components/buttons/ButtonPrimary'),
     ButtonSecondary: () => import('@/components/buttons/ButtonSecondary'),

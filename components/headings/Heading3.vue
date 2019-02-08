@@ -1,6 +1,6 @@
 <template>
   <h3>
-    <slot>H3</slot>
+    <slot />
   </h3>
 </template>
 
