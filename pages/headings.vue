@@ -8,13 +8,7 @@
     </AppCard>
 
     <div class="doc">
-      <table>
-        <tbody>
-          <tr>
-            <th>Slot</th>
-          </tr>
-        </tbody>
-      </table>
+      <small>Slot</small>
       <small>Path</small>
       <TerminalInput content="@/components/headings/Heading1" />
       <small>Usage</small>
@@ -29,13 +23,7 @@
     </AppCard>
 
     <div class="doc">
-      <table>
-        <tbody>
-          <tr>
-            <th>Slot</th>
-          </tr>
-        </tbody>
-      </table>
+      <small>Slot</small>
       <small>Path</small>
       <TerminalInput content="@/components/headings/Heading2" />
       <small>Example</small>
@@ -48,13 +36,7 @@
     </AppCard>
 
     <div class="doc">
-      <table>
-        <tbody>
-          <tr>
-            <th>Slot</th>
-          </tr>
-        </tbody>
-      </table>
+      <small>Slot</small>
       <small>Path</small>
       <TerminalInput content="@/components/headings/Heading3" />
       <small>Example</small>
@@ -67,18 +49,14 @@
     </AppCard>
 
     <div class="doc">
-      <table>
-        <tbody>
-          <tr>
-            <th>Slot</th>
-          </tr>
-        </tbody>
-      </table>
+      <small>Slot</small>
       <small>Path</small>
       <TerminalInput content="@/components/headings/Heading4" />
       <small>Example</small>
       <TerminalInput :content="escapeHtml('<Heading4>\n  Lorem ipsum dolore\n</Heading4>')" />
     </div>
+
+    <AppEdit :href="'/devoopshq/styleguide/blob/master/pages/' + this.$route.name + '.vue'" />
   </div>
 </template>
 
@@ -89,6 +67,7 @@ import Heading3 from '@/components/headings/Heading3'
 import Heading4 from '@/components/headings/Heading4'
 import TerminalInput from '@/components/code/TerminalInput'
 import AppCard from '@/components/AppCard'
+import AppEdit from '@/components/AppEdit'
 
 export default {
   components: {
@@ -97,7 +76,8 @@ export default {
     Heading3,
     Heading4,
     TerminalInput,
-    AppCard
+    AppCard,
+    AppEdit
   },
 
   head () {
@@ -109,12 +89,12 @@ export default {
   methods: {
     escapeHtml(unsafe) {
       return unsafe
-           .replace(/&/g, "&amp;")
-           .replace(/</g, "&lt;")
-           .replace(/>/g, "&gt;")
-           .replace(/"/g, "&quot;")
-           .replace(/'/g, "&#039;")
-   }
+       .replace(/&/g, '&amp;')
+       .replace(/</g, '&lt;')
+       .replace(/>/g, '&gt;')
+       .replace(/"/g, '&quot;')
+       .replace(/'/g, '&#039;')
+    }
   }
 }
 </script>

@@ -32,6 +32,8 @@
     <AppCard>
       <ButtonPrimary :warning="true" />
     </AppCard>
+
+    <AppEdit :href="'/devoopshq/styleguide/blob/master/pages/' + this.$route.name + '.vue'" />
   </div>
 </template>
 
@@ -43,6 +45,7 @@ import ButtonPrimary from '@/components/buttons/ButtonPrimary'
 import ButtonSecondary from '@/components/buttons/ButtonSecondary'
 import ButtonAbort from '@/components/buttons/ButtonAbort'
 import Spinner from '@/components/Spinner'
+import AppEdit from '@/components/AppEdit'
 
 export default {
   components: {
@@ -51,7 +54,8 @@ export default {
     ButtonPrimary,
     ButtonSecondary,
     ButtonAbort,
-    Spinner
+    Spinner,
+    AppEdit
   },
 
   head () {

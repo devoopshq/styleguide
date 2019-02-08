@@ -26,7 +26,7 @@ pre {
   /* border-image: initial; */
   margin: 8px 0;
   overflow: auto;
-  padding: 1rem 0;
+  padding: 8px 0;
 }
 /* div::before {
   content: "$ ";

@@ -91,6 +91,8 @@
         </a>
       </p>
     </div>
+
+    <AppEdit :href="'/devoopshq/styleguide/blob/master/pages/' + this.$route.name + '.vue'" />
   </div>
 </template>
 
@@ -98,12 +100,14 @@
 import Heading1 from '@/components/headings/Heading1'
 import InputTypeRange from '@/components/forms/InputTypeRange'
 import AppCard from '@/components/AppCard'
+import AppEdit from '@/components/AppEdit'
 
 export default {
   components: {
     Heading1,
     InputTypeRange,
-    AppCard
+    AppCard,
+    AppEdit
   },
   data () {
     return {

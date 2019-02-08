@@ -1,5 +1,5 @@
 <template>
-  <div v-interpolation v-html="content" />
+  <div v-html="content" />
 </template>
 
 <script>

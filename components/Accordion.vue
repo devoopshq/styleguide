@@ -5,7 +5,6 @@
       :id="id"
       :index="index"
       :key="index"
-      :multiple="multiple"
       :item="item"
       :group="index"
     />
@@ -21,15 +20,11 @@ export default {
   props: {
     id: {
       type: String,
-      default: 'id'
+      required: true
     },
     content: {
       type: Array,
       required: true
-    },
-    multiple: {
-      type: Boolean,
-      default: false
     }
   }
 }
@@ -37,7 +32,9 @@ export default {
 
 <style lang="postcss" scoped>
 .accordion {
-  margin: 0;
+  border-top: 1px solid rgba(10, 10, 10, 0.1);
+  border-bottom: 1px solid rgba(10, 10, 10, 0.1);
+  margin: 16px 0;
   /* outline: 1px dashed #000; */
 }
 </style>

@@ -12,6 +12,8 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       </div>
     </AppCard>
+
+    <AppEdit :href="'/devoopshq/styleguide/blob/master/pages/' + this.$route.name + '.vue'" />
   </div>
 </template>
 
@@ -19,12 +21,14 @@
 import Heading1 from '@/components/headings/Heading1'
 import Content from '@/components/Content'
 import AppCard from '@/components/AppCard'
+import AppEdit from '@/components/AppEdit'
 
 export default {
   components: {
     Heading1,
     Content,
-    AppCard
+    AppCard,
+    AppEdit
   },
 
   data: () => ({

@@ -19,17 +19,21 @@
       <span class="mono">DevOops - 400</span><br>
       <span class="mono m700">DevOops - 700</span>
     </AppCard>
+
+    <AppEdit :href="'/devoopshq/styleguide/blob/master/pages/' + this.$route.name + '.vue'" />
   </div>
 </template>
 
 <script>
 import Heading1 from '@/components/headings/Heading1'
 import AppCard from '@/components/AppCard'
+import AppEdit from '@/components/AppEdit'
 
 export default {
   components: {
     Heading1,
-    AppCard
+    AppCard,
+    AppEdit
   },
 
   head () {

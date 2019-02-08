@@ -2,7 +2,7 @@
   <div :id="id + '-' + index" :class="{ 'is-active': item.active }" class="accordion-item">
     <dt class="accordion-item-title">
       <div class="accordion-item-trigger" @click="toggle">
-        <h4 class="accordion-item-title-text">{{ item.title }} {{ item.active }}</h4>
+        <span class="accordion-item-title-text">{{ item.title }}</span>
         <svg width="24" height="24" viewBox="0 0 24 24">
           <path v-if="item.active" d="M19 13H5v-2h14v2z"/>
           <path v-else d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
@@ -17,22 +17,20 @@
       @before-leave="startTransition"
       @after-leave="endTransition">
       <dd v-if="item.active" class="accordion-item-details">
-        <div class="accordion-item-details-inner" v-html="item.details" />
+        <Content v-interpolation :content="item.details" class="accordion-item-details-inner" />
       </dd>
     </transition>
   </div>
 </template>
 
 <script>
+import Content from '@/components/Content'
 export default {
+  components: { Content },
   props: {
     item: {
       type: Object,
       default: () => {}
-    },
-    multiple: {
-      type: Boolean,
-      default: false
     },
     id: {
       type: String,
@@ -46,19 +44,11 @@ export default {
 
   methods: {
     toggle(event) {
-      // if (this.multiple) {
-      //   if (this.item.active === true) {
-      //     this.item.active = false
-      //   } else {
-      //     this.item.active = true
-      //   }
-      // }
-      // else {
-        this.$parent.$children.forEach(item => {
-          if (item.$el.id === event.currentTarget.parentElement.parentElement.id) item.item.active = !item.item.active
-          else item.item.active = false
-        })
-      // }
+      this.$parent.$children.forEach(item => {
+        item.$el.id === event.currentTarget.parentElement.parentElement.id
+          ? item.item.active = !item.item.active
+          : item.item.active = false
+      })
     },
 
     startTransition(el) {
@@ -87,9 +77,10 @@ export default {
   justify-content: space-between;
 }
 
-.accordion-item-title h4 {
-  font-size: 1.25rem;
-  margin: 16px 0;
+.accordion-item-title span {
+  font-size: 18px;
+  font-variation-settings: 'wght' 700;
+  margin: 24px 0;
 }
 
 .accordion-item-trigger {
