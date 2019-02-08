@@ -1,6 +1,6 @@
 <template>
   <button :class="{ warning }" :aria-label="action">
-    {{ action }}
+    <slot>ABORT</slot>
   </button>
 </template>
 

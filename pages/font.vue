@@ -3,6 +3,7 @@
     <H1 content="<strong>The Inter</strong> Font Family" />
     <div class="fieldset">
       <InputTypeRange
+        id="fontWeight"
         :value.sync="weight"
         :min="100"
         :step="0"
@@ -13,6 +14,7 @@
     </div>
     <div class="fieldset">
       <InputTypeRange
+        id="fontSlant"
         :value.sync="slant"
         :min="0"
         :step="1"
@@ -23,6 +25,7 @@
     </div>
     <div class="fieldset">
       <InputTypeRange
+        id="fontSize"
         :value.sync="size"
         :min="11"
         :step="1"
@@ -32,10 +35,19 @@
       />
     </div>
     <div class="fieldset">
-      <InputTypeRange :value.sync="letterSpacing" :min="-0.1" :step="0.001" :max="0.1" :label="'Tracking (space between letters) ' + cssVariables['--letter-spacing']" :range="true" />
+      <InputTypeRange
+        id="fontSpacing"
+        :value.sync="letterSpacing"
+        :min="-0.1"
+        :step="0.001"
+        :max="0.1"
+        :label="'Tracking (space between letters) ' + cssVariables['--letter-spacing']"
+        :range="true"
+      />
     </div>
     <div class="fieldset">
       <InputTypeRange
+        id="fontLineHeight"
         :value.sync="lineHeight"
         :min="0.7"
         :step="0.01"

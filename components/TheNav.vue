@@ -4,8 +4,18 @@
       <NuxtLink to="/">
         DevOops <span class="version"> v0.1.0</span>
       </NuxtLink>
-      <span class="label">Typography</span>
-      <NuxtLink v-for="(link, index) in links" :key="index" :to="'/' + link.toLowerCase()">
+
+      <span class="label">
+        Typography
+      </span>
+      <NuxtLink v-for="(link, index) in links.typography" :key="index" :to="'/' + link.toLowerCase()">
+        {{ link }}
+      </NuxtLink>
+
+      <span class="label">
+        Components
+      </span>
+      <NuxtLink v-for="(link, index) in links.components" :key="index" :to="'/' + link.toLowerCase()">
         {{ link }}
       </NuxtLink>
     </div>
@@ -16,8 +26,8 @@
 export default {
   props: {
     links: {
-      type: Array,
-      default: () => []
+      type: Object,
+      default: () => {}
     }
   }
 }
@@ -64,7 +74,7 @@ a:first-child {
   display: block;
   color: var(--gray3);
   font-size: 13px;
-  padding:  0 8px 16px;
+  padding: 16px 8px;
 }
 .links {
   position: sticky;

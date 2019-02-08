@@ -1,6 +1,6 @@
 <template>
-  <button :class="{ warning }" :aria-label="action">
-    {{ action }}
+  <button :class="{ warning }" :aria-label="action" :disabled="disabled">
+    <slot>ACTION</slot>
   </button>
 </template>
 
@@ -12,6 +12,10 @@ export default {
       default: ''
     },
     warning: {
+      type: Boolean,
+      default: false
+    },
+    disabled: {
       type: Boolean,
       default: false
     }
@@ -36,8 +40,10 @@ button{
   border-style: solid;
   border-color: var(--black);
   border-image: initial;
-  border-radius: 2px;
-  font-weight: 700;
+  border-radius: 4px;
+  font-variation-settings: 'wght' 600;
+  display: flex;
+  align-items: center;
 }
 button:disabled {
   background-color: var(--gray1);

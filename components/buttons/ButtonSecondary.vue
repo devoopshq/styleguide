@@ -1,6 +1,6 @@
 <template>
   <button :aria-label="action">
-    {{ action }}
+    <slot>ACTION</slot>
   </button>
 </template>
 
@@ -32,8 +32,8 @@ button {
   border-style: solid;
   border-color: var(--gray1);
   border-image: initial;
-  border-radius: 2px;
-  font-weight: 700;
+  border-radius: 4px;
+  font-variation-settings: 'wght' 600;
 }
 button:hover {
   color: var(--black);

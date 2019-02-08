@@ -16,6 +16,7 @@
 import TheNav from '@/components/TheNav'
 
 export default {
+  name: 'Default',
   components: { TheNav },
 
   beforeMount () { this.loadFont() },
@@ -86,6 +87,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   font-size: 1rem;
+  font-display: 'swap';
   letter-spacing: var(--letter-spacing);
   line-height: var(--line-height);
 }

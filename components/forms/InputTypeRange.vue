@@ -73,12 +73,19 @@ export default {
 
 [type="range"]::-webkit-slider-thumb {
   border: 0;
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   background: #000;
   cursor: pointer;
   -webkit-appearance: none;
+  margin-top: -8px;
+  transition: all 200ms;
+}
+[type="range"]:active::-webkit-slider-thumb,
+[type="range"]:hover::-webkit-slider-thumb {
+  width: 24px;
+  height: 24px;
   margin-top: -12px;
 }
 

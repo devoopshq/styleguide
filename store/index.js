@@ -1,9 +1,14 @@
 export const state = () => ({
-  links: [
-    'headings',
-    'lists',
-    'paragraphs',
-    'typeface',
-    'font'
-  ]
+  links: {
+    typography: [
+      'Headings',
+      'Lists',
+      'Paragraphs',
+      'Typeface',
+      'Font'
+    ],
+    components: [
+      'Buttons'
+    ]
+  }
 })
