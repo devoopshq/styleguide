@@ -3,22 +3,22 @@
     <H1 content="Paragraphs" />
     <small>14px — Regular</small>
     <div class="card">
-      <P content="<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>" />
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
 
     <small>14px — Bold</small>
     <div class="card w600">
-      <P content="<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>" />
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
 
     <small>14px — Regular on Dark Background</small>
     <div class="card black">
-      <P content="<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>" />
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
 
     <small>14px — Bold on Dark Background</small>
-    <div class="card black w600">
-      <P content="<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>" />
+    <div class="card black w700">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
   </div>
 </template>
@@ -27,7 +27,7 @@
 export default {
   components: {
     H1: () => import('@/components/headings/H1'),
-    P: () => import('@/components/paragraphs/P')
+    // P: () => import('@/components/paragraphs/P')
   }
 }
 </script>
@@ -37,6 +37,11 @@ small {
   display: block;
   margin-bottom: 0.25rem;
   color: #757575;
+}
+p {
+  font-size: 14px;
+  line-height: 1.714;
+  font-weight: 400;
 }
 .card {
   /* outline: 1px dashed; */
@@ -48,7 +53,7 @@ small {
 .card:hover {
   box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.12);
 }
-.w600 { font-variation-settings: 'wght' 600; }
+.w700 { font-variation-settings: 'wght' 700; }
 .black {
   background-color: var(--black);
   color: var(--white);

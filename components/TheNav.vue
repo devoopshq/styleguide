@@ -2,8 +2,9 @@
   <nav>
     <div class="links">
       <NuxtLink to="/">
-        DevOops <span> v0.1.0</span>
+        DevOops <span class="version"> v0.1.0</span>
       </NuxtLink>
+      <span class="label">Typography</span>
       <NuxtLink v-for="(link, index) in links" :key="index" :to="'/' + link.toLowerCase()">
         {{ link }}
       </NuxtLink>
@@ -24,20 +25,27 @@ export default {
 
 <style lang="postcss" scoped>
 nav {
-  width: 200px;
+  width: 256px;
   padding: 0 16px;
 }
 a {
   display: flex;
   font-weight: 400;
-  color: #757575;
+  color: var(--black);
   font-size: 14px;
   text-decoration: none;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   align-items: baseline;
+  padding: 8px;
+  border-radius: 4px;
+}
+a:hover {
+  background-color: var(--gray);
 }
 .nuxt-link-exact-active {
   color: var(--black);
+  background-color: var(--gray);
+  font-variation-settings: 'wght' 600;
 }
 a:first-child {
   color: var(--black);
@@ -45,11 +53,17 @@ a:first-child {
   font-variation-settings: 'wght' 700;
   margin-bottom: 32px;
 }
-span {
+.version {
   font-variation-settings: 'wght' 400;
   color: #757575;
   font-size: 13px;
   padding-left: 0.5em;
+}
+.label {
+  display: block;
+  color: var(--gray3);
+  font-size: 13px;
+  padding:  0 8px 16px;
 }
 .links {
   position: sticky;
