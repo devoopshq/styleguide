@@ -45,6 +45,12 @@ export default {
     ButtonSecondary: () => import('@/components/buttons/ButtonSecondary'),
     ButtonAbort: () => import('@/components/buttons/ButtonAbort'),
     Spinner: () => import('@/components/Spinner')
+  },
+
+  head () {
+    return {
+      title: 'Buttons'
+    }
   }
 }
 </script>

@@ -22,7 +22,13 @@ export default {
 
   data: () => ({
     lists: ['Item', 'Item', 'Item']
-  })
+  }),
+
+  head () {
+    return {
+      title: 'Lists'
+    }
+  }
 }
 </script>
 

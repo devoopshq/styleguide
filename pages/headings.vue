@@ -27,6 +27,12 @@ export default {
     H2: () => import('@/components/headings/H2'),
     H3: () => import('@/components/headings/H3'),
     H4: () => import('@/components/headings/H4')
+  },
+
+  head () {
+    return {
+      title: 'Headings'
+    }
   }
 }
 </script>

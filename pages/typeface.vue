@@ -17,7 +17,7 @@
     <small>Mono</small>
     <div class="card">
       <span class="mono">DevOops - 400</span><br>
-      <span class="mono m600">DevOops - 600</span>
+      <span class="mono m700">DevOops - 700</span>
     </div>
   </div>
 </template>
@@ -26,6 +26,12 @@
 export default {
   components: {
     H1: () => import('@/components/headings/H1')
+  },
+
+  head () {
+    return {
+      title: 'Typeface'
+    }
   }
 }
 </script>
@@ -52,8 +58,8 @@ small {
 .mono {
   font-family: var(--monospace);
 }
-.m600 {
-  font-weight: 600;
+.m700 {
+  font-weight: 700;
 }
 .card {
   /* outline: 1px dashed; */

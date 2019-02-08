@@ -113,6 +113,12 @@
           '--slant': this.slant
         }
       }
+    },
+
+    head () {
+      return {
+        title: 'Variable Font'
+      }
     }
   }
 </script>
