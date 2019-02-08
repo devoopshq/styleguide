@@ -2,7 +2,7 @@
   <div>
     <Heading1>Typeface</Heading1>
     <small>Sans</small>
-    <div class="card">
+    <AppCard>
       <p class="w100">Thin - 100</p>
       <p class="w200">Extra Light - 200</p>
       <p class="w300">Light - 300</p>
@@ -12,20 +12,24 @@
       <p class="w700">Bold - 700</p>
       <p class="w800">Extra Bold - 800</p>
       <p class="w900">Black - 900</p>
-    </div>
+    </AppCard>
 
     <small>Mono</small>
-    <div class="card">
+    <AppCard>
       <span class="mono">DevOops - 400</span><br>
       <span class="mono m700">DevOops - 700</span>
-    </div>
+    </AppCard>
   </div>
 </template>
 
 <script>
+import Heading1 from '@/components/headings/Heading1'
+import AppCard from '@/components/AppCard'
+
 export default {
   components: {
-    Heading1: () => import('@/components/headings/Heading1')
+    Heading1,
+    AppCard
   },
 
   head () {
@@ -60,15 +64,5 @@ small {
 }
 .m700 {
   font-weight: 700;
-}
-.card {
-  /* outline: 1px dashed; */
-  padding: 16px 32px;
-  border-radius: 4px;
-  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.12);
-  margin: 16px -32px 32px -32px;
-}
-.card:hover {
-  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.12);
 }
 </style>

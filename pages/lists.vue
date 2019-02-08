@@ -1,23 +1,31 @@
 <template>
   <div>
     <Heading1>Lists</Heading1>
+
     <small>Unordered List</small>
-    <div class="card">
+    <AppCard>
       <UL :lists="lists" />
-    </div>
+    </AppCard>
+
     <small>Ordered List</small>
-    <div class="card">
+    <AppCard>
       <OL :lists="lists" />
-    </div>
+    </AppCard>
   </div>
 </template>
 
 <script>
+import Heading1 from '@/components/headings/Heading1'
+import UL from '@/components/lists/UL'
+import OL from '@/components/lists/OL'
+import AppCard from '@/components/AppCard'
+
 export default {
   components: {
-    Heading1: () => import('@/components/headings/Heading1'),
-    UL: () => import('@/components/lists/UL'),
-    OL: () => import('@/components/lists/OL')
+    Heading1,
+    UL,
+    OL,
+    AppCard
   },
 
   data: () => ({

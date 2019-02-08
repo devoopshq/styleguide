@@ -1,10 +1,12 @@
 <template>
   <div>
     <Heading1>Headings</Heading1>
-    <div class="card">
-      <small>32px — H1 Heading</small>
+
+    <small>32px — H1 Heading</small>
+    <AppCard>
       <Heading1>Lorem <strong>Ipsum</strong> Dolore</Heading1>
-    </div>
+    </AppCard>
+
     <div class="doc">
       <table>
         <tbody>
@@ -21,10 +23,10 @@
     </div>
 
 
-    <div class="card">
-      <small>24px — H2 Heading</small>
+    <small>24px — H2 Heading</small>
+    <AppCard>
       <Heading2>Lorem ipsum dolore</Heading2>
-    </div>
+    </AppCard>
 
     <div class="doc">
       <table>
@@ -40,11 +42,10 @@
       <TerminalInput :content="escapeHtml('<Heading2>\n  Lorem ipsum dolore\n</Heading2>')" />
     </div>
 
-
-    <div class="card">
-      <small>18px — H3 Heading</small>
+    <small>18px — H3 Heading</small>
+    <AppCard>
       <Heading3>Lorem ipsum dolore</Heading3>
-    </div>
+    </AppCard>
 
     <div class="doc">
       <table>
@@ -60,10 +61,10 @@
       <TerminalInput :content="escapeHtml('<Heading3>\n  Lorem ipsum dolore\n</Heading3>')" />
     </div>
 
-    <div class="card">
-      <small>16px — H4 Heading</small>
+    <small>16px — H4 Heading</small>
+    <AppCard>
       <Heading4>Lorem ipsum dolore</Heading4>
-    </div>
+    </AppCard>
 
     <div class="doc">
       <table>
@@ -82,13 +83,21 @@
 </template>
 
 <script>
+import Heading1 from '@/components/headings/Heading1'
+import Heading2 from '@/components/headings/Heading2'
+import Heading3 from '@/components/headings/Heading3'
+import Heading4 from '@/components/headings/Heading4'
+import TerminalInput from '@/components/code/TerminalInput'
+import AppCard from '@/components/AppCard'
+
 export default {
   components: {
-    Heading1: () => import('@/components/headings/Heading1'),
-    Heading2: () => import('@/components/headings/Heading2'),
-    Heading3: () => import('@/components/headings/Heading3'),
-    Heading4: () => import('@/components/headings/Heading4'),
-    TerminalInput: () => import('@/components/code/TerminalInput')
+    Heading1,
+    Heading2,
+    Heading3,
+    Heading4,
+    TerminalInput,
+    AppCard
   },
 
   head () {

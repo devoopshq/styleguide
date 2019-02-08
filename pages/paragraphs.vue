@@ -2,32 +2,29 @@
   <div>
     <Heading1>Paragraphs</Heading1>
     <small>14px — Regular</small>
-    <div class="card">
+    <AppCard>
       <Content v-interpolation :content="content" />
-    </div>
+    </AppCard>
 
     <small>14px — Bold</small>
-    <div class="card w700">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-
-    <small>14px — Regular on Dark Background</small>
-    <div class="card black">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-
-    <small>14px — Bold on Dark Background</small>
-    <div class="card black w700">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
+    <AppCard>
+      <div class="w700">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+    </AppCard>
   </div>
 </template>
 
 <script>
+import Heading1 from '@/components/headings/Heading1'
+import Content from '@/components/Content'
+import AppCard from '@/components/AppCard'
+
 export default {
   components: {
-    Heading1: () => import('@/components/headings/Heading1'),
-    Content: () => import('@/components/Content')
+    Heading1,
+    Content,
+    AppCard
   },
 
   data: () => ({
@@ -52,16 +49,6 @@ p {
   font-size: 14px;
   line-height: 1.714;
   font-weight: 400;
-}
-.card {
-  /* outline: 1px dashed; */
-  padding: 16px 32px;
-  border-radius: 4px;
-  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.12);
-  margin: 16px -32px 32px -32px;
-}
-.card:hover {
-  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.12);
 }
 .w700 { font-variation-settings: 'wght' 700; }
 .black {

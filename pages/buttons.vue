@@ -37,14 +37,21 @@
 
 
 <script>
+import Heading1 from '@/components/headings/Heading1'
+import AppCard from '@/components/AppCard'
+import ButtonPrimary from '@/components/buttons/ButtonPrimary'
+import ButtonSecondary from '@/components/buttons/ButtonSecondary'
+import ButtonAbort from '@/components/buttons/ButtonAbort'
+import Spinner from '@/components/Spinner'
+
 export default {
   components: {
-    Heading1: () => import('@/components/headings/Heading1'),
-    AppCard: () => import('@/components/AppCard'),
-    ButtonPrimary: () => import('@/components/buttons/ButtonPrimary'),
-    ButtonSecondary: () => import('@/components/buttons/ButtonSecondary'),
-    ButtonAbort: () => import('@/components/buttons/ButtonAbort'),
-    Spinner: () => import('@/components/Spinner')
+    Heading1,
+    AppCard,
+    ButtonPrimary,
+    ButtonSecondary,
+    ButtonAbort,
+    Spinner
   },
 
   head () {

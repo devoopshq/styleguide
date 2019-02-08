@@ -71,23 +71,26 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
-  height: 100%;
 }
 @-ms-viewport {
   width: device-width;
 }
 body {
   color: var(--black);
-  background-color: var(--white);
-  margin: 0 0 25vh 0;
-  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.03);
+  margin: 0;
+}
+html,
+body,
+#__nuxt,
+#__layout {
+  height: 100%;
 }
 #__nuxt {
   font-family: var(--sans-serif);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   font-size: 1rem;
-  font-display: 'swap';
   letter-spacing: var(--letter-spacing);
   line-height: var(--line-height);
 }
@@ -96,8 +99,8 @@ body {
   font-variation-settings: 'wght' var(--weight), 'slnt' var(--slant);
 }
 .default {
-  padding: 0 60px;
   display: flex;
+  min-height: 100%;
 }
 main {
   flex: 1;
@@ -122,6 +125,6 @@ main {
 .source {
   position: fixed;
   top: 34px;
-  right: 60px;
+  right: 24px;
 }
 </style>

@@ -58,9 +58,13 @@
         :range="true"
       />
     </div>
-    <div :style="cssVariables" class="card">
-      <p class="var">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 ?!()[]{}&*^%$#@~</p>
-    </div>
+
+    <AppCard :style="cssVariables">
+      <p class="var">
+        ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 ?!()[]{}&*^%$#@~
+      </p>
+    </AppCard>
+
     <div class="resources">
       <p>
         The Inter Font family
@@ -91,38 +95,43 @@
 </template>
 
 <script>
-  export default {
-    components: {
-      Heading1: () => import('@/components/headings/Heading1'),
-      InputTypeRange: () => import('@/components/forms/InputTypeRange')
-    },
-    data () {
-      return {
-        size: 48,
-        letterSpacing: -0.03,
-        lineHeight: 1.1,
-        weight: 600,
-        slant: 0
-      }
-    },
-    computed: {
-      cssVariables () {
-        return {
-          '--size': this.size + 'px',
-          '--letter-spacing': this.letterSpacing +'em',
-          '--line-height': this.lineHeight,
-          '--weight': this.weight,
-          '--slant': this.slant
-        }
-      }
-    },
+import Heading1 from '@/components/headings/Heading1'
+import InputTypeRange from '@/components/forms/InputTypeRange'
+import AppCard from '@/components/AppCard'
 
-    head () {
+export default {
+  components: {
+    Heading1,
+    InputTypeRange,
+    AppCard
+  },
+  data () {
+    return {
+      size: 48,
+      letterSpacing: -0.03,
+      lineHeight: 1.1,
+      weight: 600,
+      slant: 0
+    }
+  },
+  computed: {
+    cssVariables () {
       return {
-        title: 'Variable Font'
+        '--size': this.size + 'px',
+        '--letter-spacing': this.letterSpacing +'em',
+        '--line-height': this.lineHeight,
+        '--weight': this.weight,
+        '--slant': this.slant
       }
     }
+  },
+
+  head () {
+    return {
+      title: 'Variable Font'
+    }
   }
+}
 </script>
 
 <style lang="postcss" scoped>
@@ -150,14 +159,4 @@
 }
 @supports not (font-variation-settings: 'wdth' 200) {}
 
-.card {
-  /* outline: 1px dashed; */
-  padding: 16px 32px;
-  border-radius: 4px;
-  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.12);
-  margin: 16px -32px 32px -32px;
-}
-.card:hover {
-  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.12);
-}
 </style>

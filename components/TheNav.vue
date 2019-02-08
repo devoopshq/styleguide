@@ -36,7 +36,8 @@ export default {
 <style lang="postcss" scoped>
 nav {
   width: 256px;
-  padding: 0 16px;
+  padding: 0 24px;
+  background-color: #fff;
 }
 a {
   display: flex;
@@ -50,11 +51,11 @@ a {
   border-radius: 4px;
 }
 a:hover {
-  background-color: var(--gray);
+  background-color: rgba(0, 0, 0, 0.03);
 }
 .nuxt-link-exact-active {
   color: var(--black);
-  background-color: var(--gray);
+  background-color: rgba(0, 0, 0, 0.03);
   font-variation-settings: 'wght' 600;
 }
 /* .nuxt-link-prefetched:after { content: '###'; } */
