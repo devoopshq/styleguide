@@ -8,7 +8,7 @@
         :step="0"
         :max="900"
         :label="'Weight ' + cssVariables['--weight']"
-        range="true"
+        :range="true"
       />
     </div>
     <div class="fieldset">
@@ -18,7 +18,7 @@
         :step="1"
         :max="10"
         :label="'Slant (angle) ' + cssVariables['--slant'] + '°'"
-        range="true"
+        :range="true"
       />
     </div>
     <div class="fieldset">
@@ -28,11 +28,11 @@
         :step="1"
         :max="112"
         :label="'Size ' + cssVariables['--size']"
-        range="true"
+        :range="true"
       />
     </div>
     <div class="fieldset">
-      <InputTypeRange :value.sync="letterSpacing" :min="-0.1" :step="0.001" :max="0.1" :label="'Tracking (space between letters) ' + cssVariables['--letter-spacing']" range="true" />
+      <InputTypeRange :value.sync="letterSpacing" :min="-0.1" :step="0.001" :max="0.1" :label="'Tracking (space between letters) ' + cssVariables['--letter-spacing']" :range="true" />
     </div>
     <div class="fieldset">
       <InputTypeRange
@@ -41,7 +41,7 @@
         :step="0.01"
         :max="2"
         :label="'Line Height ' + cssVariables['--line-height']"
-        range="true"
+        :range="true"
       />
     </div>
     <div :style="cssVariables" class="card">

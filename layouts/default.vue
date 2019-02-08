@@ -1,6 +1,6 @@
 <template>
   <div class="default">
-    <TheNav :links="links" />
+    <TheNav :links="$store.state.links" />
     <main role="main">
       <Nuxt />
     </main>
@@ -17,16 +17,6 @@ import TheNav from '@/components/TheNav'
 
 export default {
   components: { TheNav },
-
-  data: () => ({
-    links: [
-      'Headings',
-      'Lists',
-      'Paragraphs',
-      'Typeface',
-      'Font'
-    ]
-  }),
 
   beforeMount () { this.loadFont() },
 

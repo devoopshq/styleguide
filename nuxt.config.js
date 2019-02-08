@@ -57,5 +57,14 @@ module.exports = {
     http2: {
       push: true
     }
+  },
+  router: {
+    // https://github.com/nuxt/nuxt.js/pull/4574
+    // To disable prefetching, uncomment the line
+    // prefetchLinks: false
+
+    // Activate prefetched class (default: false)
+    // Used to display the check mark next to the prefetched link
+    // linkPrefetchedClass: 'nuxt-link-prefetched'
   }
 }

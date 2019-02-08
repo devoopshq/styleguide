@@ -47,6 +47,7 @@ a:hover {
   background-color: var(--gray);
   font-variation-settings: 'wght' 600;
 }
+/* .nuxt-link-prefetched:after { content: '###'; } */
 a:first-child {
   color: var(--black);
   font-size: 18px;
