@@ -110,5 +110,9 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-
+small {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: #757575;
+}
 </style>
