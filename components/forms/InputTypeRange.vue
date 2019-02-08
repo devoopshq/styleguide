@@ -1,6 +1,7 @@
 <template lang="pug">
   <div>
-    <input type="range" :min="min" :max="max" :step="step" :value="value"  @input="$emit('update:value', $event.target.value)">
+    <label v-if="label !== ''" :for="id">{{ label }}</label>
+    <input :id="id" type="range" :min="min" :max="max" :step="step" :value="value"  @input="$emit('update:value', $event.target.value)">
     <div v-if="range" class="range">
       <span>{{ min }}</span>
       <span>{{ max }}</span>
@@ -11,6 +12,10 @@
 <script>
 export default {
   props: {
+    id: {
+      type: String,
+      default: ''
+    },
     min: {
       type: [Number, String],
       default: ''
@@ -30,6 +35,10 @@ export default {
     range: {
       type: Boolean,
       default: false
+    },
+    label: {
+      type: String,
+      default: ''
     }
   }
 }

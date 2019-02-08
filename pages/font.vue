@@ -2,25 +2,47 @@
   <div>
     <H1 content="<strong>The Inter</strong> Font Family" />
     <div class="fieldset">
-      <label for="weight">Weight <strong>{{ cssVariables["--weight"] }}</strong></label>
-      <!-- <input id="weight" v-model="weight" type="range" min="100" max="900"> -->
-      <InputTypeRange :value.sync="weight" :min="100" :step="0" :max="900" range="true" />
+      <InputTypeRange
+        :value.sync="weight"
+        :min="100"
+        :step="0"
+        :max="900"
+        :label="'Weight ' + cssVariables['--weight']"
+        range="true"
+      />
     </div>
     <div class="fieldset">
-      <label for="slant">Slant <strong>{{ cssVariables["--slant"] }}°</strong> <span>(angle)</span></label>
-      <InputTypeRange :value.sync="slant" :min="0" :step="1" :max="10" range="true" />
+      <InputTypeRange
+        :value.sync="slant"
+        :min="0"
+        :step="1"
+        :max="10"
+        :label="'Slant (angle) ' + cssVariables['--slant'] + '°'"
+        range="true"
+      />
     </div>
     <div class="fieldset">
-      <label for="size">Size <strong>{{ cssVariables["--size"] }}</strong></label>
-      <InputTypeRange :value.sync="size" :min="11" :step="1" :max="112" range="true" />
+      <InputTypeRange
+        :value.sync="size"
+        :min="11"
+        :step="1"
+        :max="112"
+        :label="'Size ' + cssVariables['--size']"
+        range="true"
+      />
     </div>
     <div class="fieldset">
-      <label for="tracking">Tracking <strong>{{ cssVariables["--letter-spacing"] }}</strong> <span>(space between letters)</span></label>
-      <InputTypeRange :value.sync="letterSpacing" :min="-0.1" :step="0.001" :max="0.1" range="true" />
+      <InputTypeRange :value.sync="letterSpacing" :min="-0.1" :step="0.001" :max="0.1" :label="'Tracking (space between letters) ' + cssVariables['--letter-spacing']" range="true" />
     </div>
     <div class="fieldset">
-      <label for="lineHeight">Line Height <strong>{{ cssVariables["--line-height"] }}</strong></label>
-      <InputTypeRange :value.sync="lineHeight" :min="0.7" :step="0.01" :max="2" range="true" />
+      <InputTypeRange
+        :value.sync="lineHeight"
+        :min="0.7"
+        :step="0.01"
+        :max="2"
+        :label="'Line Height ' + cssVariables['--line-height']"
+        range="true"
+      />
     </div>
     <div :style="cssVariables" class="card">
       <p class="var">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 ?!()[]{}&*^%$#@~</p>
@@ -89,12 +111,6 @@
   display: flex;
   flex-direction: column;
   padding-bottom: 16px;
-}
-label {
-  padding-bottom: 32px;
-}
-label span {
-  color: var(--gray3);
 }
 .resources {
   font-size: 13px;
