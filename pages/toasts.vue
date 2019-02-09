@@ -122,4 +122,11 @@ export default {
   bottom: 24px;
   right: 24px;
 }
+@media (max-width: 512px) {
+  >>> .toast {
+    left: 16px;
+    bottom: 16px;
+    right: 16px;
+  }
+}
 </style>

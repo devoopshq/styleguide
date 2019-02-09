@@ -1,7 +1,7 @@
 <template>
   <div>
     <Heading1>
-      <strong>The Inter</strong> Font Family
+      The <strong>Inter</strong> Font Family
     </Heading1>
     <div class="fieldset">
       <InputTypeRange

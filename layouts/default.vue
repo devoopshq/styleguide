@@ -127,4 +127,19 @@ main {
   top: 34px;
   right: 24px;
 }
+@media (max-width: 512px) {
+  .default {
+    width: 100%;
+    flex-direction: column;
+  }
+  main {
+    max-width: none;
+    width: 100%;
+    padding: 16px 16px 25vh;
+  }
+  .source {
+    top: 12px;
+    right: 16px;
+  }
+}
 </style>

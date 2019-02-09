@@ -69,4 +69,5 @@ span {
   border-color: var(--white);
   color: var(--black);
 }
+/* @media (max-width: 512px) {} */
 </style>

@@ -77,18 +77,4 @@ export default {
 
 <style lang="postcss" scoped>
 .doc { margin-bottom: 32px; }
-table { margin-bottom: 16px; }
-th { text-align: left; }
-th,
-td {
-  padding-right: 16px;
-  padding-bottom: 8px;
-}
-.card {
-  padding: 16px 32px;
-  border-radius: 4px;
-  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.12);
-  margin: 16px -32px 32px -32px;
-}
-.card:hover { box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.12); }
 </style>

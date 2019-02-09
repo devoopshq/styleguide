@@ -36,7 +36,8 @@ export default {
 <style lang="postcss" scoped>
 nav {
   width: 256px;
-  padding: 0 24px;
+  padding-left: 24px;
+  padding-right: 24px;
   background-color: #fff;
 }
 a {
@@ -80,5 +81,13 @@ a:first-child {
 .links {
   position: sticky;
   top: 25px;
+}
+@media (max-width: 512px) {
+  nav {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+  }
 }
 </style>
