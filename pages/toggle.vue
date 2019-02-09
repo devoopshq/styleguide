@@ -1,58 +1,54 @@
 <template>
   <div>
-    <Heading1>Images</Heading1>
-
-    <small>Static</small>
+    <Heading1>Toggle</Heading1>
+    <small>Normal</small>
     <AppCard>
-      <AppImage src="https://placehold.it/1400x800" alt="alt" />
+      <SelectionSwitch />
     </AppCard>
 
-    <small>Static - Caption</small>
+    <small>Checked</small>
     <AppCard>
-      <AppImage src="https://placehold.it/1400x800" caption="Source: giphy.com" alt="alt" />
+      <SelectionSwitch :checked="true" />
     </AppCard>
+
+    <small>Disabled</small>
+    <AppCard>
+      <SelectionSwitch :disabled="true" />
+    </AppCard>
+
     <small>Props</small>
-    <TerminalInput :content="`src: {
-    type: String,
-    default: null
+    <TerminalInput :content="`checked: {
+    type: Boolean,
+    default: false
   },
-  srcset: {
-    type: String,
-    default: null
-  },
-  caption: {
-    type: String,
-    default: null
-  },
-  alt: {
-    type: String,
-    default: null
+  disabled: {
+    type: Boolean,
+    default: false
   }`" />
     <small>Path</small>
-    <TerminalInput content="@/components/AppImage" />
+    <TerminalInput content="@/components/interaction/selection/SelectionSwitch" />
     <small>Usage</small>
-    <TerminalInput :content="escapeHtml(`<AppImage
-    src=&quot;https://devoops.app/images/img.png&quot;
-    alt=&quot;Alt&quot;
-  />`)" />
+    <!-- eslint-disable-next-line -->
+    <TerminalInput :content="escapeHtml(`<SelectionSwitch />`)" />
   </div>
 </template>
 
 <script>
 import Heading1 from '@/components/headings/Heading1'
-import AppImage from '@/components/AppImage'
 import AppCard from '@/components/AppCard'
+import SelectionSwitch from '@/components/interaction/selection/SelectionSwitch'
 import TerminalInput from '@/components/code/TerminalInput'
+
 export default {
   components: {
     Heading1,
-    AppImage,
     AppCard,
+    SelectionSwitch,
     TerminalInput
   },
 
   head: () => ({
-    title: 'Images'
+    title: 'Toggle'
   }),
 
   methods: {

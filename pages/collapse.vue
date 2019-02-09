@@ -67,7 +67,7 @@ export default {
     ],
      content2: [
       {
-        active: false,
+        active: true,
         title: 'Question A',
         details: `
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -81,7 +81,7 @@ export default {
         `
       },
       {
-        active: true,
+        active: false,
         title: 'Question C',
         details: `
           <p>Duis aute irure dolor in reprehenderit in <a href="/font">internal link</a> voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>

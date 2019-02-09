@@ -1,5 +1,5 @@
 <template>
-  <button :class="{ warning }" :aria-label="action" :disabled="disabled">
+  <button :class="{ warning }" :aria-label="action" :disabled="disabled" @click="foo">
     <slot>ACTION</slot>
   </button>
 </template>
@@ -19,6 +19,12 @@ export default {
       type: Boolean,
       default: false
     }
+  },
+
+  methods: {
+    foo () {
+      this.$emit('active', true)
+    }
   }
 }
 </script>
@@ -29,7 +35,7 @@ button{
   height: 32px;
   -webkit-appearance: none;
   color: var(--white);
-  font-size: 12px;
+  font-size: 11px;
   text-transform: uppercase;
   user-select: none;
   line-height: 0;
@@ -41,9 +47,13 @@ button{
   border-color: var(--black);
   border-image: initial;
   border-radius: 4px;
-  font-variation-settings: 'wght' 600;
+  font-family: inherit;
+  font-variation-settings: 'wght' 500;
   display: flex;
   align-items: center;
+}
+button:active {
+  transform: scale(0.95);
 }
 button:disabled {
   background-color: var(--gray1);

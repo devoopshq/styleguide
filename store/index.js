@@ -11,7 +11,9 @@ export const state = () => ({
       'Collapse',
       'Buttons',
       'FileTree',
-      'Images'
+      'Images',
+      'Toggle',
+      'Toasts'
     ]
   }
 })
