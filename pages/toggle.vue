@@ -2,12 +2,12 @@
   <div>
     <Heading1>Toggle</Heading1>
 
-    <AppLabel text="Normal" />
+    <AppLabel text="Off" />
     <AppCard>
       <SelectionSwitch />
     </AppCard>
 
-    <AppLabel text="Checked" />
+    <AppLabel text="On" />
     <AppCard>
       <SelectionSwitch :checked="true" />
     </AppCard>

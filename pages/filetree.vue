@@ -69,7 +69,7 @@ export default {
   }),
 
   head: () => ({
-    title: 'File Three'
+    title: 'File Tree'
   })
 }
 </script>
