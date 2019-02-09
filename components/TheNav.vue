@@ -51,11 +51,11 @@ a {
   border-radius: 4px;
 }
 a:hover {
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: rgba(0, 0, 0, 0.04);
 }
 .nuxt-link-exact-active {
   color: var(--black);
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: rgba(0, 0, 0, 0.04);
   font-variation-settings: 'wght' 600;
 }
 /* .nuxt-link-prefetched:after { content: '###'; } */

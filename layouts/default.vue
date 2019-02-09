@@ -77,7 +77,7 @@ html {
 }
 body {
   color: var(--black);
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: rgba(0, 0, 0, 0.04);
   margin: 0;
 }
 html,
