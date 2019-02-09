@@ -10,7 +10,8 @@ export const state = () => ({
     components: [
       'Collapse',
       'Buttons',
-      'FileTree'
+      'FileTree',
+      'Images'
     ]
   }
 })

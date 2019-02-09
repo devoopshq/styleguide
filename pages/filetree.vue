@@ -82,4 +82,9 @@ ul {
   margin: 0;
   list-style: none;
 }
+small {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: #757575;
+}
 </style>
