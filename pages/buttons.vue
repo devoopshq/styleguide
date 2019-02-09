@@ -58,11 +58,9 @@ export default {
     AppEdit
   },
 
-  head () {
-    return {
-      title: 'Buttons'
-    }
-  }
+  head: () => ({
+    title: 'Buttons'
+  })
 }
 </script>
 

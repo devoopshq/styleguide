@@ -34,6 +34,7 @@
 </template>
 
 <script>
+import escape from '@/helpers/escape'
 import Heading1 from '@/components/headings/Heading1'
 import AppCard from '@/components/AppCard'
 import SelectionSwitch from '@/components/interaction/selection/SelectionSwitch'
@@ -52,14 +53,7 @@ export default {
   }),
 
   methods: {
-    escapeHtml(unsafe) {
-      return unsafe
-       .replace(/&/g, '&amp;')
-       .replace(/</g, '&lt;')
-       .replace(/>/g, '&gt;')
-       .replace(/"/g, '&quot;')
-       .replace(/'/g, '&#039;')
-    }
+    escapeHtml: x => escape(x)
   }
 }
 </script>

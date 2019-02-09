@@ -36,11 +36,9 @@ export default {
     AppEdit
   },
 
-  head () {
-    return {
-      title: 'Typeface'
-    }
-  }
+  head: () => ({
+    title: 'Typeface'
+  })
 }
 </script>
 

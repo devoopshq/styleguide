@@ -68,11 +68,9 @@ export default {
       }
   }),
 
-  head () {
-    return {
-      title: 'File Three'
-    }
-  }
+  head: () => ({
+    title: 'File Three'
+  })
 }
 </script>
 

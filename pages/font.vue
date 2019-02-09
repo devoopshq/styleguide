@@ -130,11 +130,9 @@ export default {
     }
   },
 
-  head () {
-    return {
-      title: 'Variable Font'
-    }
-  }
+  head: () => ({
+    title: 'Variable Font'
+  })
 }
 </script>
 

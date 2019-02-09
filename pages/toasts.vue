@@ -53,6 +53,7 @@
 </template>
 
 <script>
+// import escape from '@/helpers/escape'
 import Heading1 from '@/components/headings/Heading1'
 import AppCard from '@/components/AppCard'
 import ButtonPrimary from '@/components/buttons/ButtonPrimary'
@@ -104,7 +105,6 @@ export default {
       }
       this.toast.body = 'The quick brown dev jumps over the lazy frog'
       this.toast.show = true
-      console.log('### ', JSON.stringify(this.toast, null, 2)) // eslint-disable-line
     }
   }
 }

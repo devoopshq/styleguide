@@ -61,6 +61,7 @@
 </template>
 
 <script>
+import escape from '@/helpers/escape'
 import Heading1 from '@/components/headings/Heading1'
 import Heading2 from '@/components/headings/Heading2'
 import Heading3 from '@/components/headings/Heading3'
@@ -80,21 +81,12 @@ export default {
     AppEdit
   },
 
-  head () {
-    return {
-      title: 'Headings'
-    }
-  },
+  head: () => ({
+    title: 'Headings'
+  }),
 
   methods: {
-    escapeHtml(unsafe) {
-      return unsafe
-       .replace(/&/g, '&amp;')
-       .replace(/</g, '&lt;')
-       .replace(/>/g, '&gt;')
-       .replace(/"/g, '&quot;')
-       .replace(/'/g, '&#039;')
-    }
+    escapeHtml: value => escape(value)
   }
 }
 </script>

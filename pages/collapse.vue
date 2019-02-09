@@ -1,5 +1,9 @@
 <template>
   <div>
+    <Heading1>
+      Collapse
+    </Heading1>
+
     <small>Collapsible Group</small>
     <AppCard>
       <Accordion id="a" :content="content" />
@@ -34,6 +38,8 @@
 
 
 <script>
+import escape from '@/helpers/escape'
+import Heading1 from '@/components/headings/Heading1'
 import Accordion from '@/components/Accordion'
 import AppCard from '@/components/AppCard'
 import TerminalInput from '@/components/code/TerminalInput'
@@ -44,7 +50,8 @@ export default {
     Accordion,
     AppCard,
     TerminalInput,
-    AppEdit
+    AppEdit,
+    Heading1
   },
 
   data: () => ({
@@ -90,21 +97,12 @@ export default {
     ]
   }),
 
-  head () {
-    return {
-      title: 'Collapse'
-    }
-  },
+  head: () => ({
+    title: 'Collapse'
+  }),
 
   methods: {
-    escapeHtml(unsafe) {
-      return unsafe
-       .replace(/&/g, '&amp;')
-       .replace(/</g, '&lt;')
-       .replace(/>/g, '&gt;')
-       .replace(/"/g, '&quot;')
-       .replace(/'/g, '&#039;')
-    }
+    escapeHtml: x => escape(x)
   }
 }
 </script>

@@ -36,11 +36,9 @@ export default {
     lists: ['Item', 'Item', 'Item']
   }),
 
-  head () {
-    return {
-      title: 'Lists'
-    }
-  }
+  head: () => ({
+    title: 'Lists'
+  })
 }
 </script>
 
