@@ -2,12 +2,12 @@
   <div>
     <Heading1>Collapse</Heading1>
 
-    <AppLAbel text="Collapsible Group" />
+    <AppLabel text="Collapsible Group" />
     <AppCard>
       <Accordion id="a" :content="content" />
     </AppCard>
 
-    <AppLAbel text="Collapsible Group with Expanded Item" />
+    <AppLabel text="Collapsible Group with Expanded Item" />
     <AppCard>
       <Accordion id="b" :content="content2" :multiple="true" />
     </AppCard>
