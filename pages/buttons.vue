@@ -1,34 +1,35 @@
 <template>
   <div>
     <Heading1>Buttons</Heading1>
-    <small>Button — Primary</small>
+
+    <AppLabel text="Button — Primary" />
     <AppCard>
       <ButtonPrimary />
     </AppCard>
 
-    <small>Button — Secondary</small>
+    <AppLabel text="Button — Secondary" />
     <AppCard>
       <ButtonSecondary />
     </AppCard>
 
-    <small>Button — Disabled</small>
+    <AppLabel text="Button — Disabled" />
     <AppCard>
       <ButtonPrimary :disabled="true" />
     </AppCard>
 
-    <small>Button — Loading</small>
+    <AppLabel text="Button — Loading" />
     <AppCard>
       <ButtonPrimary>
         <Spinner :size="32" :stroke="'#fff'" />
       </ButtonPrimary>
     </AppCard>
 
-    <small>Button — Abort</small>
+    <AppLabel text="Button — Abort" />
     <AppCard>
       <ButtonAbort />
     </AppCard>
 
-    <small>Button — Warning</small>
+    <AppLabel text="Button — Warning" />
     <AppCard>
       <ButtonPrimary :warning="true" />
     </AppCard>
@@ -39,6 +40,7 @@
 
 
 <script>
+import AppLabel from '@/components/AppLabel'
 import Heading1 from '@/components/headings/Heading1'
 import AppCard from '@/components/AppCard'
 import ButtonPrimary from '@/components/buttons/ButtonPrimary'
@@ -55,7 +57,8 @@ export default {
     ButtonSecondary,
     ButtonAbort,
     Spinner,
-    AppEdit
+    AppEdit,
+    AppLabel
   },
 
   head: () => ({
@@ -63,11 +66,3 @@ export default {
   })
 }
 </script>
-
-<style lang="postcss" scoped>
-small {
-  display: block;
-  margin-bottom: 0.25rem;
-  color: #717171;
-}
-</style>

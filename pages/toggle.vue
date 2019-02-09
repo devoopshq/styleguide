@@ -1,22 +1,23 @@
 <template>
   <div>
     <Heading1>Toggle</Heading1>
-    <small>Normal</small>
+
+    <AppLabel text="Normal" />
     <AppCard>
       <SelectionSwitch />
     </AppCard>
 
-    <small>Checked</small>
+    <AppLabel text="Checked" />
     <AppCard>
       <SelectionSwitch :checked="true" />
     </AppCard>
 
-    <small>Disabled</small>
+    <AppLabel text="Disabled" />
     <AppCard>
       <SelectionSwitch :disabled="true" />
     </AppCard>
 
-    <small>Props</small>
+    <AppLabel text="Props" />
     <TerminalInput :content="`checked: {
     type: Boolean,
     default: false
@@ -25,15 +26,15 @@
     type: Boolean,
     default: false
   }`" />
-    <small>Path</small>
+    <AppLabel text="Path" />
     <TerminalInput content="@/components/interaction/selection/SelectionSwitch" />
-    <small>Usage</small>
-    <!-- eslint-disable-next-line -->
+    <AppLabel text="Usage" />
     <TerminalInput :content="escapeHtml(`<SelectionSwitch />`)" />
   </div>
 </template>
 
 <script>
+import AppLabel from '@/components/AppLabel'
 import escape from '@/helpers/escape'
 import Heading1 from '@/components/headings/Heading1'
 import AppCard from '@/components/AppCard'
@@ -45,7 +46,8 @@ export default {
     Heading1,
     AppCard,
     SelectionSwitch,
-    TerminalInput
+    TerminalInput,
+    AppLabel
   },
 
   head: () => ({
@@ -57,11 +59,3 @@ export default {
   }
 }
 </script>
-
-<style lang="postcss" scoped>
-small {
-  display: block;
-  margin-bottom: 0.25rem;
-  color: #717171;
-}
-</style>

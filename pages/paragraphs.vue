@@ -1,12 +1,13 @@
 <template>
   <div>
     <Heading1>Paragraphs</Heading1>
-    <small>14px — Regular</small>
+
+    <AppLabel text="14px — Regular" />
     <AppCard>
       <Content v-interpolation :content="content" />
     </AppCard>
 
-    <small>14px — Bold</small>
+    <AppLabel text="14px — Bold" />
     <AppCard>
       <div class="w700">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -18,6 +19,7 @@
 </template>
 
 <script>
+import AppLabel from '@/components/AppLabel'
 import Heading1 from '@/components/headings/Heading1'
 import Content from '@/components/Content'
 import AppCard from '@/components/AppCard'
@@ -28,7 +30,8 @@ export default {
     Heading1,
     Content,
     AppCard,
-    AppEdit
+    AppEdit,
+    AppLabel
   },
 
   data: () => ({
@@ -42,11 +45,6 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-small {
-  display: block;
-  margin-bottom: 0.25rem;
-  color: #717171;
-}
 p {
   font-size: 14px;
   line-height: 1.714;

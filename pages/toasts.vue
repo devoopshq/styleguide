@@ -1,46 +1,44 @@
 <template>
   <div class="container">
     <div class="content">
-      <Heading1>
-        Toasts
-      </Heading1>
+      <Heading1>Toasts</Heading1>
 
-      <small>Message Toast</small>
+      <AppLabel text="Message Toast" />
       <AppCard>
         <ButtonPrimary @active="bar('toast')">
           Show Toast
         </ButtonPrimary>
       </AppCard>
 
-      <small>Message Toast with Action</small>
+      <AppLabel text="Message Toast with Action" />
       <AppCard>
         <ButtonPrimary @active="bar('toastAction')">
           Show Toast
         </ButtonPrimary>
       </AppCard>
 
-      <small>Error Toast</small>
+      <AppLabel text="Error Toast" />
       <AppCard>
         <ButtonPrimary :warning="true" @active="bar('toastError')">
           Show Toast
         </ButtonPrimary>
       </AppCard>
 
-      <small>Error Toast with Action</small>
+      <AppLabel text="Error Toast with Action" />
       <AppCard>
         <ButtonPrimary :warning="true" @active="bar('toastErrorAction')">
           Show Toast
         </ButtonPrimary>
       </AppCard>
 
-      <small>Dark Toast</small>
+      <AppLabel text="Dark Toast" />
       <AppCard>
         <ButtonPrimary @active="bar('toastDark')">
           Show Toast
         </ButtonPrimary>
       </AppCard>
 
-      <small>Dark Toast with Action</small>
+      <AppLabel text="Dark Toast with Action" />
       <AppCard>
         <ButtonPrimary @active="bar('toastDarkAction')">
           Show Toast
@@ -53,7 +51,7 @@
 </template>
 
 <script>
-// import escape from '@/helpers/escape'
+import AppLabel from '@/components/AppLabel'
 import Heading1 from '@/components/headings/Heading1'
 import AppCard from '@/components/AppCard'
 import ButtonPrimary from '@/components/buttons/ButtonPrimary'
@@ -64,7 +62,8 @@ export default {
     Heading1,
     AppCard,
     ButtonPrimary,
-    AppToast
+    AppToast,
+    AppLabel
   },
 
   data: () => ({
@@ -111,14 +110,8 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-small {
-  display: block;
-  margin-bottom: 0.25rem;
-  color: #717171;
-}
 .container {
   min-height: 100%;
-  /* outline: 1px dashed; */
   height: 100%;
   display: flex;
   flex-direction: column;

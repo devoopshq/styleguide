@@ -2,57 +2,36 @@
   <div>
     <Heading1>Headings</Heading1>
 
-    <small>32px — H1 Heading</small>
+    <AppLabel text="32px — H1 Heading" />
     <AppCard>
-      <Heading1>Lorem <strong>Ipsum</strong> Dolore</Heading1>
+      <Heading1>The Brown <strong>Dev</strong> Jumped over the Fence</Heading1>
+    </AppCard>
+
+    <AppLabel text="24px — H2 Heading" />
+    <AppCard>
+      <Heading2>The Brown Dev Jumped over the Fence</Heading2>
+    </AppCard>
+
+    <AppLabel text="18px — H3 Heading" />
+    <AppCard>
+      <Heading3>The Brown Dev Jumped over the Fence</Heading3>
+    </AppCard>
+
+    <AppLabel text="16px — H4 Heading" />
+    <AppCard>
+      <Heading4>The Brown Dev Jumped over the Fence</Heading4>
+    </AppCard>
+
+    <AppLabel text="14px — Sub Heading" />
+    <AppCard>
+      <SubHeading text="THE BROWN DEV JUMPED OVER THE FENCE" />
     </AppCard>
 
     <div class="doc">
-      <small>Slot</small>
-      <small>Path</small>
-      <TerminalInput content="@/components/headings/Heading1" />
-      <small>Usage</small>
-      <!-- eslint-disable-next-line -->
-      <TerminalInput :content="escapeHtml('<Heading1>\n  Lorem <strong>Ipsum</strong> Dolore\n</Heading1>')" />
-    </div>
-
-
-    <small>24px — H2 Heading</small>
-    <AppCard>
-      <Heading2>Lorem ipsum dolore</Heading2>
-    </AppCard>
-
-    <div class="doc">
-      <small>Slot</small>
-      <small>Path</small>
-      <TerminalInput content="@/components/headings/Heading2" />
-      <small>Example</small>
-      <TerminalInput :content="escapeHtml('<Heading2>\n  Lorem ipsum dolore\n</Heading2>')" />
-    </div>
-
-    <small>18px — H3 Heading</small>
-    <AppCard>
-      <Heading3>Lorem ipsum dolore</Heading3>
-    </AppCard>
-
-    <div class="doc">
-      <small>Slot</small>
-      <small>Path</small>
-      <TerminalInput content="@/components/headings/Heading3" />
-      <small>Example</small>
-      <TerminalInput :content="escapeHtml('<Heading3>\n  Lorem ipsum dolore\n</Heading3>')" />
-    </div>
-
-    <small>16px — H4 Heading</small>
-    <AppCard>
-      <Heading4>Lorem ipsum dolore</Heading4>
-    </AppCard>
-
-    <div class="doc">
-      <small>Slot</small>
-      <small>Path</small>
+      <AppLabel text="Slot" />
+      <AppLabel text="Path" />
       <TerminalInput content="@/components/headings/Heading4" />
-      <small>Example</small>
+      <AppLabel text="Example" />
       <TerminalInput :content="escapeHtml('<Heading4>\n  Lorem ipsum dolore\n</Heading4>')" />
     </div>
 
@@ -62,10 +41,13 @@
 
 <script>
 import escape from '@/helpers/escape'
+// components
+import AppLabel from '@/components/AppLabel'
 import Heading1 from '@/components/headings/Heading1'
 import Heading2 from '@/components/headings/Heading2'
 import Heading3 from '@/components/headings/Heading3'
 import Heading4 from '@/components/headings/Heading4'
+import SubHeading from '@/components/headings/SubHeading'
 import TerminalInput from '@/components/code/TerminalInput'
 import AppCard from '@/components/AppCard'
 import AppEdit from '@/components/AppEdit'
@@ -78,7 +60,9 @@ export default {
     Heading4,
     TerminalInput,
     AppCard,
-    AppEdit
+    AppEdit,
+    AppLabel,
+    SubHeading
   },
 
   head: () => ({
@@ -92,31 +76,19 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.doc {
-  margin-bottom: 32px;
-}
+.doc { margin-bottom: 32px; }
 table { margin-bottom: 16px; }
-th {
-  text-align: left;
-}
+th { text-align: left; }
 th,
 td {
   padding-right: 16px;
   padding-bottom: 8px;
 }
-small {
-  display: block;
-  margin-bottom: 0.25rem;
-  color: #717171;
-}
 .card {
-  /* outline: 1px dashed; */
   padding: 16px 32px;
   border-radius: 4px;
   box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.12);
   margin: 16px -32px 32px -32px;
 }
-.card:hover {
-  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.12);
-}
+.card:hover { box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.12); }
 </style>

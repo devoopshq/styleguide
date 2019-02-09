@@ -2,16 +2,16 @@
   <div>
     <Heading1>Images</Heading1>
 
-    <small>Static</small>
+    <AppLabel text="Static" />
     <AppCard>
       <AppImage src="https://placehold.it/1400x800" alt="alt" />
     </AppCard>
 
-    <small>Static - Caption</small>
+    <AppLabel text="Static - Caption" />
     <AppCard>
       <AppImage src="https://placehold.it/1400x800" caption="Source: giphy.com" alt="alt" />
     </AppCard>
-    <small>Props</small>
+    <AppLabel text="Props" />
     <TerminalInput :content="`src: {
     type: String,
     default: null
@@ -28,9 +28,9 @@
     type: String,
     default: null
   }`" />
-    <small>Path</small>
+    <AppLabel text="Path" />
     <TerminalInput content="@/components/AppImage" />
-    <small>Usage</small>
+    <AppLabel text="Usage" />
     <TerminalInput :content="escapeHtml(`<AppImage
     src=&quot;https://devoops.app/images/img.png&quot;
     alt=&quot;Alt&quot;
@@ -40,16 +40,20 @@
 
 <script>
 import escape from '@/helpers/escape'
+// componnets
+import AppLabel from '@/components/AppLabel'
 import Heading1 from '@/components/headings/Heading1'
 import AppImage from '@/components/AppImage'
 import AppCard from '@/components/AppCard'
 import TerminalInput from '@/components/code/TerminalInput'
+
 export default {
   components: {
     Heading1,
     AppImage,
     AppCard,
-    TerminalInput
+    TerminalInput,
+    AppLabel
   },
 
   head: () => ({
@@ -61,11 +65,3 @@ export default {
   }
 }
 </script>
-
-<style lang="postcss" scoped>
-small {
-  display: block;
-  margin-bottom: 0.25rem;
-  color: #757575;
-}
-</style>

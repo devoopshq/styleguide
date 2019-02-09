@@ -1,7 +1,8 @@
 <template>
   <div>
     <Heading1>Typeface</Heading1>
-    <small>Sans</small>
+
+    <AppLabel text="Sans" />
     <AppCard>
       <p class="w100">Thin - 100</p>
       <p class="w200">Extra Light - 200</p>
@@ -14,7 +15,7 @@
       <p class="w900">Black - 900</p>
     </AppCard>
 
-    <small>Mono</small>
+    <AppLabel text="Mono" />
     <AppCard>
       <span class="mono">DevOops - 400</span><br>
       <span class="mono m700">DevOops - 700</span>
@@ -25,6 +26,7 @@
 </template>
 
 <script>
+import AppLabel from '@/components/AppLabel'
 import Heading1 from '@/components/headings/Heading1'
 import AppCard from '@/components/AppCard'
 import AppEdit from '@/components/AppEdit'
@@ -33,7 +35,8 @@ export default {
   components: {
     Heading1,
     AppCard,
-    AppEdit
+    AppEdit,
+    AppLabel
   },
 
   head: () => ({
@@ -56,15 +59,6 @@ p {
 .w700 { font-variation-settings: 'wght' 700; }
 .w800 { font-variation-settings: 'wght' 800; }
 .w900 { font-variation-settings: 'wght' 900; }
-small {
-  display: block;
-  margin-bottom: 0.25rem;
-  color: #717171;
-}
-.mono {
-  font-family: var(--monospace);
-}
-.m700 {
-  font-weight: 700;
-}
+.mono { font-family: var(--monospace); }
+.m700 { font-weight: 700; }
 </style>

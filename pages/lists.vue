@@ -2,12 +2,12 @@
   <div>
     <Heading1>Lists</Heading1>
 
-    <small>Unordered List</small>
+    <AppLabel text="Unordered List" />
     <AppCard>
       <UL :lists="lists" />
     </AppCard>
 
-    <small>Ordered List</small>
+    <AppLabel text="Ordered List" />
     <AppCard>
       <OL :lists="lists" />
     </AppCard>
@@ -17,6 +17,7 @@
 </template>
 
 <script>
+import AppLabel from '@/components/AppLabel'
 import Heading1 from '@/components/headings/Heading1'
 import UL from '@/components/lists/UL'
 import OL from '@/components/lists/OL'
@@ -29,7 +30,8 @@ export default {
     UL,
     OL,
     AppCard,
-    AppEdit
+    AppEdit,
+    AppLabel
   },
 
   data: () => ({
@@ -41,11 +43,3 @@ export default {
   })
 }
 </script>
-
-<style lang="postcss" scoped>
-small {
-  display: block;
-  margin-bottom: 0.25rem;
-  color: #717171;
-}
-</style>

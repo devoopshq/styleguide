@@ -1,17 +1,15 @@
 <template>
   <div>
-    <Heading1>
-      File Tree
-    </Heading1>
+    <Heading1>File Tree</Heading1>
 
-    <small>File Tree - Normal</small>
+    <AppLabel text="File Tree - Normal" />
     <AppCard>
       <ul>
         <AppTree :node="files" />
       </ul>
     </AppCard>
 
-    <small>File Tree - Open</small>
+    <AppLabel text="File Tree - Open" />
     <AppCard>
       <ul>
         <AppTree :node="files" :open="true" />
@@ -21,6 +19,7 @@
 </template>
 
 <script>
+import AppLabel from '@/components/AppLabel'
 import Heading1 from '@/components/headings/Heading1'
 import AppTree from '@/components/filetree/AppTree'
 import AppCard from '@/components/AppCard'
@@ -29,7 +28,8 @@ export default {
   components: {
     Heading1,
     AppTree,
-    AppCard
+    AppCard,
+    AppLabel
   },
 
   data: () => ({
@@ -79,10 +79,5 @@ ul {
   padding-left: 0;
   margin: 0;
   list-style: none;
-}
-small {
-  display: block;
-  margin-bottom: 0.25rem;
-  color: #717171;
 }
 </style>

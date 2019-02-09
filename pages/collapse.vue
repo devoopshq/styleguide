@@ -1,20 +1,18 @@
 <template>
   <div>
-    <Heading1>
-      Collapse
-    </Heading1>
+    <Heading1>Collapse</Heading1>
 
-    <small>Collapsible Group</small>
+    <AppLAbel text="Collapsible Group" />
     <AppCard>
       <Accordion id="a" :content="content" />
     </AppCard>
 
-    <small>Collapsible Group with Expanded Item</small>
+    <AppLAbel text="Collapsible Group with Expanded Item" />
     <AppCard>
       <Accordion id="b" :content="content2" :multiple="true" />
     </AppCard>
 
-    <small>Props</small>
+    <AppLAbel text="Props" />
     <TerminalInput content="id: {
     type: String,
     required: true
@@ -27,9 +25,9 @@
     type: Boolean,
     default: false
   }" />
-    <small>Path</small>
+    <AppLAbel text="Path" />
     <TerminalInput content="@/components/headings/Accordion" />
-    <small>Example</small>
+    <AppLAbel text="Example" />
     <TerminalInput :content="escapeHtml('<Accordion id=&quot;unique&quot; :content=&quot;content&quot; />')" />
 
     <AppEdit :href="'/devoopshq/styleguide/blob/master/pages/' + this.$route.name + '.vue'" />
@@ -38,6 +36,7 @@
 
 
 <script>
+import AppLabel from '@/components/AppLabel'
 import escape from '@/helpers/escape'
 import Heading1 from '@/components/headings/Heading1'
 import Accordion from '@/components/Accordion'
@@ -51,7 +50,8 @@ export default {
     AppCard,
     TerminalInput,
     AppEdit,
-    Heading1
+    Heading1,
+    AppLabel
   },
 
   data: () => ({
@@ -106,11 +106,3 @@ export default {
   }
 }
 </script>
-
-<style lang="postcss" scoped>
-small {
-  display: block;
-  margin-bottom: 0.25rem;
-  color: #717171;
-}
-</style>

@@ -8,6 +8,6 @@
 h3 {
   font-size: 18px;
   line-height: 1.3125;
-  font-weight: 700;
+  font-variation-settings: 'wght' 600;
 }
 </style>
