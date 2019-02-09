@@ -107,7 +107,7 @@ td {
 small {
   display: block;
   margin-bottom: 0.25rem;
-  color: #757575;
+  color: #717171;
 }
 .card {
   /* outline: 1px dashed; */

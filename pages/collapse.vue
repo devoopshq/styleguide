@@ -111,6 +111,6 @@ export default {
 small {
   display: block;
   margin-bottom: 0.25rem;
-  color: #757575;
+  color: #717171;
 }
 </style>
