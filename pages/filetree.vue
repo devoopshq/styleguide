@@ -38,19 +38,6 @@
       <TerminalInput :content="escapeHtml(`<ul>
     <AppFileTree :node=&quot;files&quot; :open=&quot;true&quot; />
   </ul>`)" />
-      <!-- node: {
-        type: Object,
-        default: () => {}
-      },
-      fill: {
-        type: String,
-        default: '#000'
-      },
-      open: {
-        type: Boolean,
-        default: false
-      } -->
-      <AppEdit />
     </template>
   </AppDoc>
 </template>
@@ -60,7 +47,6 @@ import AppLabel from '@/components/AppLabel'
 import Heading1 from '@/components/headings/Heading1'
 import AppFileTree from '@/components/AppFileTree'
 import AppCard from '@/components/AppCard'
-import AppEdit from '@/components/AppEdit'
 import AppDoc from '@/components/AppDoc'
 import TerminalInput from '@/components/code/TerminalInput'
 import escape from '@/helpers/escape'
@@ -71,7 +57,6 @@ export default {
     AppFileTree,
     AppCard,
     AppLabel,
-    AppEdit,
     AppDoc,
     TerminalInput
   },

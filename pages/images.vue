@@ -37,10 +37,6 @@
       alt=&quot;Alt&quot;
     />`)" />
     </template>
-
-    <template #right>
-      <AppEdit />
-    </template>
   </AppDoc>
 </template>
 
@@ -49,7 +45,6 @@ import escape from '@/helpers/escape'
 // componnets
 import AppLabel from '@/components/AppLabel'
 import AppCard from '@/components/AppCard'
-import AppEdit from '@/components/AppEdit'
 import AppDoc from '@/components/AppDoc'
 
 import Heading1 from '@/components/headings/Heading1'
@@ -59,7 +54,6 @@ import TerminalInput from '@/components/code/TerminalInput'
 export default {
   components: {
     AppLabel,
-    AppEdit,
     AppDoc,
     AppCard,
     Heading1,

@@ -12,11 +12,6 @@
       <AppCard>
         <OL :lists="lists" />
       </AppCard>
-
-
-    </template>
-    <template #right>
-      <AppEdit href="/" />
     </template>
   </AppDoc>
 </template>
@@ -27,7 +22,6 @@ import Heading1 from '@/components/headings/Heading1'
 import UL from '@/components/lists/UL'
 import OL from '@/components/lists/OL'
 import AppCard from '@/components/AppCard'
-import AppEdit from '@/components/AppEdit'
 import AppDoc from '@/components/AppDoc'
 
 export default {
@@ -36,7 +30,6 @@ export default {
     UL,
     OL,
     AppCard,
-    AppEdit,
     AppLabel,
     AppDoc
   },

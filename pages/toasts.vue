@@ -44,10 +44,6 @@
           Show Toast
         </ButtonPrimary>
       </AppCard>
-    </template>
-
-    <template #right>
-      <AppEdit />
       <AppToast :toast="toast" />
     </template>
   </AppDoc>
@@ -59,7 +55,6 @@ import Heading1 from '@/components/headings/Heading1'
 import AppCard from '@/components/AppCard'
 import ButtonPrimary from '@/components/buttons/ButtonPrimary'
 import AppToast from '@/components/AppToast'
-import AppEdit from '@/components/AppEdit'
 import AppDoc from '@/components/AppDoc'
 
 export default {
@@ -69,7 +64,6 @@ export default {
     ButtonPrimary,
     AppToast,
     AppLabel,
-    AppEdit,
     AppDoc
   },
 

@@ -57,8 +57,6 @@
       <TerminalInput content="@/components/headings/SubHeading" />
       <AppLabel text="Example" />
       <TerminalInput :content="escapeHtml('<SubHeading text=&quot;The brown dev jumped over the fence&quot; />')" />
-
-      <AppEdit href="/" />
     </template>
   </AppDoc>
 </template>
@@ -74,7 +72,6 @@ import Heading4 from '@/components/headings/Heading4'
 import SubHeading from '@/components/headings/SubHeading'
 import TerminalInput from '@/components/code/TerminalInput'
 import AppCard from '@/components/AppCard'
-import AppEdit from '@/components/AppEdit'
 import AppDoc from '@/components/AppDoc'
 
 export default {
@@ -85,7 +82,6 @@ export default {
     Heading4,
     TerminalInput,
     AppCard,
-    AppEdit,
     AppLabel,
     SubHeading,
     AppDoc

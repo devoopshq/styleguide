@@ -3,6 +3,14 @@
     <template #left>
       <Heading1>The <strong>Inter</strong> Font Family</Heading1>
 
+      <AppCard :style="cssVariables">
+        <p class="var">
+          ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 ?!()[]{}&*^%$#@~
+        </p>
+      </AppCard>
+    </template>
+
+    <template #right>
       <div class="fieldset">
         <InputTypeRange
           id="fontWeight"
@@ -58,43 +66,6 @@
           :range="true"
         />
       </div>
-
-      <AppCard :style="cssVariables">
-        <p class="var">
-          ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 ?!()[]{}&*^%$#@~
-        </p>
-      </AppCard>
-
-      <div class="resources">
-        <p>
-          The Inter Font family
-          <a href="https://rsms.me/inter/">
-            rsms.me/inter
-          </a>
-        </p>
-        <p>
-          Variable Fonts
-          <a href="https://caniuse.com/#feat=variable-fonts">
-            caniuse.com
-          </a>
-        </p>
-        <p>
-          Specification
-          <a href="https://drafts.csswg.org/css-fonts-4/#font-variation-settings-def">
-            drafts.csswg.org
-          </a>
-        </p>
-        <p>
-          How to use variable fonts in the real world
-          <a href="https://medium.com/clear-left-thinking/how-to-use-variable-fonts-in-the-real-world-e6d73065a604">
-            medium.com
-          </a>
-        </p>
-      </div>
-    </template>
-
-    <template #right>
-      <AppEdit />
     </template>
   </AppDoc>
 </template>
@@ -103,7 +74,6 @@
 import Heading1 from '@/components/headings/Heading1'
 import InputTypeRange from '@/components/forms/InputTypeRange'
 import AppCard from '@/components/AppCard'
-import AppEdit from '@/components/AppEdit'
 import AppDoc from '@/components/AppDoc'
 
 export default {
@@ -111,7 +81,6 @@ export default {
     Heading1,
     InputTypeRange,
     AppCard,
-    AppEdit,
     AppDoc
   },
   data () {
@@ -165,13 +134,6 @@ export default {
   display: flex;
   flex-direction: column;
   padding-bottom: 16px;
-}
-.resources {
-  font-size: 13px;
-  color: var(--gray3);
-}
-.resources a {
-  color: var(--blue-aa);
 }
 @supports (font-variation-settings: normal) {
   .var {

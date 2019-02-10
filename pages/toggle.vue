@@ -34,15 +34,12 @@
       <TerminalInput content="@/components/interaction/selection/SelectionSwitch" />
       <AppLabel text="Usage" />
       <TerminalInput :content="escapeHtml(`<SelectionSwitch />`)" />
-
-      <AppEdit />
     </template>
   </AppDoc>
 </template>
 
 <script>
 import AppLabel from '@/components/AppLabel'
-import AppEdit from '@/components/AppEdit'
 import AppDoc from '@/components/AppDoc'
 import AppCard from '@/components/AppCard'
 import escape from '@/helpers/escape'
@@ -57,7 +54,6 @@ export default {
     SelectionSwitch,
     TerminalInput,
     AppLabel,
-    AppEdit,
     AppDoc
   },
 

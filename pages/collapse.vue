@@ -32,8 +32,6 @@
       <TerminalInput content="@/components/headings/Accordion" />
       <AppLabel text="Example" />
       <TerminalInput :content="escapeHtml('<Accordion id=&quot;unique&quot; :content=&quot;content&quot; />')" />
-
-      <AppEdit href="/" />
     </template>
   </AppDoc>
 </template>
@@ -46,7 +44,6 @@ import Heading1 from '@/components/headings/Heading1'
 import Accordion from '@/components/Accordion'
 import AppCard from '@/components/AppCard'
 import TerminalInput from '@/components/code/TerminalInput'
-import AppEdit from '@/components/AppEdit'
 import AppDoc from '@/components/AppDoc'
 
 export default {
@@ -54,7 +51,6 @@ export default {
     Accordion,
     AppCard,
     TerminalInput,
-    AppEdit,
     Heading1,
     AppLabel,
     AppDoc

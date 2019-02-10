@@ -4,25 +4,25 @@
       <Heading1>Brand</Heading1>
 
       <AppLabel text="Logo - White Slash on Dark Background" />
-      <a download="lwhite" href="b.svg">.svg</a>
+      <a download="logo" href="b.svg">.svg</a>
       <AppCard>
         <AppImage src="/b.svg" />
       </AppCard>
 
       <AppLabel text="Logo - Black Slash on Light Background" />
-      <a download="logo-black" href="b.svg">.svg</a>
+      <a download="logo" href="b.svg">.svg</a>
       <AppCard>
         <AppImage src="/test.svg" />
       </AppCard>
 
       <AppLabel text="Logotype - White on Dark Background" />
-      <a download="lwhite" href="b.svg">.svg</a>
+      <a download="logo" href="b.svg">.svg</a>
       <AppCard>
         ###
       </AppCard>
 
       <AppLabel text="Logotype - Black on Light Background" />
-      <a download="lwhite" href="b.svg">.svg</a>
+      <a download="logo" href="b.svg">.svg</a>
       <AppCard>
         ###
       </AppCard>

@@ -22,10 +22,6 @@
         <span class="mono m700">DevOops - 700</span>
       </AppCard>
     </template>
-
-    <template #right>
-      <AppEdit />
-    </template>
   </AppDoc>
 </template>
 
@@ -33,14 +29,12 @@
 import AppLabel from '@/components/AppLabel'
 import Heading1 from '@/components/headings/Heading1'
 import AppCard from '@/components/AppCard'
-import AppEdit from '@/components/AppEdit'
 import AppDoc from '@/components/AppDoc'
 
 export default {
   components: {
     Heading1,
     AppCard,
-    AppEdit,
     AppLabel,
     AppDoc
   },
@@ -56,6 +50,7 @@ p {
   font-size: 32px;
   margin: 8px 0;
 }
+/* weights */
 .w100 { font-variation-settings: 'wght' 100; }
 .w200 { font-variation-settings: 'wght' 200; }
 .w300 { font-variation-settings: 'wght' 300; }
@@ -65,6 +60,7 @@ p {
 .w700 { font-variation-settings: 'wght' 700; }
 .w800 { font-variation-settings: 'wght' 800; }
 .w900 { font-variation-settings: 'wght' 900; }
+/* mono */
 .mono { font-family: var(--monospace); }
 .m700 { font-weight: 700; }
 </style>
