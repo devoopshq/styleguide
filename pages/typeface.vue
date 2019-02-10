@@ -1,28 +1,32 @@
 <template>
-  <div>
-    <Heading1>Typeface</Heading1>
+  <AppDoc>
+    <template #left>
+      <Heading1>Typeface</Heading1>
 
-    <AppLabel text="Sans" />
-    <AppCard>
-      <p class="w100">Thin - 100</p>
-      <p class="w200">Extra Light - 200</p>
-      <p class="w300">Light - 300</p>
-      <p class="w400">Regular - 400</p>
-      <p class="w500">Medium - 500</p>
-      <p class="w600">Semi Bold - 600</p>
-      <p class="w700">Bold - 700</p>
-      <p class="w800">Extra Bold - 800</p>
-      <p class="w900">Black - 900</p>
-    </AppCard>
+      <AppLabel text="Sans" />
+      <AppCard>
+        <p class="w100">Thin - 100</p>
+        <p class="w200">Extra Light - 200</p>
+        <p class="w300">Light - 300</p>
+        <p class="w400">Regular - 400</p>
+        <p class="w500">Medium - 500</p>
+        <p class="w600">Semi Bold - 600</p>
+        <p class="w700">Bold - 700</p>
+        <p class="w800">Extra Bold - 800</p>
+        <p class="w900">Black - 900</p>
+      </AppCard>
 
-    <AppLabel text="Mono" />
-    <AppCard>
-      <span class="mono">DevOops - 400</span><br>
-      <span class="mono m700">DevOops - 700</span>
-    </AppCard>
+      <AppLabel text="Mono" />
+      <AppCard>
+        <span class="mono">DevOops - 400</span><br>
+        <span class="mono m700">DevOops - 700</span>
+      </AppCard>
+    </template>
 
-    <AppEdit :href="'/devoopshq/styleguide/blob/master/pages/' + this.$route.name + '.vue'" />
-  </div>
+    <template #right>
+      <AppEdit />
+    </template>
+  </AppDoc>
 </template>
 
 <script>
@@ -30,13 +34,15 @@ import AppLabel from '@/components/AppLabel'
 import Heading1 from '@/components/headings/Heading1'
 import AppCard from '@/components/AppCard'
 import AppEdit from '@/components/AppEdit'
+import AppDoc from '@/components/AppDoc'
 
 export default {
   components: {
     Heading1,
     AppCard,
     AppEdit,
-    AppLabel
+    AppLabel,
+    AppDoc
   },
 
   head: () => ({

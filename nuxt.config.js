@@ -30,7 +30,7 @@ module.exports = {
       { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
       { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
       { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
-      { rel: 'manifest', href: 'https://devoops.app/icons/manifest.json' },
+      { rel: 'manifest', href: '/manifest.json' },
       { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#8d8e8e' },
       // Specs: https://wicg.github.io/priority-hints/
       // Origin Trail: https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/jpeSdM897Xw

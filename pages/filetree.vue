@@ -1,39 +1,79 @@
 <template>
-  <div>
-    <Heading1>File Tree</Heading1>
+  <AppDoc>
+    <template #left>
+      <Heading1>File Tree</Heading1>
 
-    <AppLabel text="File Tree - Normal" />
-    <AppCard>
-      <ul>
-        <AppTree :node="files" />
-      </ul>
-    </AppCard>
+      <AppLabel text="File Tree - Normal" />
+      <AppCard>
+        <ul>
+          <AppFileTree :node="files" />
+        </ul>
+      </AppCard>
 
-    <AppLabel text="File Tree - Open" />
-    <AppCard>
-      <ul>
-        <AppTree :node="files" :open="true" />
-      </ul>
-    </AppCard>
+      <AppLabel text="File Tree - Open" />
+      <AppCard>
+        <ul>
+          <AppFileTree :node="files" :open="true" />
+        </ul>
+      </AppCard>
+    </template>
 
-    <AppEdit />
-  </div>
+    <template #right>
+      <AppLabel text="Props" />
+      <TerminalInput content="node: {
+    type: Object,
+    default: () => {}
+  },
+  fill: {
+    type: String,
+    default: '#000'
+  },
+  open: {
+    type: Boolean,
+    default: false
+  }" />
+      <AppLabel text="Path" />
+      <TerminalInput content="@/components/AppFileTree" />
+      <AppLabel text="Sample" />
+      <TerminalInput :content="escapeHtml(`<ul>
+    <AppFileTree :node=&quot;files&quot; :open=&quot;true&quot; />
+  </ul>`)" />
+      <!-- node: {
+        type: Object,
+        default: () => {}
+      },
+      fill: {
+        type: String,
+        default: '#000'
+      },
+      open: {
+        type: Boolean,
+        default: false
+      } -->
+      <AppEdit />
+    </template>
+  </AppDoc>
 </template>
 
 <script>
 import AppLabel from '@/components/AppLabel'
 import Heading1 from '@/components/headings/Heading1'
-import AppTree from '@/components/filetree/AppTree'
+import AppFileTree from '@/components/AppFileTree'
 import AppCard from '@/components/AppCard'
 import AppEdit from '@/components/AppEdit'
+import AppDoc from '@/components/AppDoc'
+import TerminalInput from '@/components/code/TerminalInput'
+import escape from '@/helpers/escape'
 
 export default {
   components: {
     Heading1,
-    AppTree,
+    AppFileTree,
     AppCard,
     AppLabel,
-    AppEdit
+    AppEdit,
+    AppDoc,
+    TerminalInput
   },
 
   data: () => ({
@@ -74,7 +114,11 @@ export default {
 
   head: () => ({
     title: 'File Tree'
-  })
+  }),
+
+  methods: {
+    escapeHtml: value => escape(value)
+  }
 }
 </script>
 

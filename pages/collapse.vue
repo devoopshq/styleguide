@@ -1,37 +1,41 @@
 <template>
-  <div>
-    <Heading1>Collapse</Heading1>
+  <AppDoc>
+    <template #left>
+      <Heading1>Collapse</Heading1>
 
-    <AppLabel text="Collapsible Group" />
-    <AppCard>
-      <Accordion id="a" :content="content" />
-    </AppCard>
+      <AppLabel text="Collapsible Group" />
+      <AppCard>
+        <Accordion id="a" :content="content" />
+      </AppCard>
 
-    <AppLabel text="Collapsible Group with Expanded Item" />
-    <AppCard>
-      <Accordion id="b" :content="content2" :multiple="true" />
-    </AppCard>
+      <AppLabel text="Collapsible Group with Expanded Item" />
+      <AppCard>
+        <Accordion id="b" :content="content2" :multiple="true" />
+      </AppCard>
+    </template>
 
-    <AppLAbel text="Props" />
-    <TerminalInput content="id: {
-    type: String,
-    required: true
-  },
-  content: {
-    type: Array,
-    required: true
-  },
-  multiple: {
-    type: Boolean,
-    default: false
-  }" />
-    <AppLAbel text="Path" />
-    <TerminalInput content="@/components/headings/Accordion" />
-    <AppLAbel text="Example" />
-    <TerminalInput :content="escapeHtml('<Accordion id=&quot;unique&quot; :content=&quot;content&quot; />')" />
+    <template #right>
+      <AppLabel text="Props" />
+      <TerminalInput content="id: {
+      type: String,
+      required: true
+    },
+    content: {
+      type: Array,
+      required: true
+    },
+    multiple: {
+      type: Boolean,
+      default: false
+    }" />
+      <AppLabel text="Path" />
+      <TerminalInput content="@/components/headings/Accordion" />
+      <AppLabel text="Example" />
+      <TerminalInput :content="escapeHtml('<Accordion id=&quot;unique&quot; :content=&quot;content&quot; />')" />
 
-    <AppEdit :href="'/devoopshq/styleguide/blob/master/pages/' + this.$route.name + '.vue'" />
-  </div>
+      <AppEdit href="/" />
+    </template>
+  </AppDoc>
 </template>
 
 
@@ -43,6 +47,7 @@ import Accordion from '@/components/Accordion'
 import AppCard from '@/components/AppCard'
 import TerminalInput from '@/components/code/TerminalInput'
 import AppEdit from '@/components/AppEdit'
+import AppDoc from '@/components/AppDoc'
 
 export default {
   components: {
@@ -51,7 +56,8 @@ export default {
     TerminalInput,
     AppEdit,
     Heading1,
-    AppLabel
+    AppLabel,
+    AppDoc
   },
 
   data: () => ({

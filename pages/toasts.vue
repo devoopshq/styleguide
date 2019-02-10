@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <div class="content">
+  <AppDoc>
+    <template #left>
       <Heading1>Toasts</Heading1>
 
       <AppLabel text="Message Toast" />
@@ -44,11 +44,13 @@
           Show Toast
         </ButtonPrimary>
       </AppCard>
-    </div>
+    </template>
 
-    <AppEdit />
-    <AppToast :toast="toast" />
-  </div>
+    <template #right>
+      <AppEdit />
+      <AppToast :toast="toast" />
+    </template>
+  </AppDoc>
 </template>
 
 <script>
@@ -58,6 +60,7 @@ import AppCard from '@/components/AppCard'
 import ButtonPrimary from '@/components/buttons/ButtonPrimary'
 import AppToast from '@/components/AppToast'
 import AppEdit from '@/components/AppEdit'
+import AppDoc from '@/components/AppDoc'
 
 export default {
   components: {
@@ -66,7 +69,8 @@ export default {
     ButtonPrimary,
     AppToast,
     AppLabel,
-    AppEdit
+    AppEdit,
+    AppDoc
   },
 
   data: () => ({

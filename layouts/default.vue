@@ -80,7 +80,7 @@ html {
 }
 body {
   color: var(--black);
-  background-color: rgba(0, 0, 0, 0.04);
+  background-color: rgba(0, 0, 0, 0.01);
   margin: 0;
 }
 html,
@@ -108,11 +108,7 @@ body,
   display: flex;
   min-height: 100%;
 }
-main {
-  flex: 1;
-  max-width: 512px;
-  padding: 0 0 0 356px;
-}
+main { flex: 1; }
 [tabindex="-1"]:focus {
   outline: none !important;
 }

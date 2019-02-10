@@ -1,19 +1,24 @@
 <template>
-  <div>
-    <Heading1>Lists</Heading1>
+  <AppDoc>
+    <template #left>
+      <Heading1>Lists</Heading1>
 
-    <AppLabel text="Unordered List" />
-    <AppCard>
-      <UL :lists="lists" />
-    </AppCard>
+      <AppLabel text="Unordered List" />
+      <AppCard>
+        <UL :lists="lists" />
+      </AppCard>
 
-    <AppLabel text="Ordered List" />
-    <AppCard>
-      <OL :lists="lists" />
-    </AppCard>
+      <AppLabel text="Ordered List" />
+      <AppCard>
+        <OL :lists="lists" />
+      </AppCard>
 
-    <AppEdit :href="'/devoopshq/styleguide/blob/master/pages/' + this.$route.name + '.vue'" />
-  </div>
+
+    </template>
+    <template #right>
+      <AppEdit href="/" />
+    </template>
+  </AppDoc>
 </template>
 
 <script>
@@ -23,6 +28,7 @@ import UL from '@/components/lists/UL'
 import OL from '@/components/lists/OL'
 import AppCard from '@/components/AppCard'
 import AppEdit from '@/components/AppEdit'
+import AppDoc from '@/components/AppDoc'
 
 export default {
   components: {
@@ -31,7 +37,8 @@ export default {
     OL,
     AppCard,
     AppEdit,
-    AppLabel
+    AppLabel,
+    AppDoc
   },
 
   data: () => ({

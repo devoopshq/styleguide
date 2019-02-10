@@ -17,7 +17,13 @@
     </div>
 
     <ul v-if="open">
-      <NodeTree v-for="(child, index) in node.children" :key="index" :node="child" :open="open" />
+      <NodeTree
+        v-for="(child, index) in node.children"
+        :key="index"
+        :node="child"
+        :open="open"
+        :fill="fill"
+      />
     </ul>
   </li>
 </template>
@@ -116,6 +122,7 @@ li ul li:before {
 }
 small {
   color: #999;
+  padding-left: 16px;
 }
 small.open {
   color: #000;

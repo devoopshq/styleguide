@@ -1,41 +1,45 @@
 <template>
-  <div>
-    <Heading1>Buttons</Heading1>
+  <AppDoc>
+    <template #left>
+      <Heading1>Buttons</Heading1>
 
-    <AppLabel text="Button — Primary" />
-    <AppCard>
-      <ButtonPrimary />
-    </AppCard>
+      <AppLabel text="Button — Primary" />
+      <AppCard>
+        <ButtonPrimary />
+      </AppCard>
 
-    <AppLabel text="Button — Secondary" />
-    <AppCard>
-      <ButtonSecondary />
-    </AppCard>
+      <AppLabel text="Button — Secondary" />
+      <AppCard>
+        <ButtonSecondary />
+      </AppCard>
 
-    <AppLabel text="Button — Disabled" />
-    <AppCard>
-      <ButtonPrimary :disabled="true" />
-    </AppCard>
+      <AppLabel text="Button — Disabled" />
+      <AppCard>
+        <ButtonPrimary :disabled="true" />
+      </AppCard>
 
-    <AppLabel text="Button — Loading" />
-    <AppCard>
-      <ButtonPrimary>
-        <Spinner :size="32" :stroke="'#fff'" />
-      </ButtonPrimary>
-    </AppCard>
+      <AppLabel text="Button — Loading" />
+      <AppCard>
+        <ButtonPrimary>
+          <Spinner :size="32" :stroke="'#fff'" />
+        </ButtonPrimary>
+      </AppCard>
 
-    <AppLabel text="Button — Abort" />
-    <AppCard>
-      <ButtonAbort />
-    </AppCard>
+      <AppLabel text="Button — Abort" />
+      <AppCard>
+        <ButtonAbort />
+      </AppCard>
 
-    <AppLabel text="Button — Warning" />
-    <AppCard>
-      <ButtonPrimary :warning="true" />
-    </AppCard>
+      <AppLabel text="Button — Warning" />
+      <AppCard>
+        <ButtonPrimary :warning="true" />
+      </AppCard>
+    </template>
 
-    <AppEdit :href="'/devoopshq/styleguide/blob/master/pages/' + this.$route.name + '.vue'" />
-  </div>
+    <template #right>
+      <AppEdit />
+    </template>
+  </AppDoc>
 </template>
 
 
@@ -48,6 +52,7 @@ import ButtonSecondary from '@/components/buttons/ButtonSecondary'
 import ButtonAbort from '@/components/buttons/ButtonAbort'
 import Spinner from '@/components/Spinner'
 import AppEdit from '@/components/AppEdit'
+import AppDoc from '@/components/AppDoc'
 
 export default {
   components: {
@@ -58,7 +63,8 @@ export default {
     ButtonAbort,
     Spinner,
     AppEdit,
-    AppLabel
+    AppLabel,
+    AppDoc
   },
 
   head: () => ({

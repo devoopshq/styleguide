@@ -1,19 +1,23 @@
 <template>
-  <div>
-    <Heading1>Spinner</Heading1>
+  <AppDoc>
+    <template #left>
+      <Heading1>Spinner</Heading1>
 
-    <AppLabel text="Default Size" />
-    <AppCard>
-      <Spinner />
-    </AppCard>
+      <AppLabel text="Default Size" />
+      <AppCard>
+        <Spinner />
+      </AppCard>
 
-    <AppLabel text="Custom Size" />
-    <AppCard>
-      <Spinner :size="48" />
-    </AppCard>
+      <AppLabel text="Custom Size" />
+      <AppCard>
+        <Spinner :size="48" />
+      </AppCard>
+    </template>
 
-    <AppEdit />
-  </div>
+    <template #right>
+      <AppEdit />
+    </template>
+  </AppDoc>
 </template>
 
 <script>
@@ -22,6 +26,7 @@ import AppLabel from '@/components/AppLabel'
 import AppCard from '@/components/AppCard'
 import Spinner from '@/components/Spinner'
 import AppEdit from '@/components/AppEdit'
+import AppDoc from '@/components/AppDoc'
 
 export default {
   components: {
@@ -29,7 +34,8 @@ export default {
     AppLabel,
     AppCard,
     Spinner,
-    AppEdit
+    AppEdit,
+    AppDoc
   },
 
   head: () => ({

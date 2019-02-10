@@ -1,46 +1,52 @@
 <template>
-  <div>
-    <Heading1>Toggle</Heading1>
+  <AppDoc>
+    <template #left>
+      <Heading1>Toggle</Heading1>
 
-    <AppLabel :text="foo(a)" />
-    <AppCard>
-      <SelectionSwitch @update="a = $event" />
-    </AppCard>
+      <AppLabel :text="foo(a)" />
+      <AppCard>
+        <SelectionSwitch @update="a = $event" />
+      </AppCard>
 
-    <AppLabel :text="foo(b)" />
-    <AppCard>
-      <SelectionSwitch :checked="true" @update="b = $event" />
-    </AppCard>
+      <AppLabel :text="foo(b)" />
+      <AppCard>
+        <SelectionSwitch :checked="true" @update="b = $event" />
+      </AppCard>
 
-    <AppLabel text="Disabled" />
-    <AppCard>
-      <SelectionSwitch :disabled="true" />
-    </AppCard>
+      <AppLabel text="Disabled" />
+      <AppCard>
+        <SelectionSwitch :disabled="true" />
+      </AppCard>
 
-    <AppLabel text="Props" />
-    <TerminalInput :content="`checked: {
-    type: Boolean,
-    default: false
-  },
-  disabled: {
-    type: Boolean,
-    default: false
-  }`" />
-    <AppLabel text="Path" />
-    <TerminalInput content="@/components/interaction/selection/SelectionSwitch" />
-    <AppLabel text="Usage" />
-    <TerminalInput :content="escapeHtml(`<SelectionSwitch />`)" />
+    </template>
 
-    <AppEdit />
-  </div>
+    <template #right>
+      <AppLabel text="Props" />
+      <TerminalInput :content="`checked: {
+      type: Boolean,
+      default: false
+    },
+    disabled: {
+      type: Boolean,
+      default: false
+    }`" />
+      <AppLabel text="Path" />
+      <TerminalInput content="@/components/interaction/selection/SelectionSwitch" />
+      <AppLabel text="Usage" />
+      <TerminalInput :content="escapeHtml(`<SelectionSwitch />`)" />
+
+      <AppEdit />
+    </template>
+  </AppDoc>
 </template>
 
 <script>
 import AppLabel from '@/components/AppLabel'
 import AppEdit from '@/components/AppEdit'
+import AppDoc from '@/components/AppDoc'
+import AppCard from '@/components/AppCard'
 import escape from '@/helpers/escape'
 import Heading1 from '@/components/headings/Heading1'
-import AppCard from '@/components/AppCard'
 import SelectionSwitch from '@/components/interaction/selection/SelectionSwitch'
 import TerminalInput from '@/components/code/TerminalInput'
 
@@ -51,7 +57,8 @@ export default {
     SelectionSwitch,
     TerminalInput,
     AppLabel,
-    AppEdit
+    AppEdit,
+    AppDoc
   },
 
   data () {
