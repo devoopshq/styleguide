@@ -5,7 +5,7 @@ export const state = () => ({
       'Lists',
       'Paragraphs',
       'Typeface',
-      'Font'
+      'Variable'
     ],
     components: [
       'Collapse',

@@ -46,6 +46,7 @@
       </AppCard>
     </div>
 
+    <AppEdit />
     <AppToast :toast="toast" />
   </div>
 </template>
@@ -56,6 +57,7 @@ import Heading1 from '@/components/headings/Heading1'
 import AppCard from '@/components/AppCard'
 import ButtonPrimary from '@/components/buttons/ButtonPrimary'
 import AppToast from '@/components/AppToast'
+import AppEdit from '@/components/AppEdit'
 
 export default {
   components: {
@@ -63,7 +65,8 @@ export default {
     AppCard,
     ButtonPrimary,
     AppToast,
-    AppLabel
+    AppLabel,
+    AppEdit
   },
 
   data: () => ({

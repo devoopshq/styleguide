@@ -1,8 +1,7 @@
 <template>
   <div>
-    <Heading1>
-      The <strong>Inter</strong> Font Family
-    </Heading1>
+    <Heading1>The <strong>Inter</strong> Font Family</Heading1>
+
     <div class="fieldset">
       <InputTypeRange
         id="fontWeight"
@@ -128,10 +127,28 @@ export default {
         '--slant': this.slant
       }
     }
+    //  6   0.043
+    //  7   0.032
+    //  8   0.024
+    //  9   0.016
+    // 10   0.01
+    // 11   0.005
+    // 12   0
+    // 13  -0.0025
+    // 14  -0.006
+    // 15  -0.009
+    // 16  -0.011
+    // 17  -0.013
+    // 18  -0.014
+    // 20  -0.017
+    // 24  -0.019
+    // 30  -0.021
+    // 40  -0.022
+    // 80  -0.022
   },
 
   head: () => ({
-    title: 'Variable Font'
+    title: 'Variable'
   })
 }
 </script>
@@ -150,7 +167,7 @@ export default {
 .resources a {
   color: var(--blue-aa);
 }
-@supports (font-variation-settings: 'wdth' 200) {
+@supports (font-variation-settings: normal) {
   .var {
     font-size: var(--size);
     letter-spacing: var(--letter-spacing);
@@ -159,6 +176,6 @@ export default {
     word-break: break-all;
   }
 }
-@supports not (font-variation-settings: 'wdth' 200) {}
+@supports not (font-variation-settings: normal) {}
 
 </style>

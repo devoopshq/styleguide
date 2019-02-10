@@ -7,6 +7,8 @@ module.exports = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '###' },
+      { name: 'msapplication-TileColor',  content: '#ffffff' },
+      { name: 'theme-color', content: '#ffffff' },
       /*
         Open Graph
         http://ogp.me/
@@ -25,15 +27,15 @@ module.exports = {
       // { hid: 'og:url', property: 'og:url', content: `https://devoops.app/` }
     ],
     link: [
-      // { rel: 'apple-touch-icon', sizes: '180x180', href: 'https://devoops.app/icons/apple-touch-icon.png' },
-      // { rel: 'icon', type: 'image/png', sizes: '32x32', href: 'https://devoops.app/icons/favicon-32x32.png' },
-      // { rel: 'icon', type: 'image/png', sizes: '16x16', href: 'https://devoops.app/icons/favicon-16x16.png' },
-      // { rel: 'manifest', href: 'https://devoops.app/icons/manifest.json' },
-      // { rel: 'mask-icon', href: 'https://devoops.app/icons/safari-pinned-tab.svg', color: '#000000' },
-      // { rel: 'shortcut icon', href: 'https://devoops.app/icons/favicon.ico' }
+      { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+      { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+      { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
+      { rel: 'manifest', href: 'https://devoops.app/icons/manifest.json' },
+      { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#8d8e8e' },
       // Specs: https://wicg.github.io/priority-hints/
       // Origin Trail: https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/jpeSdM897Xw
-      { rel: 'preload', href: 'fonts/Inter.var.ttf', as: 'font', crossorigin: 'anonymous', importance: 'low' }
+      // importance: 'low'
+      { rel: 'preload', href: 'fonts/Inter.var.ttf', as: 'font', crossorigin: 'anonymous' }
     ]
   },
 
@@ -61,7 +63,7 @@ module.exports = {
   router: {
     // https://github.com/nuxt/nuxt.js/pull/4574
     // To disable prefetching, uncomment the line
-    // prefetchLinks: false
+    prefetchLinks: false
 
     // Activate prefetched class (default: false)
     // Used to display the check mark next to the prefetched link

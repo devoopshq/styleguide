@@ -1,22 +1,28 @@
 <template>
   <nav>
     <div class="links">
-      <NuxtLink to="/">
-        DevOops <span class="version"> v0.1.0</span>
-      </NuxtLink>
+      <NuxtLink to="/">/</NuxtLink>
 
       <span class="label">
         Typography
       </span>
-      <NuxtLink v-for="(link, index) in links.typography" :key="index" :to="'/' + link.toLowerCase()">
-        {{ link }}
+      <NuxtLink
+        v-for="(link, index) in links.typography"
+        :key="index"
+        :to="'/' + link.toLowerCase()"
+      >
+        {{ link.toLowerCase() }}
       </NuxtLink>
 
       <span class="label">
         Components
       </span>
-      <NuxtLink v-for="(link, index) in links.components" :key="index" :to="'/' + link.toLowerCase()">
-        {{ link }}
+      <NuxtLink
+        v-for="(link, index) in links.components"
+        :key="index"
+        :to="'/' + link.toLowerCase()"
+      >
+        {{ link.toLowerCase() }}
       </NuxtLink>
     </div>
   </nav>
@@ -34,11 +40,18 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
+.logo {
+  width: 32px;
+  height: 32px;
+}
 nav {
   width: 256px;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-top: 24px;
   background-color: #fff;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  overflow-y: scroll;
 }
 a {
   display: flex;
@@ -48,39 +61,32 @@ a {
   text-decoration: none;
   margin-bottom: 8px;
   align-items: baseline;
-  padding: 8px;
-  border-radius: 4px;
-}
-a:hover {
-  background-color: rgba(0, 0, 0, 0.04);
+  padding: 8px 32px;
 }
 .nuxt-link-exact-active {
   color: var(--black);
-  background-color: rgba(0, 0, 0, 0.04);
+  border-left: 3px solid var(--black);
+  padding: 8px 29px;
   font-variation-settings: 'wght' 600;
 }
 /* .nuxt-link-prefetched:after { content: '###'; } */
 a:first-child {
   color: var(--black);
   font-size: 18px;
-  font-variation-settings: 'wght' 700;
-  margin-bottom: 32px;
+  font-variation-settings: 'wght' 600;
+  margin-bottom: 8px;
 }
 .version {
-  font-variation-settings: 'wght' 400;
-  color: #757575;
-  font-size: 13px;
-  padding-left: 0.5em;
+  /* font-variation-settings: 'wght' 600; */
+  /* color: #757575; */
+/*   font-size: 13px; */
 }
 .label {
   display: block;
   color: var(--gray3);
   font-size: 13px;
-  padding: 16px 8px;
-}
-.links {
-  position: sticky;
-  top: 25px;
+  padding: 16px 32px;
+  min-height: 100%;
 }
 @media (max-width: 512px) {
   nav {

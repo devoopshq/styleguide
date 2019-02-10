@@ -24,7 +24,7 @@ export default {
   methods: {
     async loadFont () {
       const font = new FontFace(
-        'Inter',
+        'Inter var',
         'url(./fonts/Inter.var.ttf)'
       )
       await font.load()
@@ -58,6 +58,9 @@ export default {
   --gray2: #999999;
   --gray3: #666666;
   --gray4: #333333;
+
+  --letter-spacing: -0.011em;
+  ----line-height: 1.1235;
 }
 *::after {
   box-sizing: inherit;
@@ -95,8 +98,11 @@ body,
   line-height: var(--line-height);
 }
 #__nuxt.fontLoaded {
-  font-family: Inter;
-  font-variation-settings: 'wght' var(--weight), 'slnt' var(--slant);
+  font-family: "Inter var", sans-serif;
+  font-weight: 100 900;
+  font-style: oblique 0deg 10deg;
+/*   font-named-instance: 'Regular'; */
+  /* font-variation-settings: 'wght' 400, 'slnt' -0.011em; */
 }
 .default {
   display: flex;
@@ -105,7 +111,7 @@ body,
 main {
   flex: 1;
   max-width: 512px;
-  padding: 100px 0 0 100px;
+  padding: 0 0 0 356px;
 }
 [tabindex="-1"]:focus {
   outline: none !important;

@@ -4,12 +4,12 @@
 
     <AppLabel text="Static" />
     <AppCard>
-      <AppImage src="https://placehold.it/1400x800" alt="alt" />
+      <AppImage src="https://placehold.it/448x256" alt="alt" />
     </AppCard>
 
     <AppLabel text="Static - Caption" />
     <AppCard>
-      <AppImage src="https://placehold.it/1400x800" caption="Source: giphy.com" alt="alt" />
+      <AppImage src="https://placehold.it/448x256" caption="Source: giphy.com" alt="alt" />
     </AppCard>
     <AppLabel text="Props" />
     <TerminalInput :content="`src: {
@@ -35,6 +35,8 @@
     src=&quot;https://devoops.app/images/img.png&quot;
     alt=&quot;Alt&quot;
   />`)" />
+
+    <AppEdit />
   </div>
 </template>
 
@@ -42,9 +44,11 @@
 import escape from '@/helpers/escape'
 // componnets
 import AppLabel from '@/components/AppLabel'
+import AppCard from '@/components/AppCard'
+import AppEdit from '@/components/AppEdit'
+
 import Heading1 from '@/components/headings/Heading1'
 import AppImage from '@/components/AppImage'
-import AppCard from '@/components/AppCard'
 import TerminalInput from '@/components/code/TerminalInput'
 
 export default {
@@ -53,7 +57,8 @@ export default {
     AppImage,
     AppCard,
     TerminalInput,
-    AppLabel
+    AppLabel,
+    AppEdit
   },
 
   head: () => ({

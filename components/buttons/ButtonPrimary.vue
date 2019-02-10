@@ -48,7 +48,7 @@ button{
   border-image: initial;
   border-radius: 4px;
   font-family: inherit;
-  font-variation-settings: 'wght' 500;
+  font-variation-settings: 'wght' 600;
   display: flex;
   align-items: center;
 }

@@ -7,6 +7,7 @@
 <style lang="postcss" scoped>
 h4 {
   font-size: 16px;
-  font-variation-settings: 'wght' 600;
+  letter-spacing: -0.011em;
+  font-variation-settings: 'wght' 500;
 }
 </style>

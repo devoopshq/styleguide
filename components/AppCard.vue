@@ -11,8 +11,6 @@
   border-radius: 4px;
   box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.12);
   margin-top: 16px;
-  margin-left: -32px;
-  margin-right: -32px;
   margin-bottom: 32px;
   background-color: #fff;
 }
@@ -21,8 +19,6 @@
 }
 @media (max-width: 512px) {
   .card {
-    margin-left: 0;
-    margin-right: 0;
     padding: 16px;
   }
 }

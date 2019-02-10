@@ -30,6 +30,10 @@ export default {
     AppCard,
     Spinner,
     AppEdit
-  }
+  },
+
+  head: () => ({
+    title: 'Spinner'
+  })
 }
 </script>

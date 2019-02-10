@@ -15,6 +15,8 @@
         <AppTree :node="files" :open="true" />
       </ul>
     </AppCard>
+
+    <AppEdit />
   </div>
 </template>
 
@@ -23,13 +25,15 @@ import AppLabel from '@/components/AppLabel'
 import Heading1 from '@/components/headings/Heading1'
 import AppTree from '@/components/filetree/AppTree'
 import AppCard from '@/components/AppCard'
+import AppEdit from '@/components/AppEdit'
 
 export default {
   components: {
     Heading1,
     AppTree,
     AppCard,
-    AppLabel
+    AppLabel,
+    AppEdit
   },
 
   data: () => ({
