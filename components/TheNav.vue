@@ -75,6 +75,8 @@ a:first-child {
   font-size: 18px;
   font-variation-settings: 'wght' 600;
   margin-bottom: 8px;
+  padding: 8px 32px;
+  border-left: none;
 }
 .version {
   /* font-variation-settings: 'wght' 600; */

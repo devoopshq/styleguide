@@ -63,7 +63,7 @@ module.exports = {
   router: {
     // https://github.com/nuxt/nuxt.js/pull/4574
     // To disable prefetching, uncomment the line
-    prefetchLinks: false
+    // prefetchLinks: false
 
     // Activate prefetched class (default: false)
     // Used to display the check mark next to the prefetched link

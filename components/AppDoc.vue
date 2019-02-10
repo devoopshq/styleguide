@@ -17,7 +17,9 @@
   display: flex;
 }
 .docLeft {
-  min-width: 320px;
+  min-width: 0;
+  flex-basis: auto; /* default value */
+  flex-grow: 1;
 }
 .docLeft,
 .docRight {
