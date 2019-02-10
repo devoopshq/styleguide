@@ -2,14 +2,14 @@
   <div>
     <Heading1>Toggle</Heading1>
 
-    <AppLabel text="Off" />
+    <AppLabel :text="foo(a)" />
     <AppCard>
-      <SelectionSwitch />
+      <SelectionSwitch @update="a = $event" />
     </AppCard>
 
-    <AppLabel text="On" />
+    <AppLabel :text="foo(b)" />
     <AppCard>
-      <SelectionSwitch :checked="true" />
+      <SelectionSwitch :checked="true" @update="b = $event" />
     </AppCard>
 
     <AppLabel text="Disabled" />
@@ -50,11 +50,19 @@ export default {
     AppLabel
   },
 
+  data () {
+    return {
+      a: false,
+      b: true,
+    }
+  },
+
   head: () => ({
     title: 'Toggle'
   }),
 
   methods: {
+    foo: value => value ? 'On' : 'Off',
     escapeHtml: x => escape(x)
   }
 }

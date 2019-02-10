@@ -1,6 +1,6 @@
 <template>
   <label>
-    <input v-model="checked" :disabled="disabled" type="checkbox">
+    <input :disabled="disabled" :checked="checked" type="checkbox" @change="update">
     <span class="slider" />
     <span class="track" />
   </label>
@@ -8,6 +8,10 @@
 
 <script>
 export default {
+  model: {
+    prop: 'checked',
+    event: 'change'
+  },
   props: {
     checked: {
       type: Boolean,
@@ -16,6 +20,12 @@ export default {
     disabled: {
       type: Boolean,
       default: false
+    }
+  },
+
+  methods: {
+    update (event) {
+      this.$emit('update', event.target.checked)
     }
   }
 }
