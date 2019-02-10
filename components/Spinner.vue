@@ -10,7 +10,7 @@
 export default {
   props: {
     size: {
-      type: [Number, String],
+      type: Number,
       default: 24
     },
     stroke: {

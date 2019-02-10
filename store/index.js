@@ -13,7 +13,8 @@ export const state = () => ({
       'FileTree',
       'Images',
       'Toggle',
-      'Toasts'
+      'Toasts',
+      'Spinner'
     ]
   }
 })

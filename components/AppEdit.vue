@@ -1,7 +1,7 @@
 <template>
   <div>
     <p>
-      Caught a mistake or want to contribute to the documentation? Edit this page on <a :href="'https://github.com' + href">GitHub</a>!
+      Caught a mistrake or want to contribute to the documentation? Edit this page on <a :href="'https://github.com' + href">GitHub</a>.
     </p>
   </div>
 </template>
@@ -25,7 +25,7 @@ p {
 }
 
 a {
-  color: var(--blue);
+  color: var(--blue-aa);
   text-decoration: none;
 }
 </style>
