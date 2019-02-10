@@ -1,16 +1,20 @@
 <template>
-  <div>
-    <Heading1>
-      {{ error.statusCode === 404 ? 'Page not found' : 'An error occurred' }}
-    </Heading1>
-    <!-- <NuxtLink to="/">Home page</NuxtLink> -->
-  </div>
+  <AppDoc>
+    <template #left>
+      <Heading1>
+        {{ error.statusCode === 404 ? 'Page not found' : 'An error occurred' }}
+      </Heading1>
+    </template>
+  </AppDoc>
 </template>
 
 <script>
+import AppDoc from '@/components/AppDoc'
+import Heading1 from '@/components/headings/Heading1'
 export default {
   components: {
-    Heading1: () => import('@/components/headings/Heading1')
+    AppDoc,
+    Heading1
   },
   props: {
     error: {
