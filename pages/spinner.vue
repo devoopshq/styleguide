@@ -17,23 +17,15 @@
 </template>
 
 <script>
-import Heading1 from '@/components/headings/Heading1'
-import AppLabel from '@/components/AppLabel'
-import AppCard from '@/components/AppCard'
-import Spinner from '@/components/Spinner'
-import AppDoc from '@/components/AppDoc'
-
 export default {
   components: {
-    Heading1,
-    AppLabel,
-    AppCard,
-    Spinner,
-    AppDoc
+    Heading1: () => import(/* webpackChunkName: "spinner" */ '@/components/headings/Heading1'),
+    AppLabel: () => import(/* webpackChunkName: "spinner" */ '@/components/AppLabel'),
+    AppCard: () => import(/* webpackChunkName: "spinner" */ '@/components/AppCard'),
+    Spinner: () => import(/* webpackChunkName: "spinner" */ '@/components/Spinner'),
+    AppDoc: () => import(/* webpackChunkName: "spinner" */ '@/components/AppDoc')
   },
 
-  head: () => ({
-    title: 'Spinner'
-  })
+  head: () => ({ title: 'Spinner' })
 }
 </script>

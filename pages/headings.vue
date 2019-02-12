@@ -63,28 +63,18 @@
 
 <script>
 import escape from '@/helpers/escape'
-// components
-import AppLabel from '@/components/AppLabel'
-import Heading1 from '@/components/headings/Heading1'
-import Heading2 from '@/components/headings/Heading2'
-import Heading3 from '@/components/headings/Heading3'
-import Heading4 from '@/components/headings/Heading4'
-import SubHeading from '@/components/headings/SubHeading'
-import TerminalInput from '@/components/code/TerminalInput'
-import AppCard from '@/components/AppCard'
-import AppDoc from '@/components/AppDoc'
 
 export default {
   components: {
-    Heading1,
-    Heading2,
-    Heading3,
-    Heading4,
-    TerminalInput,
-    AppCard,
-    AppLabel,
-    SubHeading,
-    AppDoc
+    Heading1: () => import(/* webpackChunkName: "headings" */ '@/components/headings/Heading1'),
+    Heading2: () => import(/* webpackChunkName: "headings" */ '@/components/headings/Heading2'),
+    Heading3: () => import(/* webpackChunkName: "headings" */ '@/components/headings/Heading3'),
+    Heading4: () => import(/* webpackChunkName: "headings" */ '@/components/headings/Heading4'),
+    TerminalInput: () => import(/* webpackChunkName: "headings" */ '@/components/code/TerminalInput'),
+    AppCard: () => import(/* webpackChunkName: "headings" */ '@/components/AppCard'),
+    AppLabel: () => import(/* webpackChunkName: "headings" */ '@/components/AppLabel'),
+    SubHeading: () => import(/* webpackChunkName: "headings" */ '@/components/headings/SubHeading'),
+    AppDoc: () => import(/* webpackChunkName: "headings" */ '@/components/AppDoc')
   },
 
   head: () => ({

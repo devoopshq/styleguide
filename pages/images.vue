@@ -33,32 +33,24 @@
       <TerminalInput content="@/components/AppImage" />
       <AppLabel text="Usage" />
       <TerminalInput :content="escapeHtml(`<AppImage
-      src=&quot;https://devoops.app/images/img.png&quot;
-      alt=&quot;Alt&quot;
-    />`)" />
+    src=&quot;https://devoops.app/images/img.png&quot;
+    alt=&quot;Alt&quot;
+  />`)" />
     </template>
   </AppDoc>
 </template>
 
 <script>
 import escape from '@/helpers/escape'
-// componnets
-import AppLabel from '@/components/AppLabel'
-import AppCard from '@/components/AppCard'
-import AppDoc from '@/components/AppDoc'
-
-import Heading1 from '@/components/headings/Heading1'
-import AppImage from '@/components/AppImage'
-import TerminalInput from '@/components/code/TerminalInput'
 
 export default {
   components: {
-    AppLabel,
-    AppDoc,
-    AppCard,
-    Heading1,
-    AppImage,
-    TerminalInput
+    AppLabel: () => import(/* webpackChunkName: "headings" */ '@/components/AppLabel'),
+    AppDoc: () => import(/* webpackChunkName: "headings" */ '@/components/AppDoc'),
+    AppCard: () => import(/* webpackChunkName: "headings" */ '@/components/AppCard'),
+    Heading1: () => import(/* webpackChunkName: "headings" */ '@/components/headings/Heading1'),
+    AppImage: () => import(/* webpackChunkName: "headings" */ '@/components/AppImage'),
+    TerminalInput: () => import(/* webpackChunkName: "headings" */ '@/components/code/TerminalInput')
   },
 
   head: () => ({

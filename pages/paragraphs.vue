@@ -45,30 +45,23 @@
 
 <script>
 import escape from '@/helpers/escape'
-import AppLabel from '@/components/AppLabel'
-import Heading1 from '@/components/headings/Heading1'
-import Content from '@/components/Content'
-import AppCard from '@/components/AppCard'
-import AppDoc from '@/components/AppDoc'
-import TerminalInput from '@/components/code/TerminalInput'
 
 export default {
   components: {
-    Heading1,
-    Content,
-    AppCard,
-    AppLabel,
-    AppDoc,
-    TerminalInput
+    Heading1: () => import(/* webpackChunkName: "paragraphs" */ '@/components/headings/Heading1'),
+    Content: () => import(/* webpackChunkName: "paragraphs" */ '@/components/Content'),
+    AppCard: () => import(/* webpackChunkName: "paragraphs" */ '@/components/AppCard'),
+    AppLabel: () => import(/* webpackChunkName: "paragraphs" */ '@/components/AppLabel'),
+    AppDoc: () => import(/* webpackChunkName: "paragraphs" */ '@/components/AppDoc'),
+    TerminalInput: () => import(/* webpackChunkName: "paragraphs" */ '@/components/code/TerminalInput')
   },
 
   data: () => ({
     content: '<p>Looorem ipsum dolor sit amet, consectetur <code>devoops</code> elit, sed do <a href="/font">internal link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p><strong>Lorem <a href="https://example.com">external link</a> dolor sit amet, consectetur adipiscing elit</strong>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco <a href="https://example.com" target="_blank">_blank link</a> nisi ut aliquip ex ea commodo consequat.</p>'
   }),
 
-  head: () => ({
-    title: 'Paragraphs'
-  }),
+  head: () => ({ title: 'Paragraphs' }),
+
   methods: {
     escapeHtml: value => escape(value)
   }

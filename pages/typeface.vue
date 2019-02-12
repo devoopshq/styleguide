@@ -26,17 +26,12 @@
 </template>
 
 <script>
-import AppLabel from '@/components/AppLabel'
-import Heading1 from '@/components/headings/Heading1'
-import AppCard from '@/components/AppCard'
-import AppDoc from '@/components/AppDoc'
-
 export default {
   components: {
-    Heading1,
-    AppCard,
-    AppLabel,
-    AppDoc
+    Heading1: () => import(/* webpackChunkName: "typeface" */ '@/components/headings/Heading1'),
+    AppCard: () => import(/* webpackChunkName: "typeface" */ '@/components/AppCard'),
+    AppLabel: () => import(/* webpackChunkName: "typeface" */ '@/components/AppLabel'),
+    AppDoc: () => import(/* webpackChunkName: "typeface" */ '@/components/AppDoc')
   },
 
   head: () => ({

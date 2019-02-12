@@ -40,29 +40,18 @@
 
 
 <script>
-import AppLabel from '@/components/AppLabel'
-import Heading1 from '@/components/headings/Heading1'
-import AppCard from '@/components/AppCard'
-import ButtonPrimary from '@/components/buttons/ButtonPrimary'
-import ButtonSecondary from '@/components/buttons/ButtonSecondary'
-import ButtonAbort from '@/components/buttons/ButtonAbort'
-import Spinner from '@/components/Spinner'
-import AppDoc from '@/components/AppDoc'
-
 export default {
   components: {
-    Heading1,
-    AppCard,
-    ButtonPrimary,
-    ButtonSecondary,
-    ButtonAbort,
-    Spinner,
-    AppLabel,
-    AppDoc
+    AppLabel: () => import(/* webpackChunkName: "buttons" */ '@/components/AppLabel'),
+    Heading1: () => import(/* webpackChunkName: "buttons" */ '@/components/headings/Heading1'),
+    AppCard: () => import(/* webpackChunkName: "buttons" */ '@/components/AppCard'),
+    ButtonPrimary: () => import(/* webpackChunkName: "buttons" */ '@/components/buttons/ButtonPrimary'),
+    ButtonSecondary: () => import(/* webpackChunkName: "buttons" */ '@/components/buttons/ButtonSecondary'),
+    ButtonAbort: () => import(/* webpackChunkName: "buttons" */ '@/components/buttons/ButtonAbort'),
+    Spinner: () => import(/* webpackChunkName: "buttons" */ '@/components/Spinner'),
+    AppDoc: () => import(/* webpackChunkName: "buttons" */ '@/components/AppDoc')
   },
 
-  head: () => ({
-    title: 'Buttons'
-  })
+  head: () => ({ title: 'Buttons' })
 }
 </script>

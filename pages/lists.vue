@@ -17,21 +17,14 @@
 </template>
 
 <script>
-import AppLabel from '@/components/AppLabel'
-import Heading1 from '@/components/headings/Heading1'
-import UL from '@/components/lists/UL'
-import OL from '@/components/lists/OL'
-import AppCard from '@/components/AppCard'
-import AppDoc from '@/components/AppDoc'
-
 export default {
   components: {
-    Heading1,
-    UL,
-    OL,
-    AppCard,
-    AppLabel,
-    AppDoc
+    Heading1: () => import(/* webpackChunkName: "lists" */ '@/components/headings/Heading1'),
+    UL: () => import(/* webpackChunkName: "lists" */ '@/components/lists/UL'),
+    OL: () => import(/* webpackChunkName: "lists" */ '@/components/lists/OL'),
+    AppCard: () => import(/* webpackChunkName: "lists" */ '@/components/AppCard'),
+    AppLabel: () => import(/* webpackChunkName: "lists" */ '@/components/AppLabel'),
+    AppDoc: () => import(/* webpackChunkName: "lists" */ '@/components/AppDoc'),
   },
 
   data: () => ({

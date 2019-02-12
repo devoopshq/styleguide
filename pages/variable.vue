@@ -71,27 +71,22 @@
 </template>
 
 <script>
-import Heading1 from '@/components/headings/Heading1'
-import InputTypeRange from '@/components/forms/InputTypeRange'
-import AppCard from '@/components/AppCard'
-import AppDoc from '@/components/AppDoc'
-
 export default {
   components: {
-    Heading1,
-    InputTypeRange,
-    AppCard,
-    AppDoc
+    Heading1: () => import(/* webpackChunkName: "variable" */ '@/components/headings/Heading1'),
+    InputTypeRange: () => import(/* webpackChunkName: "variable" */ '@/components/forms/InputTypeRange'),
+    AppCard: () => import(/* webpackChunkName: "variable" */ '@/components/AppCard'),
+    AppDoc: () => import(/* webpackChunkName: "variable" */ '@/components/AppDoc')
   },
-  data () {
-    return {
-      size: 48,
-      letterSpacing: -0.03,
-      lineHeight: 1.1,
-      weight: 600,
-      slant: 0
-    }
-  },
+
+  data: () => ({
+    size: 48,
+    letterSpacing: -0.03,
+    lineHeight: 1.1,
+    weight: 600,
+    slant: 0
+  }),
+
   computed: {
     cssVariables () {
       return {

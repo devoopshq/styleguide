@@ -31,19 +31,13 @@
 </template>
 
 <script>
-import Heading1 from '@/components/headings/Heading1'
-import AppCard from '@/components/AppCard'
-import AppImage from '@/components/AppImage'
-import AppLabel from '@/components/AppLabel'
-import AppDoc from '@/components/AppDoc'
-
 export default {
   components: {
-    Heading1,
-    AppCard,
-    AppImage,
-    AppLabel,
-    AppDoc
+    Heading1: () => import(/* webpackChunkName: "index" */ '@/components/headings/Heading1'),
+    AppCard: () => import(/* webpackChunkName: "index" */ '@/components/AppCard'),
+    AppImage: () => import(/* webpackChunkName: "index" */ '@/components/AppImage'),
+    AppLabel: () => import(/* webpackChunkName: "index" */ '@/components/AppLabel'),
+    AppDoc: () => import(/* webpackChunkName: "index" */ '@/components/AppDoc')
   },
 
   head: () => ({

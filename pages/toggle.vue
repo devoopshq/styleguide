@@ -39,22 +39,16 @@
 </template>
 
 <script>
-import AppLabel from '@/components/AppLabel'
-import AppDoc from '@/components/AppDoc'
-import AppCard from '@/components/AppCard'
 import escape from '@/helpers/escape'
-import Heading1 from '@/components/headings/Heading1'
-import SelectionSwitch from '@/components/interaction/selection/SelectionSwitch'
-import TerminalInput from '@/components/code/TerminalInput'
 
 export default {
   components: {
-    Heading1,
-    AppCard,
-    SelectionSwitch,
-    TerminalInput,
-    AppLabel,
-    AppDoc
+    Heading1: () => import(/* webpackChunkName: "toggle" */ '@/components/headings/Heading1'),
+    AppCard: () => import(/* webpackChunkName: "toggle" */ '@/components/AppCard'),
+    SelectionSwitch: () => import(/* webpackChunkName: "toggle" */ '@/components/interaction/selection/SelectionSwitch'),
+    TerminalInput: () => import(/* webpackChunkName: "toggle" */ '@/components/code/TerminalInput'),
+    AppLabel: () => import(/* webpackChunkName: "toggle" */ '@/components/AppLabel'),
+    AppDoc: () => import(/* webpackChunkName: "toggle" */ '@/components/AppDoc')
   },
 
   data () {

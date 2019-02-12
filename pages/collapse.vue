@@ -38,22 +38,16 @@
 
 
 <script>
-import AppLabel from '@/components/AppLabel'
 import escape from '@/helpers/escape'
-import Heading1 from '@/components/headings/Heading1'
-import Accordion from '@/components/Accordion'
-import AppCard from '@/components/AppCard'
-import TerminalInput from '@/components/code/TerminalInput'
-import AppDoc from '@/components/AppDoc'
 
 export default {
   components: {
-    Accordion,
-    AppCard,
-    TerminalInput,
-    Heading1,
-    AppLabel,
-    AppDoc
+    Accordion: () => import(/* webpackChunkName: "collapse" */ '@/components/Accordion'),
+    AppCard: () => import(/* webpackChunkName: "collapse" */ '@/components/AppCard'),
+    TerminalInput: () => import(/* webpackChunkName: "collapse" */ '@/components/code/TerminalInput'),
+    Heading1: () => import(/* webpackChunkName: "collapse" */ '@/components/headings/Heading1'),
+    AppLabel: () => import(/* webpackChunkName: "collapse" */ '@/components/AppLabel'),
+    AppDoc: () => import(/* webpackChunkName: "collapse" */ '@/components/AppDoc')
   },
 
   data: () => ({
@@ -99,9 +93,7 @@ export default {
     ]
   }),
 
-  head: () => ({
-    title: 'Collapse'
-  }),
+  head: () => ({ title: 'Collapse' }),
 
   methods: {
     escapeHtml: x => escape(x)

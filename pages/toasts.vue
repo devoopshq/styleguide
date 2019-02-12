@@ -50,21 +50,14 @@
 </template>
 
 <script>
-import AppLabel from '@/components/AppLabel'
-import Heading1 from '@/components/headings/Heading1'
-import AppCard from '@/components/AppCard'
-import ButtonPrimary from '@/components/buttons/ButtonPrimary'
-import AppToast from '@/components/AppToast'
-import AppDoc from '@/components/AppDoc'
-
 export default {
   components: {
-    Heading1,
-    AppCard,
-    ButtonPrimary,
-    AppToast,
-    AppLabel,
-    AppDoc
+    Heading1: () => import(/* webpackChunkName: "toasts" */ '@/components/headings/Heading1'),
+    AppCard: () => import(/* webpackChunkName: "toasts" */ '@/components/AppCard'),
+    ButtonPrimary: () => import(/* webpackChunkName: "toasts" */ '@/components/buttons/ButtonPrimary'),
+    AppToast: () => import(/* webpackChunkName: "toasts" */ '@/components/AppToast'),
+    AppLabel: () => import(/* webpackChunkName: "toasts" */ '@/components/AppLabel'),
+    AppDoc: () => import(/* webpackChunkName: "toasts" */ '@/components/AppDoc')
   },
 
   data: () => ({

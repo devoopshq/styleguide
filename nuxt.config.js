@@ -1,5 +1,5 @@
 module.exports = {
-  modern: true,
+  // modern: true,
   head: {
     htmlAttrs: { lang: 'en' },
     titleTemplate: '%s - DevOops Style Guide',
@@ -39,7 +39,12 @@ module.exports = {
     ]
   },
 
-  modules: ['nuxt-interpolation'],
+  modules: [
+    'nuxt-interpolation',
+    'nuxt-purgecss'
+  ],
+
+  purgeCSS: { mode: 'postcss' },
 
   build: {
     parallel: true,

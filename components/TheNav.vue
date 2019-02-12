@@ -54,6 +54,7 @@ nav {
   overflow-y: scroll;
 }
 a {
+  text-align: right;
   display: flex;
   font-weight: 400;
   color: var(--black);

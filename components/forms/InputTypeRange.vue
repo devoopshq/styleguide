@@ -1,7 +1,17 @@
-<template lang="pug">
+<template>
   <div>
-    <label v-if="label !== ''" :for="id">{{ label }}</label>
-    <input :id="id" type="range" :min="min" :max="max" :step="step" :value="value"  @input="$emit('update:value', $event.target.value)">
+    <label v-if="label !== ''" :for="id">
+      {{ label }}
+    </label>
+    <input
+      :id="id"
+      :min="min"
+      :max="max"
+      :step="step"
+      :value="value"
+      type="range"
+      @input="$emit('update:value', $event.target.value)"
+    >
     <div v-if="range" class="range">
       <span>{{ min }}</span>
       <span>{{ max }}</span>

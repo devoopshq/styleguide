@@ -16,15 +16,10 @@
   padding-right: 24px;
   display: flex;
 }
-.docLeft {
-  min-width: 0;
-  flex-basis: auto; /* default value */
-  flex-grow: 1;
-}
 .docLeft,
 .docRight {
   max-width: 512px;
-  /* outline: 1px dashed; */
+  flex-grow: 1;
 }
 .docRight {
   margin-top: 84px;

@@ -43,22 +43,16 @@
 </template>
 
 <script>
-import AppLabel from '@/components/AppLabel'
-import Heading1 from '@/components/headings/Heading1'
-import AppFileTree from '@/components/AppFileTree'
-import AppCard from '@/components/AppCard'
-import AppDoc from '@/components/AppDoc'
-import TerminalInput from '@/components/code/TerminalInput'
 import escape from '@/helpers/escape'
 
 export default {
   components: {
-    Heading1,
-    AppFileTree,
-    AppCard,
-    AppLabel,
-    AppDoc,
-    TerminalInput
+    Heading1: () => import(/* webpackChunkName: "filetree" */ '@/components/headings/Heading1'),
+    AppFileTree: () => import(/* webpackChunkName: "filetree" */ '@/components/AppFileTree'),
+    AppCard: () => import(/* webpackChunkName: "filetree" */ '@/components/AppCard'),
+    AppLabel: () => import(/* webpackChunkName: "filetree" */ '@/components/AppLabel'),
+    AppDoc: () => import(/* webpackChunkName: "filetree" */ '@/components/AppDoc'),
+    TerminalInput: () => import(/* webpackChunkName: "filetree" */ '@/components/code/TerminalInput')
   },
 
   data: () => ({
