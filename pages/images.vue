@@ -44,6 +44,9 @@
 import escape from '@/helpers/escape'
 
 export default {
+  async asyncData ({ store }) {
+    await store.commit('setTitle', '/components/images/')
+  },
   components: {
     AppLabel: () => import(/* webpackChunkName: "headings" */ '@/components/AppLabel'),
     AppDoc: () => import(/* webpackChunkName: "headings" */ '@/components/AppDoc'),

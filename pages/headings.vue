@@ -1,8 +1,6 @@
 <template>
   <AppDoc>
     <template #left>
-      <Heading1>Headings</Heading1>
-
       <AppLabel text="32px — H1 Heading" />
       <AppCard>
         <Heading1>The Brown <strong>Dev</strong> Jumped over the Fence</Heading1>
@@ -65,16 +63,20 @@
 import escape from '@/helpers/escape'
 
 export default {
+  async asyncData ({ store }) {
+    await store.commit('setTitle', '/components/headings/')
+  },
+
   components: {
-    Heading1: () => import(/* webpackChunkName: "headings" */ '@/components/headings/Heading1'),
-    Heading2: () => import(/* webpackChunkName: "headings" */ '@/components/headings/Heading2'),
-    Heading3: () => import(/* webpackChunkName: "headings" */ '@/components/headings/Heading3'),
-    Heading4: () => import(/* webpackChunkName: "headings" */ '@/components/headings/Heading4'),
-    TerminalInput: () => import(/* webpackChunkName: "headings" */ '@/components/code/TerminalInput'),
-    AppCard: () => import(/* webpackChunkName: "headings" */ '@/components/AppCard'),
-    AppLabel: () => import(/* webpackChunkName: "headings" */ '@/components/AppLabel'),
-    SubHeading: () => import(/* webpackChunkName: "headings" */ '@/components/headings/SubHeading'),
-    AppDoc: () => import(/* webpackChunkName: "headings" */ '@/components/AppDoc')
+    Heading1: () => import('@/components/headings/Heading1'),
+    Heading2: () => import('@/components/headings/Heading2'),
+    Heading3: () => import('@/components/headings/Heading3'),
+    Heading4: () => import('@/components/headings/Heading4'),
+    TerminalInput: () => import('@/components/code/TerminalInput'),
+    AppCard: () => import('@/components/AppCard'),
+    AppLabel: () => import('@/components/AppLabel'),
+    SubHeading: () => import('@/components/headings/SubHeading'),
+    AppDoc: () => import('@/components/AppDoc')
   },
 
   head: () => ({

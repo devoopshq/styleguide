@@ -1,8 +1,6 @@
 <template>
   <AppDoc>
     <template #left>
-      <Heading1>Collapse</Heading1>
-
       <AppLabel text="Collapsible Group" />
       <AppCard>
         <Accordion id="a" :content="content" />
@@ -41,13 +39,16 @@
 import escape from '@/helpers/escape'
 
 export default {
+  async asyncData ({ store }) {
+    await store.commit('setTitle', '/components/AppCollapse')
+  },
+
   components: {
-    Accordion: () => import(/* webpackChunkName: "collapse" */ '@/components/Accordion'),
-    AppCard: () => import(/* webpackChunkName: "collapse" */ '@/components/AppCard'),
-    TerminalInput: () => import(/* webpackChunkName: "collapse" */ '@/components/code/TerminalInput'),
-    Heading1: () => import(/* webpackChunkName: "collapse" */ '@/components/headings/Heading1'),
-    AppLabel: () => import(/* webpackChunkName: "collapse" */ '@/components/AppLabel'),
-    AppDoc: () => import(/* webpackChunkName: "collapse" */ '@/components/AppDoc')
+    Accordion: () => import('@/components/Accordion'),
+    AppCard: () => import('@/components/AppCard'),
+    TerminalInput: () => import('@/components/code/TerminalInput'),
+    AppLabel: () => import('@/components/AppLabel'),
+    AppDoc: () => import('@/components/AppDoc')
   },
 
   data: () => ({

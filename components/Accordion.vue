@@ -32,9 +32,8 @@ export default {
 
 <style lang="postcss" scoped>
 .accordion {
-  border-top: 1px solid rgba(10, 10, 10, 0.1);
-  border-bottom: 1px solid rgba(10, 10, 10, 0.1);
+  border-top: 1px solid rgba(var(--color), 0.12);
+  border-bottom: 1px solid rgba(var(--color), 0.12);
   margin: 16px 0;
-  /* outline: 1px dashed #000; */
 }
 </style>

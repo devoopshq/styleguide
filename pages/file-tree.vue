@@ -46,13 +46,17 @@
 import escape from '@/helpers/escape'
 
 export default {
+  async asyncData ({ store }) {
+    await store.commit('setTitle', '/components/AppFileTree')
+  },
+
   components: {
-    Heading1: () => import(/* webpackChunkName: "filetree" */ '@/components/headings/Heading1'),
-    AppFileTree: () => import(/* webpackChunkName: "filetree" */ '@/components/AppFileTree'),
-    AppCard: () => import(/* webpackChunkName: "filetree" */ '@/components/AppCard'),
-    AppLabel: () => import(/* webpackChunkName: "filetree" */ '@/components/AppLabel'),
-    AppDoc: () => import(/* webpackChunkName: "filetree" */ '@/components/AppDoc'),
-    TerminalInput: () => import(/* webpackChunkName: "filetree" */ '@/components/code/TerminalInput')
+    Heading1: () => import('@/components/headings/Heading1'),
+    AppFileTree: () => import('@/components/AppFileTree'),
+    AppCard: () => import('@/components/AppCard'),
+    AppLabel: () => import('@/components/AppLabel'),
+    AppDoc: () => import('@/components/AppDoc'),
+    TerminalInput: () => import('@/components/code/TerminalInput')
   },
 
   data: () => ({

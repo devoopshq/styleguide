@@ -8,7 +8,7 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '###' },
       { name: 'msapplication-TileColor',  content: '#ffffff' },
-      { name: 'theme-color', content: '#ffffff' },
+      { hid: 'theme-color', name: 'theme-color', content: '#ffffff' },
       /*
         Open Graph
         http://ogp.me/

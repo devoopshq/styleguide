@@ -1,39 +1,38 @@
 <template>
   <nav>
     <div class="links">
-      <NuxtLink to="/">/</NuxtLink>
+      <NuxtLink to="/">{{ title }}</NuxtLink>
 
       <span class="label">
         Typography
       </span>
-      <NuxtLink
-        v-for="(link, index) in links.typography"
-        :key="index"
-        :to="'/' + link.toLowerCase()"
-      >
-        {{ link.toLowerCase() }}
-      </NuxtLink>
+
+      <NuxtLink to="/headings">Headings</NuxtLink>
+      <NuxtLink to="/lists">Lists</NuxtLink>
+      <NuxtLink to="/paragraphs">Paragraphs</NuxtLink>
+      <NuxtLink to="/typeface">Typeface</NuxtLink>
+      <NuxtLink to="/variable">Variable</NuxtLink>
 
       <span class="label">
         Components
       </span>
-      <NuxtLink
-        v-for="(link, index) in links.components"
-        :key="index"
-        :to="'/' + link.toLowerCase()"
-      >
-        {{ link.toLowerCase() }}
-      </NuxtLink>
+
+      <NuxtLink to="/collapse">Collapse</NuxtLink>
+      <NuxtLink to="/buttons">Buttons</NuxtLink>
+      <NuxtLink to="/file-tree">File Tree</NuxtLink>
+      <NuxtLink to="/images">Images</NuxtLink>
+      <NuxtLink to="/toggle">Toggle</NuxtLink>
+      <NuxtLink to="/toasts">Toasts</NuxtLink>
+      <NuxtLink to="/spinner">Spinner</NuxtLink>
     </div>
   </nav>
 </template>
 
 <script>
 export default {
-  props: {
-    links: {
-      type: Object,
-      default: () => {}
+  computed: {
+    title () {
+      return this.$store.state.title
     }
   }
 }
@@ -47,17 +46,17 @@ export default {
 nav {
   width: 256px;
   padding-top: 24px;
-  background-color: #fff;
-  position: fixed;
+  background-color: var(--background-color);
+}
+.links {
+  position: sticky;
   top: 0;
-  bottom: 0;
-  overflow-y: scroll;
 }
 a {
   text-align: right;
   display: flex;
   font-weight: 400;
-  color: var(--black);
+  color: rgb(var(--color));
   font-size: 14px;
   text-decoration: none;
   margin-bottom: 8px;
@@ -65,14 +64,14 @@ a {
   padding: 8px 32px;
 }
 .nuxt-link-exact-active {
-  color: var(--black);
-  border-left: 3px solid var(--black);
+  color: rgb(var(--color));
+  border-left: 3px solid rgb(var(--color));
   padding: 8px 29px;
   font-variation-settings: 'wght' 600;
 }
 /* .nuxt-link-prefetched:after { content: '###'; } */
 a:first-child {
-  color: var(--black);
+  color: rgb(var(--color));
   font-size: 18px;
   font-variation-settings: 'wght' 600;
   margin-bottom: 8px;
@@ -94,9 +93,15 @@ a:first-child {
 @media (max-width: 512px) {
   nav {
     width: 100%;
-    padding-left: 16px;
-    padding-right: 16px;
     padding-bottom: 16px;
+  }
+  a,
+  a:first-child,
+  .label {
+    padding: 8px 16px;
+  }
+  .nuxt-link-exact-active {
+    padding: 8px 13px;
   }
 }
 </style>

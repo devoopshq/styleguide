@@ -1,8 +1,6 @@
 <template>
   <AppDoc>
     <template #left>
-      <Heading1>Toasts</Heading1>
-
       <AppLabel text="Message Toast" />
       <AppCard>
         <ButtonPrimary @active="bar('toast')">
@@ -51,13 +49,16 @@
 
 <script>
 export default {
+  async asyncData ({ store }) {
+    await store.commit('setTitle', '/components/AppToast')
+  },
+
   components: {
-    Heading1: () => import(/* webpackChunkName: "toasts" */ '@/components/headings/Heading1'),
-    AppCard: () => import(/* webpackChunkName: "toasts" */ '@/components/AppCard'),
-    ButtonPrimary: () => import(/* webpackChunkName: "toasts" */ '@/components/buttons/ButtonPrimary'),
-    AppToast: () => import(/* webpackChunkName: "toasts" */ '@/components/AppToast'),
-    AppLabel: () => import(/* webpackChunkName: "toasts" */ '@/components/AppLabel'),
-    AppDoc: () => import(/* webpackChunkName: "toasts" */ '@/components/AppDoc')
+    AppCard: () => import('@/components/AppCard'),
+    ButtonPrimary: () => import('@/components/buttons/ButtonPrimary'),
+    AppToast: () => import('@/components/AppToast'),
+    AppLabel: () => import('@/components/AppLabel'),
+    AppDoc: () => import('@/components/AppDoc')
   },
 
   data: () => ({

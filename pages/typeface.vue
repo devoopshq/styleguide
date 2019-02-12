@@ -1,8 +1,6 @@
 <template>
   <AppDoc>
     <template #left>
-      <Heading1>Typeface</Heading1>
-
       <AppLabel text="Sans" />
       <AppCard>
         <p class="w100">Thin - 100</p>
@@ -27,16 +25,17 @@
 
 <script>
 export default {
-  components: {
-    Heading1: () => import(/* webpackChunkName: "typeface" */ '@/components/headings/Heading1'),
-    AppCard: () => import(/* webpackChunkName: "typeface" */ '@/components/AppCard'),
-    AppLabel: () => import(/* webpackChunkName: "typeface" */ '@/components/AppLabel'),
-    AppDoc: () => import(/* webpackChunkName: "typeface" */ '@/components/AppDoc')
+  async asyncData ({ store }) {
+    await store.commit('setTitle', '/typeface')
   },
 
-  head: () => ({
-    title: 'Typeface'
-  })
+  components: {
+    AppCard: () => import('@/components/AppCard'),
+    AppLabel: () => import('@/components/AppLabel'),
+    AppDoc: () => import('@/components/AppDoc')
+  },
+
+  head: () => ({ title: 'Typeface' })
 }
 </script>
 

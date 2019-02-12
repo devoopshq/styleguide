@@ -12,7 +12,10 @@
       <AppLabel text="Logo - Black Slash on Light Background" />
       <a download="logo" href="b.svg">.svg</a>
       <AppCard>
-        <AppImage src="/test.svg" />
+        <svg viewBox="0 0 448 256" width="448" height="256">
+          <path fill="#fff" d="M0 0h448v256H0z"/>
+          <path fill="#000" d="M235.75 97.925l-16.612 61.996-6.888-1.846 16.612-61.996 6.888 1.846z"/>
+        </svg>
       </AppCard>
 
       <AppLabel text="Logotype - White on Dark Background" />
@@ -32,12 +35,16 @@
 
 <script>
 export default {
+  async asyncData ({ store }) {
+    await store.commit('setTitle', '/')
+  },
+
   components: {
-    Heading1: () => import(/* webpackChunkName: "index" */ '@/components/headings/Heading1'),
-    AppCard: () => import(/* webpackChunkName: "index" */ '@/components/AppCard'),
-    AppImage: () => import(/* webpackChunkName: "index" */ '@/components/AppImage'),
-    AppLabel: () => import(/* webpackChunkName: "index" */ '@/components/AppLabel'),
-    AppDoc: () => import(/* webpackChunkName: "index" */ '@/components/AppDoc')
+    Heading1: () => import('@/components/headings/Heading1'),
+    AppCard: () => import('@/components/AppCard'),
+    AppImage: () => import('@/components/AppImage'),
+    AppLabel: () => import('@/components/AppLabel'),
+    AppDoc: () => import('@/components/AppDoc')
   },
 
   head: () => ({

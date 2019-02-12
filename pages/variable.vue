@@ -1,8 +1,7 @@
 <template>
   <AppDoc>
     <template #left>
-      <Heading1>The <strong>Inter</strong> Font Family</Heading1>
-
+      <AppLabel text="Label" />
       <AppCard :style="cssVariables">
         <p class="var">
           ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 ?!()[]{}&*^%$#@~
@@ -11,6 +10,7 @@
     </template>
 
     <template #right>
+      <AppLabel text="Label" />
       <div class="fieldset">
         <InputTypeRange
           id="fontWeight"
@@ -72,11 +72,14 @@
 
 <script>
 export default {
+  async asyncData ({ store }) {
+    await store.commit('setTitle', '/variable')
+  },
   components: {
-    Heading1: () => import(/* webpackChunkName: "variable" */ '@/components/headings/Heading1'),
-    InputTypeRange: () => import(/* webpackChunkName: "variable" */ '@/components/forms/InputTypeRange'),
-    AppCard: () => import(/* webpackChunkName: "variable" */ '@/components/AppCard'),
-    AppDoc: () => import(/* webpackChunkName: "variable" */ '@/components/AppDoc')
+    InputTypeRange: () => import('@/components/forms/InputTypeRange'),
+    AppCard: () => import('@/components/AppCard'),
+    AppDoc: () => import('@/components/AppDoc'),
+    AppLabel: () => import('@/components/AppLabel')
   },
 
   data: () => ({
@@ -124,7 +127,6 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
->>> h1 { margin-bottom: 48px; }
 .fieldset {
   display: flex;
   flex-direction: column;
@@ -132,6 +134,7 @@ export default {
 }
 @supports (font-variation-settings: normal) {
   .var {
+    margin: 0;
     font-size: var(--size);
     letter-spacing: var(--letter-spacing);
     line-height: var(--line-height);

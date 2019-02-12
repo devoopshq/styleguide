@@ -15,7 +15,7 @@ export default {
 
 <style lang="postcss" scoped>
 pre {
-  color: var(--magenta-aa);
+  color: var(--color);
   font-family: var(--monospace);
   font-size: 13px;
   line-height: 20px;
@@ -27,6 +27,7 @@ pre {
   margin: 8px 0;
   overflow: auto;
   padding: 8px 0;
+  overflow-x: auto;
 }
 /* div::before {
   content: "$ ";

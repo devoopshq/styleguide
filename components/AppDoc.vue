@@ -12,8 +12,6 @@
 <style lang="postcss" scoped>
 .doc {
   /* outline: 1px dashed; */
-  padding-left: calc(4vw + 256px);
-  padding-right: 24px;
   display: flex;
 }
 .docLeft,
@@ -21,8 +19,26 @@
   max-width: 512px;
   flex-grow: 1;
 }
+.docLeft {
+  padding-left: 5vw;
+}
 .docRight {
-  margin-top: 84px;
-  margin-left: 4vw;
+  padding: 0 5vw;
+}
+@media (max-width: 512px) {
+  .doc {
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .docLeft,
+  .docRight {
+    width: 100%;
+    padding: 0;
+  }
+  .docRight {
+    margin-top: 0;
+    margin-left: 0;
+  }
 }
 </style>

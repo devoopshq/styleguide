@@ -3,10 +3,10 @@
     <div class="a">
       <svg width="24" height="24" viewBox="0 0 24 24">
         <g v-if="isFolder">
-          <path v-if="!open" :fill="node.size === 0 ? '#ccc' : fill" d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/>
-          <path v-else :fill="fill" d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z"/>
+          <path v-if="!open" :fill="node.size === 0 ? '#ccc' : 'currentColor'" d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/>
+          <path v-else fill="currentColor" d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z"/>
         </g>
-        <path v-else :fill="fill" d="M6 2c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6H6zm7 7V3.5L18.5 9H13z"/>
+        <path v-else fill="currentColor" d="M6 2c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6H6zm7 7V3.5L18.5 9H13z"/>
         <path d="M0 0h24v24H0z" fill="none"/>
       </svg>
 
@@ -81,7 +81,7 @@ span {
   margin-left: 8px;
 }
 span:hover {
-  font-weight: 600;
+  font-variation-settings: 'wght' 600;
 }
 span:hover small {
   font-variation-settings: 'wght' 400;
@@ -100,7 +100,7 @@ li ul li:before {
   content: '';
   width: 1px;
   height: 100%;
-  background-color: rgba(0,0,0,0.12);
+  background-color: rgba(var(--color), 0.12);
   display: block;
 }
 .open {
@@ -117,15 +117,15 @@ li ul li:before {
   justify-content: space-between;
 }
 .a .isFolder {
-  font-variation-settings: 'wght' 700;
-  color: #000;
+  font-variation-settings: 'wght' 600;
+  color: rgb(var(--color));
 }
 small {
   color: #999;
   padding-left: 16px;
 }
 small.open {
-  color: #000;
+  color: rgb(var(--color));
   font-variation-settings: 'wght' 400;
 }
 </style>

@@ -1,20 +1,9 @@
 export const state = () => ({
-  links: {
-    typography: [
-      'Headings',
-      'Lists',
-      'Paragraphs',
-      'Typeface',
-      'Variable'
-    ],
-    components: [
-      'Collapse',
-      'Buttons',
-      'FileTree',
-      'Images',
-      'Toggle',
-      'Toasts',
-      'Spinner'
-    ]
-  }
+  theme: ['0, 0, 0', '255, 255, 255'],
+  title: '/'
 })
+
+export const mutations = {
+  setTheme: (state, value) => state.theme = value,
+  setTitle: (state, value) => state.title = value
+}

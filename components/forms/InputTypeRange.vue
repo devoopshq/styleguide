@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="root">
     <label v-if="label !== ''" :for="id">
       {{ label }}
     </label>
@@ -55,11 +55,8 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-:root {
-  --thumb-width: 16px;
-  --thumb-height: 16px;
-  --track-color: #000;
-  --thumb-color: #000;
+.root {
+  --thumb-size: 16px;
   --track-width: 100%;
   --track-height: 1px;
 }
@@ -77,16 +74,16 @@ export default {
   width: 100%;
   height: 1px;
   cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.12);
+  background-color: var(--gray1);
   border: 0;
 }
 
 [type="range"]::-webkit-slider-thumb {
   border: 0;
-  width: 16px;
-  height: 16px;
+  width: var(--thumb-size);
+  height: var(--thumb-size);
   border-radius: 50%;
-  background: #000;
+  background: rgb(var(--color));
   cursor: pointer;
   -webkit-appearance: none;
   margin-top: -8px;
@@ -94,9 +91,9 @@ export default {
 }
 [type="range"]:active::-webkit-slider-thumb,
 [type="range"]:hover::-webkit-slider-thumb {
-  width: 24px;
-  height: 24px;
-  margin-top: -12px;
+  width: calc(var(--thumb-size) + 8px);
+  height: calc(var(--thumb-size) + 8px);
+  margin-top: calc((var(--thumb-size) + 8px) / -2);
 }
 
 /*   &::-moz-range-track

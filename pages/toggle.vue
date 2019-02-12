@@ -42,13 +42,17 @@
 import escape from '@/helpers/escape'
 
 export default {
+  async asyncData ({ store }) {
+    await store.commit('setTitle', '/components/toogle/')
+  },
+
   components: {
-    Heading1: () => import(/* webpackChunkName: "toggle" */ '@/components/headings/Heading1'),
-    AppCard: () => import(/* webpackChunkName: "toggle" */ '@/components/AppCard'),
-    SelectionSwitch: () => import(/* webpackChunkName: "toggle" */ '@/components/interaction/selection/SelectionSwitch'),
-    TerminalInput: () => import(/* webpackChunkName: "toggle" */ '@/components/code/TerminalInput'),
-    AppLabel: () => import(/* webpackChunkName: "toggle" */ '@/components/AppLabel'),
-    AppDoc: () => import(/* webpackChunkName: "toggle" */ '@/components/AppDoc')
+    Heading1: () => import('@/components/headings/Heading1'),
+    AppCard: () => import('@/components/AppCard'),
+    SelectionSwitch: () => import('@/components/interaction/selection/SelectionSwitch'),
+    TerminalInput: () => import('@/components/code/TerminalInput'),
+    AppLabel: () => import('@/components/AppLabel'),
+    AppDoc: () => import('@/components/AppDoc')
   },
 
   data () {
@@ -58,12 +62,10 @@ export default {
     }
   },
 
-  head: () => ({
-    title: 'Toggle'
-  }),
+  head: () => ({ title: 'Toggle' }),
 
   methods: {
-    foo: value => value ? 'On' : 'Off',
+    foo: x => x ? 'On' : 'Off',
     escapeHtml: x => escape(x)
   }
 }

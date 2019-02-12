@@ -1,8 +1,6 @@
 <template>
   <AppDoc>
     <template #left>
-      <Heading1>Buttons</Heading1>
-
       <AppLabel text="Button — Primary" />
       <AppCard>
         <ButtonPrimary />
@@ -41,15 +39,18 @@
 
 <script>
 export default {
+  async asyncData ({ store }) {
+    await store.commit('setTitle', '/components/buttons/')
+  },
+
   components: {
-    AppLabel: () => import(/* webpackChunkName: "buttons" */ '@/components/AppLabel'),
-    Heading1: () => import(/* webpackChunkName: "buttons" */ '@/components/headings/Heading1'),
-    AppCard: () => import(/* webpackChunkName: "buttons" */ '@/components/AppCard'),
-    ButtonPrimary: () => import(/* webpackChunkName: "buttons" */ '@/components/buttons/ButtonPrimary'),
-    ButtonSecondary: () => import(/* webpackChunkName: "buttons" */ '@/components/buttons/ButtonSecondary'),
-    ButtonAbort: () => import(/* webpackChunkName: "buttons" */ '@/components/buttons/ButtonAbort'),
-    Spinner: () => import(/* webpackChunkName: "buttons" */ '@/components/Spinner'),
-    AppDoc: () => import(/* webpackChunkName: "buttons" */ '@/components/AppDoc')
+    AppLabel: () => import('@/components/AppLabel'),
+    AppCard: () => import('@/components/AppCard'),
+    ButtonPrimary: () => import('@/components/buttons/ButtonPrimary'),
+    ButtonSecondary: () => import('@/components/buttons/ButtonSecondary'),
+    ButtonAbort: () => import('@/components/buttons/ButtonAbort'),
+    Spinner: () => import('@/components/Spinner'),
+    AppDoc: () => import('@/components/AppDoc')
   },
 
   head: () => ({ title: 'Buttons' })

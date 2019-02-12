@@ -4,8 +4,8 @@
       <div class="accordion-item-trigger" @click="toggle">
         <span class="accordion-item-title-text">{{ item.title }}</span>
         <svg width="24" height="24" viewBox="0 0 24 24">
-          <path v-if="item.active" d="M19 13H5v-2h14v2z"/>
-          <path v-else d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+          <path v-if="item.active" fill="currentColor" d="M19 13H5v-2h14v2z"/>
+          <path v-else fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
           <path d="M0 0h24v24H0z" fill="none"/>
         </svg>
       </div>
@@ -64,7 +64,7 @@ export default {
 
 <style lang="postcss" scoped>
 .accordion div:not(:last-child) {
-  border-bottom: 1px solid rgba(10, 10, 10, 0.1);
+  border-bottom: 1px solid rgba(var(--color), 0.12);
 }
 .accordion dd {
   margin-left: 0;

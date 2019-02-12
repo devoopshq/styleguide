@@ -1,8 +1,6 @@
 <template>
   <AppDoc>
     <template #left>
-      <Heading1>Spinner</Heading1>
-
       <AppLabel text="Default Size" />
       <AppCard>
         <Spinner />
@@ -18,12 +16,15 @@
 
 <script>
 export default {
+  async asyncData ({ store }) {
+    await store.commit('setTitle', '/components/AppSpinner')
+  },
+
   components: {
-    Heading1: () => import(/* webpackChunkName: "spinner" */ '@/components/headings/Heading1'),
-    AppLabel: () => import(/* webpackChunkName: "spinner" */ '@/components/AppLabel'),
-    AppCard: () => import(/* webpackChunkName: "spinner" */ '@/components/AppCard'),
-    Spinner: () => import(/* webpackChunkName: "spinner" */ '@/components/Spinner'),
-    AppDoc: () => import(/* webpackChunkName: "spinner" */ '@/components/AppDoc')
+    AppLabel: () => import('@/components/AppLabel'),
+    AppCard: () => import('@/components/AppCard'),
+    Spinner: () => import('@/components/Spinner'),
+    AppDoc: () => import('@/components/AppDoc')
   },
 
   head: () => ({ title: 'Spinner' })
