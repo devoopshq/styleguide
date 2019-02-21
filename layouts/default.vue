@@ -121,7 +121,7 @@ body,
   font-family: "Inter var", sans-serif;
   font-weight: 100 900;
   font-style: oblique 0deg 10deg;
-/*   font-named-instance: 'Regular'; */
+  /* font-named-instance: 'Regular'; */
   /* font-variation-settings: 'wght' 400, 'slnt' -0.011em; */
 }
 .default {
